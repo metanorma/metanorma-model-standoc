@@ -2,7 +2,8 @@
 
 StandardDocument ("StanDoc") is a family of document models that forms the basis
 of IsoDoc, which is used to represent ISO Standards and similarly structured
-standards.
+standards. It itself is an instantiation of
+https://github.com/riboseinc/basicdoc-models[BasicDocument (BasicDoc)]
 
 It is one of the document models that Selagraph operates on.
 
