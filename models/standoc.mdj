@@ -38,6 +38,27 @@
 					"attributes": [
 						{
 							"_type": "UMLAttribute",
+							"_id": "AAAAAAFibG4DLtYVVXo=",
+							"_parent": {
+								"$ref": "AAAAAAFgkGz2o4xDjPg="
+							},
+							"name": "preface",
+							"visibility": "public",
+							"isStatic": false,
+							"isLeaf": false,
+							"type": {
+								"$ref": "AAAAAAFgphD2IrXuYR8="
+							},
+							"multiplicity": "0..*",
+							"isReadOnly": false,
+							"isOrdered": false,
+							"isUnique": false,
+							"isDerived": false,
+							"aggregation": "none",
+							"isID": false
+						},
+						{
+							"_type": "UMLAttribute",
 							"_id": "AAAAAAFgnYaA8lKZPmg=",
 							"_parent": {
 								"$ref": "AAAAAAFgkGz2o4xDjPg="
@@ -84,11 +105,13 @@
 							"_parent": {
 								"$ref": "AAAAAAFgkGz2o4xDjPg="
 							},
-							"name": "references",
+							"name": "bibliography",
 							"visibility": "public",
 							"isStatic": false,
 							"isLeaf": false,
-							"type": "ReferenceSection",
+							"type": {
+								"$ref": "AAAAAAFgoENIJI/p2io="
+							},
 							"multiplicity": "0..*",
 							"isReadOnly": false,
 							"isOrdered": false,
@@ -254,7 +277,7 @@
 											"containerExtending": false,
 											"left": 93,
 											"top": 167,
-											"width": 269.75,
+											"width": 275,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -326,7 +349,7 @@
 									"containerExtending": false,
 									"left": 88,
 									"top": 160,
-									"width": 279.75,
+									"width": 285,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -354,6 +377,35 @@
 									"subViews": [
 										{
 											"_type": "UMLAttributeView",
+											"_id": "AAAAAAFibG4DQ9YY52k=",
+											"_parent": {
+												"$ref": "AAAAAAFgkRjk4pzV1o4="
+											},
+											"model": {
+												"$ref": "AAAAAAFibG4DLtYVVXo="
+											},
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 93,
+											"top": 190,
+											"width": 275,
+											"height": 13,
+											"autoResize": false,
+											"underline": false,
+											"text": "+preface: StandardHierarchicalSection[0..*]",
+											"horizontalAlignment": 0,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "UMLAttributeView",
 											"_id": "AAAAAAFgnYaBHlKcrXg=",
 											"_parent": {
 												"$ref": "AAAAAAFgkRjk4pzV1o4="
@@ -371,8 +423,8 @@
 											"containerChangeable": false,
 											"containerExtending": false,
 											"left": 93,
-											"top": 190,
-											"width": 269.75,
+											"top": 205,
+											"width": 275,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -400,8 +452,8 @@
 											"containerChangeable": false,
 											"containerExtending": false,
 											"left": 93,
-											"top": 205,
-											"width": 269.75,
+											"top": 220,
+											"width": 275,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
@@ -429,12 +481,12 @@
 											"containerChangeable": false,
 											"containerExtending": false,
 											"left": 93,
-											"top": 220,
-											"width": 269.75,
+											"top": 235,
+											"width": 275,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "+references: ReferenceSection[0..*]",
+											"text": "+bibliography: StandardReferencesSection[0..*]",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -451,8 +503,8 @@
 									"containerExtending": false,
 									"left": 88,
 									"top": 185,
-									"width": 279.75,
-									"height": 53,
+									"width": 285,
+									"height": 68,
 									"autoResize": false
 								},
 								{
@@ -474,8 +526,8 @@
 									"containerChangeable": false,
 									"containerExtending": false,
 									"left": 88,
-									"top": 238,
-									"width": 279.75,
+									"top": 253,
+									"width": 285,
 									"height": 10,
 									"autoResize": false
 								},
@@ -539,8 +591,8 @@
 							"containerExtending": false,
 							"left": 88,
 							"top": 160,
-							"width": 279.75,
-							"height": 88,
+							"width": 285,
+							"height": 103,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
@@ -12385,6 +12437,29 @@
 							"height": 116,
 							"autoResize": false,
 							"text": "StandardHierarchicalSection, StandardContentSection and StandardReferencesSection differ from those of BasicDocument with having an extra \"obligation\" attribute.",
+							"wordWrap": true
+						},
+						{
+							"_type": "UMLNoteView",
+							"_id": "AAAAAAFibHBQSWVf38s=",
+							"_parent": {
+								"$ref": "AAAAAAFgoRnCWoUp44w="
+							},
+							"visible": true,
+							"enabled": true,
+							"lineColor": "#000000",
+							"fillColor": "#ffffff",
+							"fontColor": "#000000",
+							"font": "Arial;13;0",
+							"showShadow": true,
+							"containerChangeable": false,
+							"containerExtending": false,
+							"left": 624,
+							"top": 832,
+							"width": 161,
+							"height": 49,
+							"autoResize": false,
+							"text": "a ReferencesSection is also a leaf node.",
 							"wordWrap": true
 						}
 					]
