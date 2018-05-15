@@ -1,37 +1,41 @@
-= StandardDocument Models
+= Metanorma StandardDocument Models
 
-StandardDocument ("StanDoc") is a family of document models that forms the basis
-of IsoDoc, which is used to represent ISO Standards and similarly structured
+Metanorma StandardDocument ("StanDoc") is a family of document models that forms the basis
+of Metanorma IsoDoc, which is used to represent ISO Standards and similarly structured
 standards. It itself is an instantiation of
 https://github.com/riboseinc/basicdoc-models[BasicDocument (BasicDoc)]
 
 It is one of the document models that Selagraph operates on.
 
-StandardDocument itself is a document model can form the basis of multiple
+Metanorma StandardDocument itself is a document model can form the basis of multiple
 standard document types, including:
 
 * https://github.com/riboseinc/isodoc[ISO Standards]
 * https://github.com/riboseinc/csd[CSD Standards]
 * https://github.com/riboseinc/gbdoc[Chinese Standards (GB and family)]
 
-Bibliography UML models are located here:
-https://github.com/riboseinc/bib-models[BibModels]
+The Relaton Bibliography UML models used within these models are located here:
+https://github.com/riboseinc/bib-models[Relaton BibModels]
 
 
 == Standard Document UML Models
 
 === StandardDocument
 
-image::images/standoc.png[]
+image::images/png/StandardDocument__StanDoc_0.png[]
+
+=== Bibliography
+
+image::images/png/StandardDocument__Bibliography_4.png[]
 
 === Sections
 
-image::images/sections.png[]
+image::images/png/StandardDocument__Section_2.png[]
 
 === Terms
 
-image::images/terms.png[]
+image::images/png/StandardDocument__Terms_1.png[]
 
 === Data Types
 
-image::images/datatypes.png[]
+image::images/png/StandardDocument__DataTypes_3.png[]
