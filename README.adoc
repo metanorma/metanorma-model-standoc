@@ -24,20 +24,20 @@ https://github.com/riboseinc/bib-models[Relaton BibModels]
 
 === StandardDocument
 
-image::images/png/StandardDoc_StandardDocument.png[]
+image::images/StandardDoc_StandardDocument.png[]
 
 === Bibliography
 
-image::images/png/StandardDoc_Bibliography.png[]
+image::images/StandardDoc_Bibliography.png[]
 
 === Sections
 
-image::images/png/StandardDoc_Sections.png[]
+image::images/StandardDoc_Sections.png[]
 
 === Terms
 
-image::images/png/StandardDoc_Terms.png[]
+image::images/StandardDoc_Terms.png[]
 
 === Data Types
 
-image::images/png/StandardDoc_DataTypes.png[]
+image::images/StandardDoc_DataTypes.png[]
