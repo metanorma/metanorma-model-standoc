@@ -1,0 +1,12 @@
+language: java
+before_install:
+  - travis_retry sudo apt-get update
+  - travis_retry sudo apt-get install -y curl
+install:
+  - sudo bash -c "curl -L https://github.com/riboseinc/plantuml-install/raw/master/ubuntu.sh | bash"
+env:
+  global:
+    - JAVA_OPTS="java.awt.headless=true"
+script:
+  - plantuml -testdot
+  - make all
