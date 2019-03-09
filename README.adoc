@@ -12,9 +12,9 @@ It is one of the document models that Selagraph operates on.
 Metanorma StandardDocument itself is a document model can form the basis of multiple
 standard document types, including:
 
-* https://github.com/riboseinc/metanorma-model-iso[ISO Standards]
-* https://github.com/riboseinc/metanorma-model-csd[CSD Standards]
-* https://github.com/riboseinc/metanorma-model-gb[Chinese Standards (GB and family)]
+* https://github.com/metanorma/metanorma-model-iso[ISO Standards]
+* https://github.com/metanorma/metanorma-model-csd[CSD Standards]
+* https://github.com/metanorma/metanorma-model-gb[Chinese Standards (GB and family)]
 
 The Relaton Bibliography UML models used within these models are located here:
 https://github.com/riboseinc/relaton-models[Relaton BibModels]
