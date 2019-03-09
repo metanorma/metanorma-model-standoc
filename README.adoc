@@ -5,7 +5,7 @@ is a family of document models that forms the basis
 of Metanorma `IsoDoc`, which is used to represent ISO Standards and
 similarly structured standards.
 It itself is an instantiation of
-https://github.com/riboseinc/basicdoc-models[`BasicDocument` (`BasicDoc`)]
+https://github.com/metanorma/basicdoc-models[`BasicDocument` (`BasicDoc`)]
 
 It is one of the document models that Selagraph operates on.
 
@@ -17,7 +17,7 @@ standard document types, including:
 * https://github.com/metanorma/metanorma-model-gb[Chinese Standards (GB and family)]
 
 The Relaton Bibliography UML models used within these models are located here:
-https://github.com/riboseinc/relaton-models[Relaton BibModels]
+https://github.com/metanorma/relaton-models[Relaton BibModels]
 
 
 == Standard Document UML Models
