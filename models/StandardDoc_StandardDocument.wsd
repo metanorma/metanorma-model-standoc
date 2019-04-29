@@ -29,10 +29,18 @@ class BasicDocument <<BasicDocument>> {
 }
 
 class StandardDocument {
+    +boilerplate: BoilerplateType[0..1]
     +preface: StandardHierarchicalSection[0..*]
     +sections: StandardHierarchicalSection[1..*]
     +annex: StandardHierarchicalSection[0..*]
     +bibliography: StandardReferencesSection[0..*]
+}
+
+class BoilerplateType {
+    + copyright: HierarchicalSection[0..1]
+    + license: HierarchicalSection[0..1]
+    + legal: HierarchicalSection[0..1]
+    + feedback: HierarchicalSection[0..1]
 }
 
 '******* NOTES ********************************************************

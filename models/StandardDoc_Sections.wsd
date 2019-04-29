@@ -56,11 +56,13 @@ StereotypeFontSize 10
 
 '******* CLASS DEFINITION *********************************************
 class BasicSection <<BasicDocument>> {
-   
+}
+
+class HierarchicalSection <<BasicDocument>> {
 }
 
 class StandardSection {
-    +status: StandardStatus
+    +status: NormativeType
 }
 
 class StandardHierarchicalSection{
@@ -75,7 +77,7 @@ class ClauseSection{
     +subsections: ClauseSection[0..*]
 }
 
-class TermsSecion{
+class TermsSection{
     +terms: <<Term>>TermCollection
 }
 
@@ -100,7 +102,7 @@ enum NormativeType <<enumeration>>{
 note "StandardHierarchicalSection, StandardContentSection\nand StandardReferencesSection differ from those of\nBasicDocument with having an extra 'obligation' attribute" as N1
 note bottom of StandardHierarchicalSection: Non-clause sections are\nmodeled as\nStandardContentSections.\nExample: Introduction, Foreword.
 note top of ClauseSection: Subclauses are\nmutually exclusive\nwith text content
-note bottom of TermsSecion: A TermsSection or DefinitionSection\nis a leaf node - only contain terms\nor symbols/abbreviations. The\ncontent of each solely comes from\nthe terms or symbols/abbreviations.
+note bottom of TermsSection: A TermsSection or DefinitionSection\nis a leaf node - only contain terms\nor symbols/abbreviations. The\ncontent of each solely comes from\nthe terms or symbols/abbreviations.
 note bottom of AnnexSection: Annex and its children\nclauses permit\nhanging paragraphs\n(as is 'blocks').
 note bottom of StandardReferencesSection: A referencesSection is also a leaf node.
 
@@ -115,7 +117,7 @@ StandardSection <|-- StandardReferencesSection
 
 StandardHierarchicalSection <|-- StandardContentSection
 
-ClauseSection <|-- TermsSecion
+ClauseSection <|-- TermsSection
 ClauseSection <|-- DefinitionSection
 
 @enduml
