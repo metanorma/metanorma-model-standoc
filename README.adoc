@@ -26,6 +26,10 @@ https://github.com/metanorma/relaton-models[Relaton BibModels]
 
 image::images/StandardDoc_StandardDocument.png[]
 
+=== Metadata
+
+image::images/StandardDoc_Metadata.png[]
+
 === Sections
 
 image::images/StandardDoc_Sections.png[]

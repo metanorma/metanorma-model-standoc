@@ -31,12 +31,25 @@ class Term <<Term>> {
     +id: String[0..1]
     +preferred: <<BasicDocument>> LocalizedString[1..*]
     +admitted: <<BasicDocument>> LocalizedString[0..*]
+    +related: RelatedTerm[0..*]
     +deprecates: <<BasicDocument>> LocalizedString[0..*]
     +domain: <<BasicDocument>> LocalizedString[0..1]
+    +grammar: <<BasicDocument>> LocalizedString[0..*]
     +definition: <<BasicDocument>> Definition[1..*]
     +note: <<BasicDocument>> ParagraphBlock[0..*]
     +example: <<BasicDocument>> ParagraphBlock[0..*]
     +source: TermSource[0..*]
+}
+
+class RelatedTerm {
+    +type: RelatedTermType 
+    +content: <<BasicDocument>> LocalizedString
+}
+
+enum RelatedTermType <<enumeration>>{
+   compare
+   contrast
+   see
 }
 
 class TermSource <<Term>>{
@@ -66,6 +79,8 @@ note bottom of Definition: Definition modelled according to ISO/IEC\nDirectives 
 TermCollection <-- Term
 Term <-- TermSource
 TermSource <-- TermSourceStatus
+Term <-- RelatedTerm
+RelatedTerm <-- RelatedTermType
 
 DefinitionCollection <-- Definition
 

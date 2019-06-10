@@ -1,6 +1,6 @@
-@startuml StandardDoc_StandardDocument
+@startuml StandardDoc_Metadata
 /'
-Diagram:        StandardDoc_StandardDocument
+Diagram:        StandardDoc_Metadata
 DateCreate:     22/08/2018
 Description:    Metanorma StandardDocument ("StanDoc") is a family of document models that forms the basis of Metanorma IsoDoc, which is used to represent
                 ISO Standards and similarly structured standards. It itself is an instantiation of BasicDocument (BasicDoc)
@@ -22,32 +22,43 @@ Hystory of changes:
 '******* CONFIGURATION ************************************************
 !include style.uml.inc
 
-
 '******* CLASS DEFINITION *********************************************
-class BasicDocument <<BasicDocument>> {
-
+class BibDataExtensionType <<BasicDocument>> {
 }
 
-class StandardDocument {
-    +bibdata: StandardBibData
-    +boilerplate: BoilerplateType[0..1]
-    +preface: StandardHierarchicalSection[0..*]
-    +sections: StandardHierarchicalSection[1..*]
-    +annex: StandardHierarchicalSection[0..*]
-    +bibliography: StandardReferencesSection[0..*]
+class BibData <<BasicDocument>> {
 }
 
-class BoilerplateType {
-    + copyright: HierarchicalSection[0..1]
-    + license: HierarchicalSection[0..1]
-    + legal: HierarchicalSection[0..1]
-    + feedback: HierarchicalSection[0..1]
+class StandardBibData {
+    +ext: StandardBibDataExtensionType
 }
+
+class StandardBibDataExtensionType {
+    +doctype: String
+    +structuredidentifier[0..*]: StructuredIdentifierType
+}
+
+class StructuredIdentifierType {
+    +type: String[0..1]
+    +agency: String[1..*]
+    +class: String[0..1]
+    +docnumber: String
+    +partnumber: String[0..1]
+    +edition: String[0..1]
+    +version: String[0..1]
+    +supplementtype: String[0..1]
+    +supplementnumber: String[0..1]
+    +year: String[0..1]
+    +language: String[0..1]
+}
+
 
 '******* NOTES ********************************************************
 
 '******* CLASS RELATIONS **********************************************
-BasicDocument <|-- StandardDocument
-StandardDocument <-- BoilerplateType
+BibData <|-- StandardBibData
+BibDataExtensionType <|-- StandardBibDataExtensionType
+StandardBibData <-- StandardBibDataExtensionType
+StandardBibDataExtensionType <-- StructuredIdentifierType
 
 @enduml

@@ -69,11 +69,21 @@ class StandardHierarchicalSection{
     +subsections: StandardSection[0..*]
 }
 
-class StandardContentSection{
+class Abstract { 
+}
+class Foreword { 
+}
+class Introduction { 
+}
+class Acknowledgements { 
+}
 
+class StandardContentSection{
+    +type: String[0..1]
 }
 
 class ClauseSection{
+    +type: String[0..1]
 }
 
 class ClauseHierarchicalSection{
@@ -119,6 +129,11 @@ StandardSection <|-- AnnexSection
 StandardSection <|-- StandardReferencesSection
 
 StandardHierarchicalSection <|-- StandardContentSection
+
+StandardContentSection <|-- Abstract
+StandardContentSection <|-- Foreword
+StandardContentSection <|-- Introduction
+StandardContentSection <|-- Acknowledgements
 
 ClauseSection <|-- TermsSection
 ClauseSection <|-- DefinitionSection
