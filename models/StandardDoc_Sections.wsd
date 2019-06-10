@@ -15,7 +15,7 @@ Description:    Metanorma StandardDocument ("StanDoc") is a family of document m
 
 Hystory of changes:
 > DD/MM/YYYY
-    - 
+    - 10/06/2019: refine modelling of sections
     - 
 '/
 
@@ -74,7 +74,10 @@ class StandardContentSection{
 }
 
 class ClauseSection{
-    +subsections: ClauseSection[0..*]
+}
+
+class ClauseHierarchicalSection{
+    +subsections: ClauseHierarchicalSection[0..*]
 }
 
 class TermsSection{
@@ -119,5 +122,6 @@ StandardHierarchicalSection <|-- StandardContentSection
 
 ClauseSection <|-- TermsSection
 ClauseSection <|-- DefinitionSection
+ClauseSection <|-- ClauseHierarchicalSection
 
 @enduml

@@ -26,10 +26,6 @@ https://github.com/metanorma/relaton-models[Relaton BibModels]
 
 image::images/StandardDoc_StandardDocument.png[]
 
-=== Bibliography
-
-image::images/StandardDoc_Bibliography.png[]
-
 === Sections
 
 image::images/StandardDoc_Sections.png[]
@@ -38,6 +34,3 @@ image::images/StandardDoc_Sections.png[]
 
 image::images/StandardDoc_Terms.png[]
 
-=== Data Types
-
-image::images/StandardDoc_DataTypes.png[]
