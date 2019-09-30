@@ -1,0 +1,18 @@
+# Auto-generated !!! Do not edit it manually
+# use ci-master https://github.com/metanorma/metanorma-build-scripts
+name: ubuntu
+
+on: [push]
+
+jobs:
+  test-linux:
+    name: Test on PlantUML Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Install PlantUML
+        run: |
+          sudo bash -c "curl -L https://github.com/riboseinc/plantuml-install/raw/master/ubuntu.sh | bash"
+      - name: Make
+        run: |
+          make all
