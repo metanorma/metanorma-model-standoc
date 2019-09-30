@@ -1,0 +1,18 @@
+# Auto-generated !!! Do not edit it manually
+# use ci-master https://github.com/metanorma/metanorma-build-scripts
+name: macos
+
+on: [push]
+
+jobs:
+  test-macos:
+    name: Test on PlantUML macOS
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Install PlantUML
+        run: |
+          brew install plantuml
+      - name: Make
+        run: |
+          make all
