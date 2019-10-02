@@ -16,7 +16,7 @@ Description:    Metanorma StandardDocument ("StanDoc") is a family of document m
 Hystory of changes:
 > DD/MM/YYYY
     - 10/06/2019: refine modelling of sections
-    - 
+    - 02/10/2019: alternate notes and references
 '/
 
 '******* CONFIGURATION ************************************************
@@ -104,6 +104,7 @@ class AnnexSection{
 
 class StandardReferencesSection{
     references: <<Bibliography>>BibliographicItem[0..*]
+    note: <<BasicDocument>> ParagraphBlock[0..*]
 }
 
 enum NormativeType <<enumeration>>{
@@ -118,6 +119,7 @@ note bottom of ClauseHierarchicalSection: Subclauses are\nmutually exclusive\nwi
 note bottom of TermsSection: A TermsSection or DefinitionSection\nis a leaf node - only contain terms\nor symbols/abbreviations. The\ncontent of each solely comes from\nthe terms or symbols/abbreviations.
 note bottom of AnnexSection: Annex and its children\nclauses permit\nhanging paragraphs\n(as is 'blocks').
 note bottom of StandardReferencesSection: A referencesSection is also a leaf node.
+note right of StandardReferencesSection: A note optionally follows each BibliographicItem
 
 '******* CLASS RELATIONS **********************************************
 BasicSection <|-- StandardSection
