@@ -44,19 +44,10 @@ class BoilerplateType {
     + feedback: HierarchicalSection[0..1]
 }
 
-class ExampleBlock <<BasicDocument>> {
-}
-
-class StandardExampleBlock {
-    + role: String[0..1]
-}
-
 '******* NOTES ********************************************************
 
 '******* CLASS RELATIONS **********************************************
 BasicDocument <|-- StandardDocument
 StandardDocument <-- BoilerplateType
-
-ExampleBlock <|-- StandardExampleBlock
 
 @enduml
