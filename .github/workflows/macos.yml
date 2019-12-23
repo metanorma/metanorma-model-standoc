@@ -2,7 +2,7 @@
 # use ci-master https://github.com/metanorma/metanorma-build-scripts
 name: macos
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   test-macos:
@@ -15,4 +15,4 @@ jobs:
           brew install plantuml
       - name: Make
         run: |
-          make all
+          make clean all

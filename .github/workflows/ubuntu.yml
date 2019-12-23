@@ -2,7 +2,7 @@
 # use ci-master https://github.com/metanorma/metanorma-build-scripts
 name: ubuntu
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   test-linux:
@@ -15,4 +15,4 @@ jobs:
           sudo bash -c "curl -L https://github.com/riboseinc/plantuml-install/raw/master/ubuntu.sh | bash"
       - name: Make
         run: |
-          make all
+          make clean all

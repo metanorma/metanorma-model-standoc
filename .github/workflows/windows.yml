@@ -2,7 +2,7 @@
 # use ci-master https://github.com/metanorma/metanorma-build-scripts
 name: windows
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   test-windows:
@@ -15,4 +15,4 @@ jobs:
           cinst -y plantuml
       - name: Make
         run: |
-          make SHELL=cmd all
+          make clean all SHELL=cmd
