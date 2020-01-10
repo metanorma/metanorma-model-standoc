@@ -16,7 +16,7 @@ Description:    Metanorma StandardDocument ("StanDoc") is a family of document m
 Hystory of changes:
 > DD/MM/YYYY
     - 31/10/2019: example/role
-    -
+    - 10/01/2020: StandardNoteBlock
 '/
 
 '******* CONFIGURATION ************************************************
@@ -26,6 +26,15 @@ Hystory of changes:
 '******* CLASS DEFINITION *********************************************
 class BasicDocument <<BasicDocument>> {
 
+}
+
+class NoteBlock <<BasicDocument>> {
+}
+
+class StandardNoteBlock {
+    +ul: UnorderedList[0..*]
+    +ol: OrderedList[0..*]
+    +dl: DefinitionList[0..*]
 }
 
 class StandardDocument {
@@ -49,5 +58,7 @@ class BoilerplateType {
 '******* CLASS RELATIONS **********************************************
 BasicDocument <|-- StandardDocument
 StandardDocument <-- BoilerplateType
+NoteBlock --> BasicDocument
+StandardNoteBlock --|> NoteBlock
 
 @enduml
