@@ -17,6 +17,7 @@ Hystory of changes:
 > DD/MM/YYYY
     - 31/10/2019: example/role
     - 10/01/2020: StandardNoteBlock
+    - 14/01/2020: ReferenceToTerm
 '/
 
 '******* CONFIGURATION ************************************************
@@ -35,7 +36,27 @@ class StandardNoteBlock {
     +ul: UnorderedList[0..*]
     +ol: OrderedList[0..*]
     +dl: DefinitionList[0..*]
+    +formula: FormulaBlock[0..*]
 }
+
+class ReferenceElement <<BasicDocument>> {
+}
+
+class ReferenceToTerm {
+   +source: ReferenceToTermSource
+   +term: String[0..*]
+}
+
+class ReferenceToCitationElement <<BasicDocument>> {
+}
+class ReferenceToIdElement <<BasicDocument>> {
+}
+
+class ReferenceToTermbase {
+    +termbase: String
+    +target: String[0..1]
+}
+
 
 class StandardDocument {
     +bibdata: StandardBibData
@@ -55,10 +76,18 @@ class BoilerplateType {
 
 '******* NOTES ********************************************************
 
+
 '******* CLASS RELATIONS **********************************************
 BasicDocument <|-- StandardDocument
 StandardDocument <-- BoilerplateType
-NoteBlock --> BasicDocument
-StandardNoteBlock --|> NoteBlock
+BasicDocument <-- NoteBlock
+BasicDocument <-- ReferenceElement
+NoteBlock <|-- StandardNoteBlock 
+ReferenceElement <|-- ReferenceToTerm
+ReferenceElement <|-- ReferenceToTermbase
+ReferenceToTerm <-- ReferenceToTermSource
+ReferenceToTermSource <|-- ReferenceToCitationElement
+ReferenceToTermSource <|-- ReferenceToIdElement
+ReferenceToTermSource <|-- ReferenceToTermbase
 
 @enduml
