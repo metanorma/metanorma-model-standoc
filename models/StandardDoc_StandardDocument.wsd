@@ -18,6 +18,7 @@ Hystory of changes:
     - 31/10/2019: example/role
     - 10/01/2020: StandardNoteBlock
     - 14/01/2020: ReferenceToTerm
+    - 04/02/2020: ReferenceToTerm
 '/
 
 '******* CONFIGURATION ************************************************
@@ -57,6 +58,14 @@ class ReferenceToTermbase {
     +target: String[0..1]
 }
 
+class PageBreakElement <<BasicDocument>>{
+   +orientation: OrientationType[0..1]
+}
+
+enum OrientationType <<enumeration>>{
+    portrait
+    landscape
+}
 
 class StandardDocument {
     +bibdata: StandardBibData
@@ -82,12 +91,15 @@ BasicDocument <|-- StandardDocument
 StandardDocument <-- BoilerplateType
 BasicDocument <-- NoteBlock
 BasicDocument <-- ReferenceElement
+BasicDocument <-- PageBreakElement
 NoteBlock <|-- StandardNoteBlock 
+PageBreakElement <|-- StandardPageBreakElement
 ReferenceElement <|-- ReferenceToTerm
 ReferenceElement <|-- ReferenceToTermbase
 ReferenceToTerm <-- ReferenceToTermSource
 ReferenceToTermSource <|-- ReferenceToCitationElement
 ReferenceToTermSource <|-- ReferenceToIdElement
 ReferenceToTermSource <|-- ReferenceToTermbase
+StandardPageBreakElement <-- OrientationType
 
 @enduml
