@@ -83,6 +83,22 @@ class BoilerplateType {
     + feedback: HierarchicalSection[0..1]
 }
 
+class UnorderedList <<BasicDocument>> {
+}
+
+class StandardUnorderedList {
+    +listitem: UnorderedCheckableListItem[0..*]
+}
+
+class Listitem <<BasicDocument>> {
+}
+
+class UnorderedCheckableListItem {
+    +checkbox: Boolean
+    +checkedcheckbox: Boolean
+}
+
+
 '******* NOTES ********************************************************
 
 
@@ -101,5 +117,7 @@ ReferenceToTermSource <|-- ReferenceToCitationElement
 ReferenceToTermSource <|-- ReferenceToIdElement
 ReferenceToTermSource <|-- ReferenceToTermbase
 StandardPageBreakElement <-- OrientationType
+UnorderedList <|-- StandardUnorderedList
+ListItem <|-- UnorderedCheckableListItem
 
 @enduml
