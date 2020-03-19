@@ -38,3 +38,7 @@ image::images/StandardDoc_Sections.png[]
 
 image::images/StandardDoc_Terms.png[]
 
+=== Blocks
+
+image::images/StandardDoc_Block.png[]
+

@@ -19,6 +19,7 @@ Hystory of changes:
     - 10/01/2020: StandardNoteBlock
     - 14/01/2020: ReferenceToTerm
     - 04/02/2020: ReferenceToTerm
+    - 04/02/2020: ReferenceToTerm
 '/
 
 '******* CONFIGURATION ************************************************
@@ -28,16 +29,6 @@ Hystory of changes:
 '******* CLASS DEFINITION *********************************************
 class BasicDocument <<BasicDocument>> {
 
-}
-
-class NoteBlock <<BasicDocument>> {
-}
-
-class StandardNoteBlock {
-    +ul: UnorderedList[0..*]
-    +ol: OrderedList[0..*]
-    +dl: DefinitionList[0..*]
-    +formula: FormulaBlock[0..*]
 }
 
 class ReferenceElement <<BasicDocument>> {
@@ -59,6 +50,9 @@ class ReferenceToTermbase {
 }
 
 class PageBreakElement <<BasicDocument>>{
+}
+
+class StandardPageBreakElement {
    +orientation: OrientationType[0..1]
 }
 
@@ -83,21 +77,6 @@ class BoilerplateType {
     + feedback: HierarchicalSection[0..1]
 }
 
-class UnorderedList <<BasicDocument>> {
-}
-
-class StandardUnorderedList {
-    +listitem: UnorderedCheckableListItem[0..*]
-}
-
-class Listitem <<BasicDocument>> {
-}
-
-class UnorderedCheckableListItem {
-    +checkbox: Boolean
-    +checkedcheckbox: Boolean
-}
-
 
 '******* NOTES ********************************************************
 
@@ -105,10 +84,9 @@ class UnorderedCheckableListItem {
 '******* CLASS RELATIONS **********************************************
 BasicDocument <|-- StandardDocument
 StandardDocument <-- BoilerplateType
-BasicDocument <-- NoteBlock
 BasicDocument <-- ReferenceElement
 BasicDocument <-- PageBreakElement
-NoteBlock <|-- StandardNoteBlock 
+BasicDocument <-- UnorderedList
 PageBreakElement <|-- StandardPageBreakElement
 ReferenceElement <|-- ReferenceToTerm
 ReferenceElement <|-- ReferenceToTermbase
@@ -117,7 +95,5 @@ ReferenceToTermSource <|-- ReferenceToCitationElement
 ReferenceToTermSource <|-- ReferenceToIdElement
 ReferenceToTermSource <|-- ReferenceToTermbase
 StandardPageBreakElement <-- OrientationType
-UnorderedList <|-- StandardUnorderedList
-ListItem <|-- UnorderedCheckableListItem
 
 @enduml
