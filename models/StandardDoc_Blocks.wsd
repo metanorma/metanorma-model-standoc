@@ -19,7 +19,7 @@ Hystory of changes:
     - 10/01/2020: StandardNoteBlock
     - 14/01/2020: ReferenceToTerm
     - 04/02/2020: ReferenceToTerm
-    - 04/02/2020: ReferenceToTerm
+    - 20/03/2020: Table
 '/
 
 '******* CONFIGURATION ************************************************
@@ -56,6 +56,13 @@ class UnorderedCheckableListItem {
     +checkedcheckbox: Boolean
 }
 
+class TableBlock <<BasicDocument>> {
+}
+
+class StandardTableBlock {
+    +width: String[0..1]
+}
+
 
 '******* NOTES ********************************************************
 
@@ -64,8 +71,10 @@ class UnorderedCheckableListItem {
 BasicDocument <-- NoteBlock
 BasicDocument <-- UnorderedList
 BasicDocument <-- ListItem
+BasicDocument <-- TableBlock
 NoteBlock <|-- StandardNoteBlock 
 UnorderedList <|-- StandardUnorderedList
 ListItem <|-- UnorderedCheckableListItem
+TableBlock <|-- StandardTableBlock
 
 @enduml

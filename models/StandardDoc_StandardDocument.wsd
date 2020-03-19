@@ -86,7 +86,6 @@ BasicDocument <|-- StandardDocument
 StandardDocument <-- BoilerplateType
 BasicDocument <-- ReferenceElement
 BasicDocument <-- PageBreakElement
-BasicDocument <-- UnorderedList
 PageBreakElement <|-- StandardPageBreakElement
 ReferenceElement <|-- ReferenceToTerm
 ReferenceElement <|-- ReferenceToTermbase
