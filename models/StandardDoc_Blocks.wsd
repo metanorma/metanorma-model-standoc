@@ -1,4 +1,4 @@
-@startuml StandardDoc_Block
+@startuml StandardDoc_Blocks
 /'
 Diagram:        StandardDoc_StandardDocument
 DateCreate:     22/08/2018
@@ -72,7 +72,7 @@ BasicDocument <-- NoteBlock
 BasicDocument <-- UnorderedList
 BasicDocument <-- ListItem
 BasicDocument <-- TableBlock
-NoteBlock <|-- StandardNoteBlock 
+NoteBlock <|-- StandardNoteBlock
 UnorderedList <|-- StandardUnorderedList
 ListItem <|-- UnorderedCheckableListItem
 TableBlock <|-- StandardTableBlock
