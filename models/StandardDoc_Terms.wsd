@@ -15,7 +15,7 @@ Description:    Metanorma StandardDocument ("StanDoc") is a family of document m
 
 Hystory of changes:
 > DD/MM/YYYY
-    -
+    - 20/04/2020: origin can be reference to termbase
     -
 '/
 
@@ -54,7 +54,7 @@ enum RelatedTermType <<enumeration>>{
 
 class TermSource <<Term>>{
     +status: TermOriginStatus
-    +origin: <<Bibliography>> Citation
+    +origin: <<Bibliography>> Citation | ReferenceToTermbase
     +modification: <<BasicDocument>> ParagraphBlock[0..1]
 }
 
