@@ -1,5 +1,9 @@
 = Metanorma StandardDocument Models
 
+image:https://github.com/metanorma/metanorma-model-standoc/workflows/ubuntu/badge.svg["Ubuntu Build Status", link="https://github.com/metanorma/metanorma-model-standoc/actions?query=workflow%3Aubuntu"]
+image:https://github.com/metanorma/metanorma-model-standoc/workflows/macos/badge.svg["OSX Build Status", link="https://github.com/metanorma/metanorma-model-standoc/actions?query=workflow%3Amacos"]
+image:https://github.com/metanorma/metanorma-model-standoc/workflows/windows/badge.svg["Windows Build Status", link="https://github.com/metanorma/metanorma-model-standoc/actions?query=workflow%3Awindows"]
+
 Metanorma `StandardDocument` (abbreviated as `StanDoc`)
 is a family of document models that forms the basis
 of Metanorma `IsoDoc`, which is used to represent ISO Standards and
@@ -40,5 +44,5 @@ image::images/StandardDoc_Terms.png[]
 
 === Blocks
 
-image::images/StandardDoc_Block.png[]
+image::images/StandardDoc_Blocks.png[]
 
