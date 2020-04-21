@@ -46,3 +46,6 @@ image::images/StandardDoc_Terms.png[]
 
 image::images/StandardDoc_Blocks.png[]
 
+=== Inline
+
+image::images/StandardDoc_Inline.png[]
