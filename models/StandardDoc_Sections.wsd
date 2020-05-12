@@ -17,6 +17,7 @@ Hystory of changes:
 > DD/MM/YYYY
     - 10/06/2019: refine modelling of sections
     - 02/10/2019: alternate notes and references
+    - 12/05/2020: StandardReferencesSection/@normative
 '/
 
 '******* CONFIGURATION ************************************************
@@ -103,6 +104,7 @@ class AnnexSection{
 }
 
 class StandardReferencesSection{
+    normative: Boolean[0..1]
     references: <<Bibliography>>BibliographicItem[0..*]
     note: <<BasicDocument>> ParagraphBlock[0..*]
 }
