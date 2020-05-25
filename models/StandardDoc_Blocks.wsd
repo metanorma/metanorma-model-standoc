@@ -20,7 +20,6 @@ Hystory of changes:
     - 14/01/2020: ReferenceToTerm
     - 04/02/2020: ReferenceToTerm
     - 20/03/2020: Table
-    - 25/05/2020: Note@keep-separate
 '/
 
 '******* CONFIGURATION ************************************************
@@ -36,7 +35,6 @@ class NoteBlock <<BasicDocument>> {
 }
 
 class StandardNoteBlock {
-    +keep-separate: Boolean[0..1]
     +ul: UnorderedList[0..*]
     +ol: OrderedList[0..*]
     +dl: DefinitionList[0..*]
