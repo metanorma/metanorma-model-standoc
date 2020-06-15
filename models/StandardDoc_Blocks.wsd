@@ -20,6 +20,7 @@ Hystory of changes:
     - 14/01/2020: ReferenceToTerm
     - 04/02/2020: ReferenceToTerm
     - 20/03/2020: Table
+    - 15/06/2020: number attribute overriding autonumbering
 '/
 
 '******* CONFIGURATION ************************************************
@@ -32,6 +33,18 @@ class BasicDocument <<BasicDocument>> {
 }
 
 class NoteBlock <<BasicDocument>> {
+}
+
+class FigureBlock <<BasicDocument>> {
+}
+
+class SourcecodeBlock <<BasicDocument>> {
+}
+
+class FormulaBlock <<BasicDocument>> {
+}
+
+class ExampleBlock <<BasicDocument>> {
 }
 
 class StandardNoteBlock {
@@ -61,6 +74,23 @@ class TableBlock <<BasicDocument>> {
 
 class StandardTableBlock {
     +width: String[0..1]
+    +number: String[0..1]
+}
+
+class StandardFigureBlock {
+    +number: String[0..1]
+}
+
+class StandardSourcecodeBlock {
+    +number: String[0..1]
+}
+
+class StandardFormulaBlock {
+    +number: String[0..1]
+}
+
+class StandardExampleBlock {
+    +number: String[0..1]
 }
 
 
@@ -76,5 +106,13 @@ NoteBlock <|-- StandardNoteBlock
 UnorderedList <|-- StandardUnorderedList
 ListItem <|-- UnorderedCheckableListItem
 TableBlock <|-- StandardTableBlock
+BasicDocument <-- FigureBlock
+FigureBlock <|-- StandardFigureBlock
+BasicDocument <-- SourcecodeBlock
+SourcecodeBlock <|-- StandardSourcecodeBlock
+BasicDocument <-- FormulaBlock
+FormulaBlock <|-- StandardFormulaBlock
+BasicDocument <-- ExampleBlock
+ExampleBlock <|-- StandardExampleBlock
 
 @enduml
