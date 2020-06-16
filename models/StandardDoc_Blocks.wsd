@@ -21,6 +21,7 @@ Hystory of changes:
     - 04/02/2020: ReferenceToTerm
     - 20/03/2020: Table
     - 15/06/2020: number attribute overriding autonumbering
+    - 16/06/2020: keep-with-next, keep-lines-together
 '/
 
 '******* CONFIGURATION ************************************************
@@ -47,7 +48,18 @@ class FormulaBlock <<BasicDocument>> {
 class ExampleBlock <<BasicDocument>> {
 }
 
+class ParagraphBlock <<BasicDocument>> {
+}
+
+class QuoteBlock <<BasicDocument>> {
+}
+
 class StandardNoteBlock {
+    +keep-lines-together: Boolean[0..1],
+    +keep-with-next: Boolean[0..1],
+    +number: String[0..1]
+    +subsequence: String[0..1]
+    +unnumbered: Boolean[0..1]
     +ul: UnorderedList[0..*]
     +ol: OrderedList[0..*]
     +dl: DefinitionList[0..*]
@@ -75,22 +87,42 @@ class TableBlock <<BasicDocument>> {
 class StandardTableBlock {
     +width: String[0..1]
     +number: String[0..1]
+    +keep-lines-together: Boolean[0..1],
+    +keep-with-next: Boolean[0..1],
 }
 
 class StandardFigureBlock {
     +number: String[0..1]
+    +keep-lines-together: Boolean[0..1],
+    +keep-with-next: Boolean[0..1],
 }
 
 class StandardSourcecodeBlock {
     +number: String[0..1]
+    +keep-lines-together: Boolean[0..1],
+    +keep-with-next: Boolean[0..1],
 }
 
 class StandardFormulaBlock {
     +number: String[0..1]
+    +keep-lines-together: Boolean[0..1],
+    +keep-with-next: Boolean[0..1],
 }
 
 class StandardExampleBlock {
     +number: String[0..1]
+    +keep-lines-together: Boolean[0..1],
+    +keep-with-next: Boolean[0..1],
+}
+
+class StandardParagraphBlock {
+    +keep-lines-together: Boolean[0..1],
+    +keep-with-next: Boolean[0..1],
+}
+
+class StandardQuoteBlock {
+    +keep-lines-together: Boolean[0..1],
+    +keep-with-next: Boolean[0..1],
 }
 
 
@@ -114,5 +146,9 @@ BasicDocument <-- FormulaBlock
 FormulaBlock <|-- StandardFormulaBlock
 BasicDocument <-- ExampleBlock
 ExampleBlock <|-- StandardExampleBlock
+BasicDocument <-- ParagraphBlock
+ParagraphBlock <|-- StandardParagraphBlock
+BasicDocument <-- QuoteBlock
+QuoteBlock <|-- StandardQuoteBlock
 
 @enduml
