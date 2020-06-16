@@ -54,6 +54,15 @@ class ParagraphBlock <<BasicDocument>> {
 class QuoteBlock <<BasicDocument>> {
 }
 
+class AdmonitionBlock <<BasicDocument>> {
+}
+
+class UnorderedList <<BasicDocument>> {
+}
+
+class DefinitionList <<BasicDocument>> {
+}
+
 class StandardNoteBlock {
     +keep-lines-together: Boolean[0..1],
     +keep-with-next: Boolean[0..1],
@@ -125,6 +134,21 @@ class StandardQuoteBlock {
     +keep-with-next: Boolean[0..1],
 }
 
+class StandardAdmonitionBlock {
+    +keep-lines-together: Boolean[0..1],
+    +keep-with-next: Boolean[0..1],
+}
+
+class StandardUnorderedList {
+    +keep-lines-together: Boolean[0..1],
+    +keep-with-next: Boolean[0..1],
+}
+
+class StandardDefinitionList {
+    +keep-lines-together: Boolean[0..1],
+    +keep-with-next: Boolean[0..1],
+}
+
 
 '******* NOTES ********************************************************
 
@@ -150,5 +174,11 @@ BasicDocument <-- ParagraphBlock
 ParagraphBlock <|-- StandardParagraphBlock
 BasicDocument <-- QuoteBlock
 QuoteBlock <|-- StandardQuoteBlock
+BasicDocument <-- AdmonitionBlock
+AdmonitionBlock <|-- StandardAdmonitionBlock
+BasicDocument <-- UnorderedList
+UnorderedList <|-- StandardUnorderedList
+BasicDocument <-- DefinitionList
+DefinitionList <|-- StandardDefinitionList
 
 @enduml
