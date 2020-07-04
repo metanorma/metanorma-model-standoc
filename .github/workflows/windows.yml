@@ -6,6 +6,9 @@ on:
   push:
     branches: [ master ]
   pull_request:
+    paths-ignore:
+      - .github/workflows/macos.yml
+      - .github/workflows/ubuntu.yml
 
 jobs:
   test-windows:

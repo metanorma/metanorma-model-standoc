@@ -6,6 +6,9 @@ on:
   push:
     branches: [ master ]
   pull_request:
+    paths-ignore:
+      - .github/workflows/macos.yml
+      - .github/workflows/windows.yml
 
 jobs:
   test-linux:
@@ -14,8 +17,12 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Install PlantUML
-        run: |
-          sudo bash -c "curl -L https://github.com/riboseinc/plantuml-install/raw/master/ubuntu.sh | bash"
+        uses: nick-invision/retry@v1
+        with:
+          polling_interval_seconds: 5
+          timeout_minutes: 5
+          max_attempts: 3
+          command: sudo bash -c "curl -L https://github.com/metanorma/plantuml-install/raw/master/ubuntu.sh | bash"
       - name: Make
         run: |
           make clean all
