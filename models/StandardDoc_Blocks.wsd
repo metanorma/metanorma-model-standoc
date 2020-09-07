@@ -23,6 +23,7 @@ Hystory of changes:
     - 15/06/2020: number attribute overriding autonumbering
     - 16/06/2020: keep-with-next, keep-lines-together
     - 17/06/2020: note/@type
+    - 07/09/2020: add to note contents
 '/
 
 '******* CONFIGURATION ************************************************
@@ -75,6 +76,8 @@ class StandardNoteBlock {
     +ol: OrderedList[0..*]
     +dl: DefinitionList[0..*]
     +formula: FormulaBlock[0..*]
+    +sourcecode: SourcecodeBlock[0..*]
+    +quotes: QuoteBlock[0..*]
 }
 
 class UnorderedList <<BasicDocument>> {
