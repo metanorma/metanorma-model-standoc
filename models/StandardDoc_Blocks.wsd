@@ -24,6 +24,7 @@ Hystory of changes:
     - 16/06/2020: keep-with-next, keep-lines-together
     - 17/06/2020: note/@type
     - 07/09/2020: add to note contents
+    - 09/09/2020: amend block
 '/
 
 '******* CONFIGURATION ************************************************
@@ -154,6 +155,43 @@ class StandardDefinitionList {
     +keep-with-next: Boolean[0..1],
 }
 
+class AmendBlock {
+    +change: ChangeType,
+    +bibLocality: BibItemLocality[0..*],
+    +path: String[0..1],
+    +path_end: String[0..1],
+    +name: String[0..1],
+    +description: BasicBlock[0..*],
+    +autonumber: AutoNumber[0..*],
+    +replacement: BasicBlock[0..*]
+}
+
+class AutoNumber {
+    +type: ElementName,
+    +value: String
+}
+
+class BibItemLocality <<Relaton>> {
+}
+
+enum ChangeType <<enumeration>>{
+    add
+    modify
+    delete
+}
+
+enum ElementName <<enumeration>>{
+    requirement
+    recommendation
+    permission
+    table
+    figure
+    admonition
+    formula
+    sourcecode
+    example
+    note
+}
 
 '******* NOTES ********************************************************
 
@@ -185,5 +223,9 @@ BasicDocument <-- UnorderedList
 UnorderedList <|-- StandardUnorderedList
 BasicDocument <-- DefinitionList
 DefinitionList <|-- StandardDefinitionList
+AmendBlock <-- ChangeType
+AmendBlock <-- AutoNumber
+AmendBlock <-- BibItemLocality
+AmendBlock <-- ElementName
 
 @enduml

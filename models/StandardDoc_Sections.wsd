@@ -18,6 +18,7 @@ Hystory of changes:
     - 10/06/2019: refine modelling of sections
     - 02/10/2019: alternate notes and references
     - 12/05/2020: StandardReferencesSection/@normative
+    - 09/09/2020: amend blocks
 '/
 
 '******* CONFIGURATION ************************************************
@@ -64,6 +65,7 @@ class HierarchicalSection <<BasicDocument>> {
 
 class StandardSection {
     +status: NormativeType
+    +amend: AmendBlock[0..1]
 }
 
 class StandardHierarchicalSection{
