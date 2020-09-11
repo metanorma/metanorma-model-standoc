@@ -163,7 +163,7 @@ class AmendBlock {
     +name: String[0..1],
     +description: BasicBlock[0..*],
     +autonumber: AutoNumber[0..*],
-    +replacement: BasicBlock[0..*]
+    +newcontent: BasicBlock[0..*]
 }
 
 class AutoNumber {
