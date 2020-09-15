@@ -14,7 +14,8 @@ Description:    Metanorma StandardDocument ("StanDoc") is a family of document m
                 The Relaton Bibliography UML models used within these models are located here: Relaton BibModels
 
 Hystory of changes:
-> 31/05/2020: StandocReferenceToIdElement
+> 31/05/2020: StandocReferenceToIdElement case
+> 15/09/2020: StandocReferenceToIdElement droploc
 '/
 
 '******* CONFIGURATION ************************************************
@@ -46,6 +47,7 @@ class ReferenceToTermbase {
 
 class StandocReferenceToIdElement {
   +case: XrefCaseType[0..1]
+  +droploc: Boolean[0..1]
 }
 
 class XrefCaseType <<enumeration>> {
