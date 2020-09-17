@@ -20,6 +20,7 @@ Hystory of changes:
     - 14/01/2020: ReferenceToTerm
     - 04/02/2020: ReferenceToTerm
     - 04/02/2020: ReferenceToTerm
+    - 17/09/2020: versioning
 '/
 
 '******* CONFIGURATION ************************************************
@@ -68,6 +69,8 @@ class StandardDocument {
     +sections: StandardHierarchicalSection[1..*]
     +annex: StandardHierarchicalSection[0..*]
     +bibliography: StandardReferencesSection[0..*]
+    +type: StandardDocumentType
+    +version: String
 }
 
 class BoilerplateType {
@@ -77,12 +80,18 @@ class BoilerplateType {
     + feedback: HierarchicalSection[0..1]
 }
 
+enum StandardDocumentType <<enumeration>> {
+     semantic
+     presentation
+}
+
 
 '******* NOTES ********************************************************
 
 
 '******* CLASS RELATIONS **********************************************
 BasicDocument <|-- StandardDocument
+StandardDocument <-- StandardDocumentType
 StandardDocument <-- BoilerplateType
 BasicDocument <-- ReferenceElement
 BasicDocument <-- PageBreakElement
