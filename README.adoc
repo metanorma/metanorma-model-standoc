@@ -1,8 +1,6 @@
 = Metanorma StandardDocument Models
 
-image:https://github.com/metanorma/metanorma-model-standoc/workflows/ubuntu/badge.svg["Ubuntu Build Status", link="https://github.com/metanorma/metanorma-model-standoc/actions?query=workflow%3Aubuntu"]
-image:https://github.com/metanorma/metanorma-model-standoc/workflows/macos/badge.svg["OSX Build Status", link="https://github.com/metanorma/metanorma-model-standoc/actions?query=workflow%3Amacos"]
-image:https://github.com/metanorma/metanorma-model-standoc/workflows/windows/badge.svg["Windows Build Status", link="https://github.com/metanorma/metanorma-model-standoc/actions?query=workflow%3Awindows"]
+image:https://github.com/metanorma/metanorma-model-standoc/workflows/make/badge.svg["Build Status", link="https://github.com/metanorma/metanorma-model-standoc/actions?query=workflow%3Amake"]
 
 Metanorma `StandardDocument` (abbreviated as `StanDoc`)
 is a family of document models that forms the basis
