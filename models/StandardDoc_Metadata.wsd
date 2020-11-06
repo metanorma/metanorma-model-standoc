@@ -15,7 +15,7 @@ Description:    Metanorma StandardDocument ("StanDoc") is a family of document m
 
 Hystory of changes:
 > DD/MM/YYYY
-    -
+    - 07/11/2020: doctype abbreviation
     -
 '/
 
@@ -35,6 +35,7 @@ class StandardBibData {
 
 class StandardBibDataExtensionType {
     +doctype: String
+    +doctype_abbreviation: String[0..1]
     +structuredidentifier[0..*]: StructuredIdentifierType
 }
 
