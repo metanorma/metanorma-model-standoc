@@ -44,7 +44,7 @@ jobs:
         run: make clean all SHELL=cmd
 
   tests-passed:
-    needs: rake
+    needs: make
     runs-on: ubuntu-latest
     steps:
       - name: Trigger tests passed event
