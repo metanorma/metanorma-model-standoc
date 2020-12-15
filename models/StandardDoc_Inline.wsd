@@ -16,6 +16,7 @@ Description:    Metanorma StandardDocument ("StanDoc") is a family of document m
 Hystory of changes:
 > 31/05/2020: StandocReferenceToIdElement case
 > 15/09/2020: StandocReferenceToIdElement droploc
+> 16/12/2020: StandocReferenceToIdElement to
 '/
 
 '******* CONFIGURATION ************************************************
@@ -48,6 +49,7 @@ class ReferenceToTermbase {
 class StandocReferenceToIdElement {
   +case: XrefCaseType[0..1]
   +droploc: Boolean[0..1]
+  +to: IdElement[0..1]
 }
 
 class XrefCaseType <<enumeration>> {
