@@ -1,0 +1,330 @@
+diagram StandardDoc_Blocks {
+  
+  
+  
+  class BasicDocument <<BasicDocument>> {
+  
+  }
+  
+  class NoteBlock <<BasicDocument>> {
+  }
+  
+  class FigureBlock <<BasicDocument>> {
+  }
+  
+  class SourcecodeBlock <<BasicDocument>> {
+  }
+  
+  class FormulaBlock <<BasicDocument>> {
+  }
+  
+  class ExampleBlock <<BasicDocument>> {
+  }
+  
+  class ParagraphBlock <<BasicDocument>> {
+  }
+  
+  class QuoteBlock <<BasicDocument>> {
+  }
+  
+  class AdmonitionBlock <<BasicDocument>> {
+  }
+  
+  class UnorderedList <<BasicDocument>> {
+  }
+  
+  class DefinitionList <<BasicDocument>> {
+  }
+  
+  class StandardNoteBlock {
+      +keep-lines-together: Boolean[0..1]
+      +keep-with-next: Boolean[0..1]
+      +number: String[0..1]
+      +subsequence: String[0..1]
+      +unnumbered: Boolean[0..1]
+      +type: String[0..1]
+      +ul: UnorderedList[0..*]
+      +ol: OrderedList[0..*]
+      +dl: DefinitionList[0..*]
+      +formula: FormulaBlock[0..*]
+      +sourcecode: SourcecodeBlock[0..*]
+      +quotes: QuoteBlock[0..*]
+  }
+  
+  class UnorderedList <<BasicDocument>> {
+  }
+  
+  class StandardUnorderedList {
+      +listitem: UnorderedCheckableListItem[0..*]
+  }
+  
+  class ListItem <<BasicDocument>> {
+  }
+  
+  class UnorderedCheckableListItem {
+      +checkbox: Boolean
+      +checkedcheckbox: Boolean
+  }
+  
+  class TableBlock <<BasicDocument>> {
+  }
+  
+  class StandardTableBlock {
+      +width: String[0..1]
+      +number: String[0..1]
+      +keep-lines-together: Boolean[0..1]
+      +keep-with-next: Boolean[0..1]
+      +colgroup: TableCol[0..*]
+  }
+  
+  class TableCol {
+      +width: String[0..1]
+  }
+  
+  class StandardFigureBlock {
+      +number: String[0..1]
+      +keep-lines-together: Boolean[0..1]
+      +keep-with-next: Boolean[0..1]
+  }
+  
+  class StandardSourcecodeBlock {
+      +number: String[0..1]
+      +keep-lines-together: Boolean[0..1]
+      +keep-with-next: Boolean[0..1]
+  }
+  
+  class StandardFormulaBlock {
+      +number: String[0..1]
+      +keep-lines-together: Boolean[0..1]
+      +keep-with-next: Boolean[0..1]
+  }
+  
+  class StandardExampleBlock {
+      +number: String[0..1]
+      +keep-lines-together: Boolean[0..1]
+      +keep-with-next: Boolean[0..1]
+  }
+  
+  class StandardParagraphBlock {
+      +keep-lines-together: Boolean[0..1]
+      +keep-with-next: Boolean[0..1]
+  }
+  
+  class StandardQuoteBlock {
+      +keep-lines-together: Boolean[0..1]
+      +keep-with-next: Boolean[0..1]
+  }
+  
+  class StandardAdmonitionBlock {
+      +keep-lines-together: Boolean[0..1]
+      +keep-with-next: Boolean[0..1]
+  }
+  
+  class StandardUnorderedList {
+      +keep-lines-together: Boolean[0..1]
+      +keep-with-next: Boolean[0..1]
+  }
+  
+  class StandardDefinitionList {
+      +keep-lines-together: Boolean[0..1]
+      +keep-with-next: Boolean[0..1]
+      +key: Boolean[0..1]
+  }
+  
+  class AmendBlock {
+      +change: ChangeType
+      +bibLocality: BibItemLocality[0..*]
+      +path: String[0..1]
+      +path_end: String[0..1]
+      +name: String[0..1]
+      +description: BasicBlock[0..*]
+      +autonumber: AutoNumber[0..*]
+      +newcontent: BasicBlock[0..*]
+  }
+  
+  class AutoNumber {
+      +type: ElementName
+      +value: String
+  }
+  
+  class BibItemLocality <<Relaton>> {
+  }
+  
+  enum ChangeType <<enumeration>>{
+      add
+      modify
+      delete
+  }
+  
+  enum ElementName <<enumeration>>{
+      requirement
+      recommendation
+      permission
+      table
+      figure
+      admonition
+      formula
+      sourcecode
+      example
+      note
+  }
+  
+  
+  
+  association {
+    owner BasicDocument
+    member NoteBlock
+    owner_type direct
+  }
+  association {
+    owner BasicDocument
+    member UnorderedList
+    owner_type direct
+  }
+  association {
+    owner BasicDocument
+    member ListItem
+    owner_type direct
+  }
+  association {
+    owner BasicDocument
+    member TableBlock
+    owner_type direct
+  }
+  association {
+    owner NoteBlock
+    member StandardNoteBlock
+    owner_type inheritance
+  }
+  association {
+    owner UnorderedList
+    member StandardUnorderedList
+    owner_type inheritance
+  }
+  association {
+    owner ListItem
+    member UnorderedCheckableListItem
+    owner_type inheritance
+  }
+  association {
+    owner TableBlock
+    member StandardTableBlock
+    owner_type inheritance
+  }
+  association {
+    owner StandardTableBlock
+    member TableCol
+    owner_type direct
+  }
+  association {
+    owner BasicDocument
+    member FigureBlock
+    owner_type direct
+  }
+  association {
+    owner FigureBlock
+    member StandardFigureBlock
+    owner_type inheritance
+  }
+  association {
+    owner BasicDocument
+    member SourcecodeBlock
+    owner_type direct
+  }
+  association {
+    owner SourcecodeBlock
+    member StandardSourcecodeBlock
+    owner_type inheritance
+  }
+  association {
+    owner BasicDocument
+    member FormulaBlock
+    owner_type direct
+  }
+  association {
+    owner FormulaBlock
+    member StandardFormulaBlock
+    owner_type inheritance
+  }
+  association {
+    owner BasicDocument
+    member ExampleBlock
+    owner_type direct
+  }
+  association {
+    owner ExampleBlock
+    member StandardExampleBlock
+    owner_type inheritance
+  }
+  association {
+    owner BasicDocument
+    member ParagraphBlock
+    owner_type direct
+  }
+  association {
+    owner ParagraphBlock
+    member StandardParagraphBlock
+    owner_type inheritance
+  }
+  association {
+    owner BasicDocument
+    member QuoteBlock
+    owner_type direct
+  }
+  association {
+    owner QuoteBlock
+    member StandardQuoteBlock
+    owner_type inheritance
+  }
+  association {
+    owner BasicDocument
+    member AdmonitionBlock
+    owner_type direct
+  }
+  association {
+    owner AdmonitionBlock
+    member StandardAdmonitionBlock
+    owner_type inheritance
+  }
+  association {
+    owner BasicDocument
+    member UnorderedList
+    owner_type direct
+  }
+  association {
+    owner UnorderedList
+    member StandardUnorderedList
+    owner_type inheritance
+  }
+  association {
+    owner BasicDocument
+    member DefinitionList
+    owner_type direct
+  }
+  association {
+    owner DefinitionList
+    member StandardDefinitionList
+    owner_type inheritance
+  }
+  association {
+    owner AmendBlock
+    member ChangeType
+    owner_type direct
+  }
+  association {
+    owner AmendBlock
+    member AutoNumber
+    owner_type direct
+  }
+  association {
+    owner AmendBlock
+    member BibItemLocality
+    owner_type direct
+  }
+  association {
+    owner AmendBlock
+    member ElementName
+    owner_type direct
+  }
+  
+}

@@ -1,0 +1,78 @@
+diagram StandardDoc_Inline {
+  
+  
+  
+  class BasicDocument <<BasicDocument>> {
+  }
+  
+  class ReferenceToIdElement <<BasicDocument>> {
+  }
+  
+  class ReferenceToCitationElement <<BasicDocument>> {
+  }
+  
+  class Concept{
+    +term: String[0..1]
+    +xref: ReferenceToIdElement[0..1]
+    +eref: ReferenceToCitationElement[0..1]
+    +termref: ReferenceToTermbase[0..1]
+  }
+  
+  class ReferenceToTermbase {
+    +base: String
+    +target: String
+    +text: TextElement
+  }
+  
+  class StandocReferenceToIdElement {
+    +case: XrefCaseType[0..1]
+    +droploc: Boolean[0..1]
+    +to: IdElement[0..1]
+  }
+  
+  class XrefCaseType <<enumeration>> {
+    capital
+    lowercase
+  }
+  
+  
+  
+  
+  
+  association {
+    owner BasicDocument
+    member ReferenceToIdElement
+    owner_type direct
+  }
+  association {
+    owner BasicDocument
+    member ReferenceToCitationElement
+    owner_type direct
+  }
+  association {
+    owner ReferenceToIdElement
+    member Concept
+    owner_type direct
+  }
+  association {
+    owner ReferenceToCitationElement
+    member Concept
+    owner_type direct
+  }
+  association {
+    owner ReferenceToTermbase
+    member Concept
+    owner_type direct
+  }
+  association {
+    owner ReferenceToIdElement
+    member StandocReferenceToIdElement
+    owner_type inheritance
+  }
+  association {
+    owner StandocReferenceToIdElement
+    member XrefCaseType
+    owner_type direct
+  }
+  
+}
