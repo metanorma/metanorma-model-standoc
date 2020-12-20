@@ -1,0 +1,87 @@
+diagram StandardDoc_Terms {
+  
+  
+  class TermCollection <<Term>> {
+      +terms: Term[0..*]
+  }
+  
+  class Term <<Term>> {
+      +id: String[0..1]
+      +preferred: <<BasicDocument>> LocalizedString[1..*]
+      +admitted: <<BasicDocument>> LocalizedString[0..*]
+      +related: RelatedTerm[0..*]
+      +deprecates: <<BasicDocument>> LocalizedString[0..*]
+      +domain: <<BasicDocument>> LocalizedString[0..1]
+      +grammar: <<BasicDocument>> LocalizedString[0..*]
+      +definition: <<BasicDocument>> Definition[1..*]
+      +note: <<BasicDocument>> ParagraphBlock[0..*]
+      +example: <<BasicDocument>> ParagraphBlock[0..*]
+      +source: TermSource[0..*]
+  }
+  
+  class RelatedTerm {
+      +type: RelatedTermType 
+      +content: <<BasicDocument>> LocalizedString
+  }
+  
+  enum RelatedTermType <<enumeration>>{
+     compare
+     contrast
+     see
+  }
+  
+  class TermSource <<Term>>{
+      +status: TermOriginStatus
+      +origin: <<Bibliography>> Citation 
+      +modification: <<BasicDocument>> ParagraphBlock[0..1]
+  }
+  
+  class DefinitionCollection{
+      +definitions: Definition[0..*]
+  }
+  
+  class Definition <<BasicDocument>>{
+  
+  }
+  
+  enum TermSourceStatus <<enumeration>>{
+      identical
+      modified
+  }
+  
+  
+  association {
+    owner TermCollection
+    member Term
+    owner_type direct
+  }
+  association {
+    owner Term
+    member TermSource
+    owner_type direct
+  }
+  association {
+    owner TermSource
+    member TermSourceStatus
+    owner_type direct
+  }
+  association {
+    owner Term
+    member RelatedTerm
+    owner_type direct
+  }
+  association {
+    owner RelatedTerm
+    member RelatedTermType
+    owner_type direct
+  }
+  
+  association {
+    owner DefinitionCollection
+    member Definition
+    owner_type direct
+  }
+  
+  
+  
+}

@@ -1,0 +1,57 @@
+diagram StandardDoc_Metadata {
+  
+  
+  class BibDataExtensionType <<BasicDocument>> {
+  }
+  
+  class BibData <<BasicDocument>> {
+  }
+  
+  class StandardBibData {
+      +ext: StandardBibDataExtensionType
+  }
+  
+  class StandardBibDataExtensionType {
+      +doctype: String
+      +doctype_abbreviation: String[0..1]
+      +structuredidentifier: StructuredIdentifierType[0..*]
+  }
+  
+  class StructuredIdentifierType {
+      +type: String[0..1]
+      +agency: String[1..*]
+      +class: String[0..1]
+      +docnumber: String
+      +partnumber: String[0..1]
+      +edition: String[0..1]
+      +version: String[0..1]
+      +supplementtype: String[0..1]
+      +supplementnumber: String[0..1]
+      +year: String[0..1]
+      +language: String[0..1]
+  }
+  
+  
+  
+  association {
+    owner BibData
+    member StandardBibData
+    owner_type inheritance
+  }
+  association {
+    owner BibDataExtensionType
+    member StandardBibDataExtensionType
+    owner_type inheritance
+  }
+  association {
+    owner StandardBibData
+    member StandardBibDataExtensionType
+    owner_type direct
+  }
+  association {
+    owner StandardBibDataExtensionType
+    member StructuredIdentifierType
+    owner_type direct
+  }
+  
+}
