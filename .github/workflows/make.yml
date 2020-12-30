@@ -44,8 +44,9 @@ jobs:
         run: make clean all SHELL=cmd
 
   tests-passed:
-    needs: rake
+    needs: make
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
       - name: Trigger tests passed event
         uses: Sibz/github-status-action@v1
