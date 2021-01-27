@@ -9,11 +9,10 @@ Description:    Metanorma StandardDocument ("StanDoc") is a family of document m
 
                 - ISO Standards
                 - CSD Standards
-                - Chinese Standards (GB and family)
 
                 The Relaton Bibliography UML models used within these models are located here: Relaton BibModels
 
-Hystory of changes:
+History of changes:
 > DD/MM/YYYY
     - 31/10/2019: example/role
     - 10/01/2020: StandardNoteBlock
@@ -24,9 +23,9 @@ Hystory of changes:
     - 16/06/2020: keep-with-next, keep-lines-together
     - 17/06/2020: note/@type
     - 07/09/2020: add to note contents
-    - 09/09/2020: amend block
     - 06/11/2020: dl/@key
     - 05/12/2020: table/colgroup
+    - 27/01/2021: svgmap, imagemap
 '/
 
 '******* CONFIGURATION ************************************************
@@ -36,6 +35,9 @@ Hystory of changes:
 '******* CLASS DEFINITION *********************************************
 class BasicDocument <<BasicDocument>> {
 
+}
+
+class BasicBlockNoNotes <<BasicDocument>> {
 }
 
 class NoteBlock <<BasicDocument>> {
@@ -60,6 +62,9 @@ class QuoteBlock <<BasicDocument>> {
 }
 
 class AdmonitionBlock <<BasicDocument>> {
+}
+
+class List <<BasicDocument>> {
 }
 
 class UnorderedList <<BasicDocument>> {
@@ -163,78 +168,37 @@ class StandardDefinitionList {
     +key: Boolean[0..1]
 }
 
-class AmendBlock {
-    +change: ChangeType
-    +bibLocality: BibItemLocality[0..*]
-    +path: String[0..1]
-    +path_end: String[0..1]
-    +name: String[0..1]
-    +description: BasicBlock[0..*]
-    +autonumber: AutoNumber[0..*]
-    +newcontent: BasicBlock[0..*]
-}
-
-class AutoNumber {
-    +type: ElementName
-    +value: String
-}
-
-class BibItemLocality <<Relaton>> {
-}
-
-enum ChangeType <<enumeration>>{
-    add
-    modify
-    delete
-}
-
-enum ElementName <<enumeration>>{
-    requirement
-    recommendation
-    permission
-    table
-    figure
-    admonition
-    formula
-    sourcecode
-    example
-    note
-}
-
 '******* NOTES ********************************************************
 
 
 '******* CLASS RELATIONS **********************************************
-BasicDocument <-- NoteBlock
-BasicDocument <-- UnorderedList
-BasicDocument <-- ListItem
-BasicDocument <-- TableBlock
-NoteBlock <|-- StandardNoteBlock
+BasicDocument <-- BasicBlockNoNotes
+BasicBlockNoNotes <|-- BasicBlock
+BasicBlockNoNotes <|-- NoteBlock
+BasicBlock <|-- List
+List <|-- UnorderedList
+List <-- ListItem
+BasicBlock <-- TableBlock
+StandardNoteBlock -right-|> NoteBlock
 UnorderedList <|-- StandardUnorderedList
 ListItem <|-- UnorderedCheckableListItem
 TableBlock <|-- StandardTableBlock
 StandardTableBlock <-- TableCol
-BasicDocument <-- FigureBlock
+BasicBlock <-- FigureBlock
 FigureBlock <|-- StandardFigureBlock
-BasicDocument <-- SourcecodeBlock
+BasicBlock <-- SourcecodeBlock
 SourcecodeBlock <|-- StandardSourcecodeBlock
-BasicDocument <-- FormulaBlock
+BasicBlock <-- FormulaBlock
 FormulaBlock <|-- StandardFormulaBlock
-BasicDocument <-- ExampleBlock
+BasicBlock <-- ExampleBlock
 ExampleBlock <|-- StandardExampleBlock
-BasicDocument <-- ParagraphBlock
+BasicBlock <-- ParagraphBlock
 ParagraphBlock <|-- StandardParagraphBlock
-BasicDocument <-- QuoteBlock
+BasicBlock <-- QuoteBlock
 QuoteBlock <|-- StandardQuoteBlock
-BasicDocument <-- AdmonitionBlock
+BasicBlock <-- AdmonitionBlock
 AdmonitionBlock <|-- StandardAdmonitionBlock
-BasicDocument <-- UnorderedList
-UnorderedList <|-- StandardUnorderedList
-BasicDocument <-- DefinitionList
+List <-- DefinitionList
 DefinitionList <|-- StandardDefinitionList
-AmendBlock <-- ChangeType
-AmendBlock <-- AutoNumber
-AmendBlock <-- BibItemLocality
-AmendBlock <-- ElementName
 
 @enduml

@@ -1,0 +1,131 @@
+@startuml StandardDoc_Blocks_New
+/'
+Diagram:        StandardDoc_StandardDocument
+DateCreate:     27/01/2021
+Description:    Metanorma StandardDocument ("StanDoc") is a family of document models that forms the basis of Metanorma IsoDoc, which is used to represent
+                ISO Standards and similarly structured standards. It itself is an instantiation of BasicDocument (BasicDoc)
+                It is one of the document models that Selagraph operates on.
+                Metanorma StandardDocument itself is a document model can form the basis of multiple standard document types, including:
+
+                - ISO Standards
+                - CSD Standards
+
+                The Relaton Bibliography UML models used within these models are located here: Relaton BibModels
+
+History of changes:
+> DD/MM/YYYY
+    - 09/09/2020: amend block
+    - 05/12/2020: table/colgroup
+    - 27/01/2021: svgmap, imagemap
+'/
+
+'******* CONFIGURATION ************************************************
+!include style.uml.inc
+
+
+'******* CLASS DEFINITION *********************************************
+class BasicDocument <<BasicDocument>> {
+
+}
+
+class BasicBlockNoNotes <<BasicDocument>> {
+}
+
+class AmendBlock {
+    +change: ChangeType
+    +bibLocality: BibItemLocality[0..*]
+    +path: String[0..1]
+    +path_end: String[0..1]
+    +name: String[0..1]
+    +description: BasicBlock[0..*]
+    +autonumber: AutoNumber[0..*]
+    +newcontent: BasicBlock[0..*]
+}
+
+class AutoNumber {
+    +type: ElementName
+    +value: String
+}
+
+class BibItemLocality <<Relaton>> {
+}
+
+enum ChangeType <<enumeration>>{
+    add
+    modify
+    delete
+}
+
+enum ElementName <<enumeration>>{
+    requirement
+    recommendation
+    permission
+    table
+    figure
+    admonition
+    formula
+    sourcecode
+    example
+    note
+}
+
+class SVGMapBlock {
+    + source: String
+    + alt: String[0..1]
+    + target: SVGTargetType[0..*]
+}
+
+class SVGTargetType {
+    + href: String
+    + ReferenceElement
+}
+
+class ImageMapBlock {
+    + source: String
+    + alt: String[0..1]
+    + area: ImageMapAreaType[0..*]
+}
+
+class ImageMapAreaType {
+    + type: ImageMapAreaTypeType
+    + ReferenceElement
+    + coords: ImageMapCoords[1..*]
+    + radius: ImageMapRadius[0..1]
+}
+
+enum ImageMapAreaTypeType <<enumeration>> {
+    rect
+    circle
+    ellipse
+    poly
+}
+
+class ImageMapCoords {
+    + x: Float
+    + y: Float
+}
+
+class ImageMapRadius {
+    + x: Float
+    + y: Float[0..1]
+}
+
+'******* NOTES ********************************************************
+
+
+'******* CLASS RELATIONS **********************************************
+BasicDocument <-- BasicBlockNoNotes
+AmendBlock <-- ChangeType
+AmendBlock <-- AutoNumber
+AmendBlock <-- BibItemLocality
+AmendBlock <-- ElementName
+BasicBlockNoNotes <|-- AmendBlock
+BasicBlockNoNotes <|-- SVGMapBlock
+BasicBlockNoNotes <|-- ImageMapBlock
+SVGMapBlock <-- SVGTargetType
+ImageMapBlock <-- ImageMapAreaType
+ImageMapAreaType <-- ImageMapAreaTypeType
+ImageMapAreaType <-- ImageMapCoords
+ImageMapAreaType <-- ImageMapRadius
+
+@enduml
