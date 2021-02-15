@@ -21,6 +21,7 @@ Hystory of changes:
     - 04/02/2020: ReferenceToTerm
     - 04/02/2020: ReferenceToTerm
     - 17/09/2020: versioning
+    - 15/02/2021: MiscContainer
 '/
 
 '******* CONFIGURATION ************************************************
@@ -64,6 +65,7 @@ enum OrientationType <<enumeration>>{
 
 class StandardDocument {
     +bibdata: StandardBibData
+    +misc: MiscContainer[0..1]
     +boilerplate: BoilerplateType[0..1]
     +preface: StandardHierarchicalSection[0..*]
     +sections: StandardHierarchicalSection[1..*]
@@ -71,6 +73,10 @@ class StandardDocument {
     +bibliography: StandardReferencesSection[0..*]
     +type: StandardDocumentType
     +version: String
+}
+
+class MiscContainer {
+    +element: Any[0..*]
 }
 
 class BoilerplateType {
@@ -93,6 +99,7 @@ enum StandardDocumentType <<enumeration>> {
 BasicDocument <|-- StandardDocument
 StandardDocument <-- StandardDocumentType
 StandardDocument <-- BoilerplateType
+StandardDocument <-- MiscContainer
 BasicDocument <-- ReferenceElement
 BasicDocument <-- PageBreakElement
 PageBreakElement <|-- StandardPageBreakElement
