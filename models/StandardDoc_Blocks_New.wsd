@@ -16,7 +16,7 @@ History of changes:
 > DD/MM/YYYY
     - 09/09/2020: amend block
     - 05/12/2020: table/colgroup
-    - 27/01/2021: svgmap, imagemap
+    - 27/01/2021: Svgmap, imagemap
 '/
 
 '******* CONFIGURATION ************************************************
@@ -69,13 +69,13 @@ enum ElementName <<enumeration>>{
     note
 }
 
-class SVGMapBlock {
+class SvgMapBlock {
     + source: String
     + alt: String[0..1]
-    + target: SVGTargetType[0..*]
+    + target: SvgTargetType[0..*]
 }
 
-class SVGTargetType {
+class SvgTargetType {
     + href: String
     + ReferenceElement
 }
@@ -120,9 +120,9 @@ AmendBlock <-- AutoNumber
 AmendBlock <-- BibItemLocality
 AmendBlock <-- ElementName
 BasicBlockNoNotes <|-- AmendBlock
-BasicBlockNoNotes <|-- SVGMapBlock
+BasicBlockNoNotes <|-- SvgMapBlock
 BasicBlockNoNotes <|-- ImageMapBlock
-SVGMapBlock <-- SVGTargetType
+SvgMapBlock <-- SvgTargetType
 ImageMapBlock <-- ImageMapAreaType
 ImageMapAreaType <-- ImageMapAreaTypeType
 ImageMapAreaType <-- ImageMapCoords
