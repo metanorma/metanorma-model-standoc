@@ -22,6 +22,7 @@ Hystory of changes:
     - 04/02/2020: ReferenceToTerm
     - 17/09/2020: versioning
     - 15/02/2021: MiscContainer
+    - 16/02/2021: Index
 '/
 
 '******* CONFIGURATION ************************************************
@@ -71,6 +72,7 @@ class StandardDocument {
     +sections: StandardHierarchicalSection[1..*]
     +annex: StandardHierarchicalSection[0..*]
     +bibliography: StandardReferencesSection[0..*]
+    +index: StandardHierarchicalSection[0..*]
     +type: StandardDocumentType
     +version: String
 }
