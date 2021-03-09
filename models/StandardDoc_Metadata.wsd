@@ -16,7 +16,7 @@ Description:    Metanorma StandardDocument ("StanDoc") is a family of document m
 Hystory of changes:
 > DD/MM/YYYY
     - 07/11/2020: doctype abbreviation
-    -
+    - 10/03/2021: ics, editorial committee
 '/
 
 '******* CONFIGURATION ************************************************
@@ -36,7 +36,24 @@ class StandardBibData {
 class StandardBibDataExtensionType {
     +doctype: String
     +doctype_abbreviation: String[0..1]
+    +editorialgroup: EditorialGroupType[0..1]: 
+    +ics: IcsType[0..*]
     +structuredidentifier[0..*]: StructuredIdentifierType
+}
+
+class EditorialGroupType {
+    +technicalcommittee[1..*]: TechnicalCommitteeType
+}
+
+class TechnicalCommitteeType {
+    +number: Int[0..1]
+    +type: String[0..1]
+    +text: String
+}
+
+class IcsType {
+    +code: String
+    +text: String[0..1]
 }
 
 class StructuredIdentifierType {
@@ -61,5 +78,8 @@ BibData <|-- StandardBibData
 BibDataExtensionType <|-- StandardBibDataExtensionType
 StandardBibData <-- StandardBibDataExtensionType
 StandardBibDataExtensionType <-- StructuredIdentifierType
+StandardBibDataExtensionType <-- IcsType
+StandardBibDataExtensionType <-- EditorialGroupType
+EditorialGroupType <-- TechnicalCommitteeType
 
 @enduml
