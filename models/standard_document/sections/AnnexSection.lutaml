@@ -1,3 +1,9 @@
-class AnnexSection{
-  +subsections: ClauseSection[0..*]
+class AnnexSection {
+  definition {
+    Section of document constituting an annex or appendix.
+  }
+  +subsections: ClauseSection[0..*] {
+    Subsections of the annex. Added explicitly because AnnexSection permits hanging paragraphs
+    (top-level blocks are included in the section alongside subsections).
+  }
 }

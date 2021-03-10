@@ -1,2 +1,5 @@
 class Abstract {
+  definition {
+    Abstract of the document.
+  }
 }

@@ -1,7 +1,32 @@
 class StandardBibDataExtensionType {
-  +doctype: String
-  +doctype_abbreviation: String[0..1]
-  +editorialgroup: EditorialGroupType[0..1]
-  +ics: IcsType[0..*]
-  +structuredidentifier: StructuredIdentifierType[0..*]
+  definition {
+    The extension point of the bibliographic description of a StandardDocument.
+  }
+  +doctype: String {
+    definition {
+      Classification of the StandardDocument that is treated as a distinct series by the
+      standards defining organization, and that is rendered in a distinct manner.
+    }
+  }
+  +doctype_abbreviation: String[0..1] {
+    definition {
+      Standard abbreviation for the doctype value used by the standards defining organization.
+    }
+  }
+  +editorialgroup: EditorialGroupType[0..1] {
+    definition {
+      Groups associated with the production of the standards document, typically within
+      a standards definition organization.
+    }
+  }
+  +ics: IcsType[0..*] {
+    definition {
+      Classifications of the document contents taken from the International Classification of Standards.
+    }
+  }
+  +structuredidentifier: StructuredIdentifierType[0..*] {
+    definition {
+      Representation of the identifier for the StandardDocument, giving its individual semantic components.
+    }
+  }
 }

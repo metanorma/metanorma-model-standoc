@@ -1,3 +1,11 @@
 class EditorialGroupType {
-  +technicalcommittee: TechnicalCommitteeType[1..*]
+  definition {
+    A group associated with the production of the standards document, typically within
+    a standards definition organization.
+  }
+  +technicalcommittee: TechnicalCommitteeType[1..*] {
+    definition {
+      A technical committee associated with the production of the standards document.
+    }
+  }
 }

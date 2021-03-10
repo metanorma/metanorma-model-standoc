@@ -1,6 +1,21 @@
 class TechnicalCommitteeType {
-  +number: Integer[0..1]
-  +type: String[0..1]
-  +text: String
+  definition {
+    Technical committee associated with the production of a standards document.
+  }
+  +number: Integer[0..1] {
+    definition {
+      Identifier of the technical committee (typically numeric).
+    }
+  }
+  +type: String[0..1] {
+    definition {
+      Type of the technical committee, used in identifying the technical committee.
+    }
+  }
+  +text: String {
+    definition {
+      Name of the technical committee.
+    }
+  }
 }
 

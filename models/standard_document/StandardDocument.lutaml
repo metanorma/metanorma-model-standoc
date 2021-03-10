@@ -1,12 +1,77 @@
 class StandardDocument {
-  +bibdata: StandardBibData
-  +misc: MiscContainer[0..1]
-  +boilerplate: BoilerplateType[0..1]
-  +preface: StandardHierarchicalSection[0..*]
-  +sections: StandardHierarchicalSection[1..*]
-  +annex: StandardHierarchicalSection[0..*]
-  +bibliography: StandardReferencesSection[0..*]
-  +index: StandardHierarchicalSection[0..*]
-  +type: StandardDocumentType
-  +version: String
+  definition {
+  The `StandardDocument` model is used to represent a standardization
+  document.
+
+  Typically, a standardization document contains at least the
+  following data elements:
+
+  * Metadata information;
+  * Clauses and subclauses;
+  * Bibliographies;
+  * Annexes if applicable.
+
+  The exact component requirements of a standardization document
+  can differ widely from one standardization body to the next.
+  Specialization is necessary to adopt the `StandardDocument`
+  model for such standardization bodies.
+
+  The `StandardDocument` model extends the `BasicDocument`
+  modelling of the document by requiring specific types
+  of sections.
+  }
+  +bibdata: StandardBibData {
+    definition {
+      Bibliographic description of the document itself, expressed in the Relaton
+      model.
+    }
+  }
+  +misc: MiscContainer[0..1] {
+    definition {
+      Extension point for extraneous elements that need to be added to standards document
+      from other schemas, e.g. UnitsML.
+    }
+  }
+  +boilerplate: BoilerplateType[0..1] {
+    definition {
+      An optional _boilerplate_ section, intended to appear at the
+      front of the document. It consists of content addressing
+      _copyright_, _license_, _legal_, and _feedback_ concerns.
+    }
+  }
+  +preface: StandardHierarchicalSection[0..*] {
+    definition {
+      Zero or more optional _preface_ sections.
+    }
+  }
+  +sections: StandardHierarchicalSection[1..*] {
+    definition {
+      One or more _sections_.
+    }
+  }
+  +annex: StandardHierarchicalSection[0..*] {
+    definition {
+      Zero or more _annexes_.
+    }
+  }
+  +bibliography: StandardReferencesSection[0..*] {
+    definition {
+      Zero or more _bibliographies_.
+    }
+  }
+  +index: StandardHierarchicalSection[0..*] {
+    definition {
+      Index of a standards document.
+    }
+  }
+  +type: StandardDocumentType {
+    definition {
+      Type of standards document representation given in this class instance.
+    }
+  }
+  +version: String {
+    definition {
+      Version number of the schema used for this standards document.
+    }
+  }
 }

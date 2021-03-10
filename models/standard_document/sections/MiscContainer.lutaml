@@ -1,3 +1,7 @@
 class MiscContainer {
+  definition {
+    Extension point for extraneous elements that need to be added to standards document
+    from other schemas, e.g. UnitsML.
+  }
   +element: Any[0..*]
 }

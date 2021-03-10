@@ -1,4 +1,17 @@
 enum NormativeType <<enumeration>>{
-  normative
-  informative
+  unstructured {
+    definition {
+      The force of a clause of text in a StandardDocument.
+    }
+  }
+  normative {
+    definition {
+      The content in this section has normative effect.
+    }
+  }
+  informative {
+    definition {
+      The content in this section has informative effect.
+    }
+  }
 }

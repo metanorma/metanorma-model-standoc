@@ -1,4 +1,17 @@
 enum TermSourceStatus <<enumeration>>{
-  identical
-  modified
+  unstructured {
+    definition {
+      The status of a term as it is used in this document, relative to its definition in the original document.
+    }
+  }
+  identical {
+    definition {
+      The term definition in this document is identical to that given in the original document.
+    }
+  }
+  modified {
+    definition {
+      The term definition in this document has been modified from that given in the original document.
+    }
+  }
 }

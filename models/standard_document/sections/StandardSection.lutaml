@@ -1,5 +1,20 @@
 class StandardSection {
-  +status: NormativeType
-  +amend: AmendBlock[0..1]
-  +number: String[0..1]
+  definition {
+  }
+  +status: NormativeType {
+    definition {
+      Force of this clause in the standards document.
+    }
+  }
+  +amend: AmendBlock[0..1] {
+    definition {
+      Specification of machine-readable change outlined in this section,
+      in a document amendment.
+    }
+  }
+  +number: String[0..1] {
+    definition {
+      Value of number to be used for numbering of section, overriding any autonumbering in rendering.
+    }
+  }
 }

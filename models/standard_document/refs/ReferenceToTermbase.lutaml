@@ -1,5 +1,20 @@
 class ReferenceToTermbase {
-  +base: String
-  +target: String
-  +text: TextElement
+  definition {
+    Cross-reference to a term defined within a termbase.
+  }
+  +base: String {
+    definition {
+      Identifier of the termbase.
+    }
+  }
+  +target: String {
+    definition {
+      Identifier of the term within the termbase.
+    }
+  }
+  +text: TextElement {
+    definition {
+       Text to display for the cross-reference to the term.
+    }
+  }
 }

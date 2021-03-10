@@ -4,8 +4,24 @@ enum ImageMapAreaTypeType <<enumeration>> {
       The type of area in an image map to be hyperlinked.
     }
   }
-  rect
-  circle
-  ellipse
-  poly
+  rect {
+    definition {
+      Rectangle.
+    }
+  }
+  circle {
+    definition {
+      Circle.
+    }
+  }
+  ellipse {
+    definition {
+      Ellipse.
+    }
+  }
+  poly {
+    definition {
+      Polygon.
+    }
+  }
 }

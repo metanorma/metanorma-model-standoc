@@ -1,5 +1,22 @@
 enum RelatedTermType <<enumeration>>{
-   compare
-   contrast
-   see
+  unstructured {
+    definition {
+      Type of relation between terms.
+    }
+  }
+   compare {
+     definition {
+       The related term is mentioned as something the current term is comparable to.
+     }
+   }
+   contrast {
+     definition {
+       The related term is mentioned as something the current term is to be contrasted with.
+     }
+   }
+   see {
+     definition {
+       The related term is mentioned as something to be consulted as providing further information on the current term.
+     }
+   }
 }

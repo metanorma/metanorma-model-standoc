@@ -1,6 +1,27 @@
 class Concept{
-  +term: String[0..1]
-  +xref: ReferenceToIdElement[0..1]
-  +eref: ReferenceToCitationElement[0..1]
-  +termref: ReferenceToTermbase[0..1]
+  definition {
+    Formally defined concept used in a StandardDocument, aligned to a definition.
+    That concept may be defined as a term within the current document, or it may
+    be defined externally.
+  }
+  +term: String[0..1] {
+    definition {
+      The name of the concept being defined.
+    }
+  }
+  +xref: ReferenceToIdElement[0..1] {
+    definition {
+      Link to a definition of the term in an element of the current document.
+    }
+  }
+  +eref: ReferenceToCitationElement[0..1] {
+    definition {
+      Link to a definition of the term in a bibliographic entry.
+    }
+  }
+  +termref: ReferenceToTermbase[0..1] {
+    definition {
+      Link to a definition of the term in a termbase.
+    }
+  }
 }

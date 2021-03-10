@@ -1,4 +1,16 @@
 class IcsType {
-  +code: String
-  +text: String[0..1]
+  definition {
+    Classification taken from the International Classification of Standards. 
+    ICS is defined by ISO here -- https://www.iso.org/publication/PUB100033.html
+  }
+  +code: String {
+    definition {
+      Classification code taken from the ICS.
+    }
+  }
+  +text: String[0..1] {
+    definition {
+      Text string associated with the classification code.
+    }
+  }
 }

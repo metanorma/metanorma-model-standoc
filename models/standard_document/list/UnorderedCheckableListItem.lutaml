@@ -1,4 +1,7 @@
 class UnorderedCheckableListItem {
+  definition {
+      List item for unordered lists for standards documents.
+  }
   +checkbox: Boolean[0..1] {
     definition {
       Include a checkbox for the list item.

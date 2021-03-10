@@ -1,3 +1,10 @@
 class StandardUnorderedList {
-  +listitem: UnorderedCheckableListItem[0..*]
+  definition {
+    Unordered list for standards documents.
+  }
+  +listitem: UnorderedCheckableListItem[0..*] {
+    definition {
+      List item for standards documents.
+    }
+  }
 }

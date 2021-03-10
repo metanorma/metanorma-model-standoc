@@ -1,3 +1,11 @@
 class ClauseHierarchicalSection{
-  +subsections: ClauseHierarchicalSection[0..*]
+  definition {
+    Clauses in which all textual content belongs in a strict clause hierarchy. such that no blocks of text
+    are siblings to subclauses.
+  }
+  +subsections: ClauseHierarchicalSection[0..*] {
+    definition {
+      Subclauses which are mutually exclusive with text content.
+    }
+  }
 }
