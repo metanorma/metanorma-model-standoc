@@ -29,17 +29,16 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby }}
 
-      - name: Update gems
-        run: |
-          sudo gem install lutaml
-          sudo gem install lutaml-uml
-
       - name: Install GraphViz macOS
         run: brew install graphviz
 
+      - name: Install gems
+        run: |
+          sudo gem install lutaml
+
       - name: Generate diagrams
         run: |
-          make
+          make clean all
 
   tests-passed:
     needs: test-macos
