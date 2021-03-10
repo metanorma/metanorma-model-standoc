@@ -1,20 +1,20 @@
 
 diagram StandardDoc_Blocks_New {
 
-  include model/basic_document/BasicDocument.lutaml
-  include model/basic_document/block/BasicBlockNoNotes.lutaml
-  include model/standard_document/block/AmendBlock.lutaml
-  include model/standard_document/block/AutoNumber.lutaml
-  include model/standard_document/block/ImageMapBlock.lutaml
-  include model/relaton/BibItemLocality.lutaml
-  include model/standard_document/block/ChangeType.lutaml
-  include model/standard_document/block/ElementName.lutaml
-  include model/standard_document/block/SvgMapBlock.lutaml
-  include model/standard_document/block/SvgTargetType.lutaml
-  include model/standard_document/block/ImageMapAreaType.lutaml
-  include model/standard_document/block/ImageMapAreaTypeType.lutaml
-  include model/standard_document/block/ImageMapCoords.lutaml
-  include model/standard_document/block/ImageMapRadius.lutaml
+  include ../models/basic_document/BasicDocument.lutaml
+  include ../models/basic_document/block/BasicBlockNoNotes.lutaml
+  include ../models/standard_document/block/AmendBlock.lutaml
+  include ../models/standard_document/block/AutoNumber.lutaml
+  include ../models/standard_document/block/ImageMapBlock.lutaml
+  include ../models/relaton/BibItemLocality.lutaml
+  include ../models/standard_document/block/ChangeType.lutaml
+  include ../models/standard_document/block/ElementName.lutaml
+  include ../models/standard_document/block/SvgMapBlock.lutaml
+  include ../models/standard_document/block/SvgTargetType.lutaml
+  include ../models/standard_document/block/ImageMapAreaType.lutaml
+  include ../models/standard_document/block/ImageMapAreaTypeType.lutaml
+  include ../models/standard_document/block/ImageMapCoords.lutaml
+  include ../models/standard_document/block/ImageMapRadius.lutaml
 
   association {
     owner BasicDocument

@@ -1,23 +1,23 @@
 diagram StandardDoc_StandardDocument {
 
-  include model/basic_document/BasicDocument.lutaml
+  include ../models/basic_document/BasicDocument.lutaml
 
-  include model/basic_document/refs/ReferenceElement.lutaml
-  include model/basic_document/refs/ReferenceToCitationElement.lutaml
-  include model/basic_document/refs/ReferenceToIdElement.lutaml
+  include ../models/basic_document/refs/ReferenceElement.lutaml
+  include ../models/basic_document/refs/ReferenceToCitationElement.lutaml
+  include ../models/basic_document/refs/ReferenceToIdElement.lutaml
 
-  include model/standard_document/refs/ReferenceToTermbase.lutaml
-  include model/standard_document/refs/ReferenceToTerm.lutaml
+  include ../models/standard_document/refs/ReferenceToTermbase.lutaml
+  include ../models/standard_document/refs/ReferenceToTerm.lutaml
 
-  include model/basic_document/elements/PageBreakElement.lutaml
-  include model/standard_document/elements/StandardPageBreakElement.lutaml
-  include model/standard_document/elements/OrientationType.lutaml
+  include ../models/basic_document/elements/PageBreakElement.lutaml
+  include ../models/standard_document/elements/StandardPageBreakElement.lutaml
+  include ../models/standard_document/elements/OrientationType.lutaml
 
-  include model/standard_document/StandardDocument.lutaml
-  include model/standard_document/StandardDocumentType.lutaml
+  include ../models/standard_document/StandardDocument.lutaml
+  include ../models/standard_document/StandardDocumentType.lutaml
 
-  include model/standard_document/sections/MiscContainer.lutaml
-  include model/standard_document/sections/BoilerplateType.lutaml
+  include ../models/standard_document/sections/MiscContainer.lutaml
+  include ../models/standard_document/sections/BoilerplateType.lutaml
 
   association {
     owner BasicDocument

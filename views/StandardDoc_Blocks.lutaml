@@ -1,37 +1,37 @@
 diagram StandardDoc_Blocks {
 
-  include model/basic_document/BasicDocument.lutaml
-  include model/basic_document/block/BasicBlockNoNotes.lutaml
+  include ../models/basic_document/BasicDocument.lutaml
+  include ../models/basic_document/block/BasicBlockNoNotes.lutaml
 
-  include model/basic_document/block/NoteBlock.lutaml
-  include model/basic_document/block/FigureBlock.lutaml
-  include model/basic_document/block/SourcecodeBlock.lutaml
-  include model/basic_document/block/FormulaBlock.lutaml
-  include model/basic_document/block/ExampleBlock.lutaml
-  include model/basic_document/block/ParagraphBlock.lutaml
-  include model/basic_document/block/QuoteBlock.lutaml
-  include model/basic_document/block/AdmonitionBlock.lutaml
-  include model/basic_document/block/TableBlock.lutaml
+  include ../models/basic_document/block/NoteBlock.lutaml
+  include ../models/basic_document/block/FigureBlock.lutaml
+  include ../models/basic_document/block/SourcecodeBlock.lutaml
+  include ../models/basic_document/block/FormulaBlock.lutaml
+  include ../models/basic_document/block/ExampleBlock.lutaml
+  include ../models/basic_document/block/ParagraphBlock.lutaml
+  include ../models/basic_document/block/QuoteBlock.lutaml
+  include ../models/basic_document/block/AdmonitionBlock.lutaml
+  include ../models/basic_document/block/TableBlock.lutaml
 
-  include model/basic_document/list/List.lutaml
-  include model/basic_document/list/UnorderedList.lutaml
-  include model/basic_document/list/DefinitionList.lutaml
-  include model/basic_document/list/ListItem.lutaml
+  include ../models/basic_document/list/List.lutaml
+  include ../models/basic_document/list/UnorderedList.lutaml
+  include ../models/basic_document/list/DefinitionList.lutaml
+  include ../models/basic_document/list/ListItem.lutaml
 
-  include model/standard_document/block/StandardNoteBlock.lutaml
-  include model/standard_document/block/StandardTableBlock.lutaml
-  include model/standard_document/block/TableCol.lutaml
-  include model/standard_document/block/StandardFigureBlock.lutaml
-  include model/standard_document/block/StandardSourcecodeBlock.lutaml
-  include model/standard_document/block/StandardFormulaBlock.lutaml
-  include model/standard_document/block/StandardExampleBlock.lutaml
-  include model/standard_document/block/StandardParagraphBlock.lutaml
-  include model/standard_document/block/StandardQuoteBlock.lutaml
-  include model/standard_document/block/StandardAdmonitionBlock.lutaml
+  include ../models/standard_document/block/StandardNoteBlock.lutaml
+  include ../models/standard_document/block/StandardTableBlock.lutaml
+  include ../models/standard_document/block/TableCol.lutaml
+  include ../models/standard_document/block/StandardFigureBlock.lutaml
+  include ../models/standard_document/block/StandardSourcecodeBlock.lutaml
+  include ../models/standard_document/block/StandardFormulaBlock.lutaml
+  include ../models/standard_document/block/StandardExampleBlock.lutaml
+  include ../models/standard_document/block/StandardParagraphBlock.lutaml
+  include ../models/standard_document/block/StandardQuoteBlock.lutaml
+  include ../models/standard_document/block/StandardAdmonitionBlock.lutaml
 
-  include model/standard_document/list/StandardUnorderedList.lutaml
-  include model/standard_document/list/UnorderedCheckableListItem.lutaml
-  include model/standard_document/list/StandardDefinitionList.lutaml
+  include ../models/standard_document/list/StandardUnorderedList.lutaml
+  include ../models/standard_document/list/UnorderedCheckableListItem.lutaml
+  include ../models/standard_document/list/StandardDefinitionList.lutaml
 
   association {
     owner BasicDocument

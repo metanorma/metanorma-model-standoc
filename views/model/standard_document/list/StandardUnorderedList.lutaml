@@ -1,3 +1,0 @@
-class StandardUnorderedList {
-  +listitem: UnorderedCheckableListItem[0..*]
-}
