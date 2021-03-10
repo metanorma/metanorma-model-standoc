@@ -1,4 +1,9 @@
 enum ChangeType <<enumeration>>{
+  unstructured {
+    definition {
+      The type of change described in AmendBlock.
+    }
+  }
   add
   modify
   delete

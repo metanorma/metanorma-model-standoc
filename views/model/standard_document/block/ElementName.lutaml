@@ -1,4 +1,9 @@
 enum ElementName <<enumeration>>{
+  unstructured {
+    definition {
+      The classes of block subject to autonumbering within an AmendBlock newcontent element.
+    }
+  }
   requirement
   recommendation
   permission

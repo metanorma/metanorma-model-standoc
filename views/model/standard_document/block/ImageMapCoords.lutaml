@@ -1,4 +1,12 @@
 class ImageMapCoords {
-  +x: Float
-  +y: Float
+  definition {
+  }
+  +x: Float {
+    definition {
+    }
+  }
+  +y: Float {
+    definition {
+    }
+  }
 }

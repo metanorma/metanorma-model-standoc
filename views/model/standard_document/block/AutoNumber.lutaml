@@ -1,4 +1,16 @@
 class AutoNumber {
-  +type: ElementName
-  +value: String
+  definition {
+    Specification of how blocks of a given class should be autonumbered
+    within an AmendBlock newcontent element.
+  }
+  +type: ElementName {
+    definition {
+      The class of block to apply autonumbering to within an AmendBlock newcontent element.
+    }
+  }
+  +value: String {
+    definition {
+      The starting value of numbering for the blocks with that class.
+    }
+  }
 }

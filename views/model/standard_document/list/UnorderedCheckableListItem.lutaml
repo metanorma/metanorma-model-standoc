@@ -1,4 +1,12 @@
 class UnorderedCheckableListItem {
-  +checkbox: Boolean
-  +checkedcheckbox: Boolean
+  +checkbox: Boolean[0..1] {
+    definition {
+      Include a checkbox for the list item.
+    }
+  }
+  +checkedcheckbox: Boolean[0..1] {
+    definition {
+      Check the checkbox for the list item.
+    }
+  }
 }

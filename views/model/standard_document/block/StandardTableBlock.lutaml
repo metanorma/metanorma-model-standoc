@@ -1,7 +1,27 @@
 class StandardTableBlock {
-  +width: String[0..1]
-  +number: String[0..1]
-  +keep-lines-together: Boolean[0..1]
-  +keep-with-next: Boolean[0..1]
-  +colgroup: TableCol[0..*]
+  +width: String[0..1] {
+    definition {
+      Width of the table block in rendering.
+    }
+  }
+  +number: String[0..1] {
+    definition {
+      Override the numbering of this block in numbering.
+    }
+  }
+  +keep-lines-together: Boolean[0..1] {
+    definition {
+      Do not permit a page break between the lines of the block in paged media.
+    }
+  }
+  +keep-with-next: Boolean[0..1] {
+    definition {
+      Keep this block on the same page as the following block in paged media.
+    }
+  }
+  +colgroup: TableCol[0..*] {
+    definition {
+      The widths of the columns in the table.
+    }
+  }
 }
