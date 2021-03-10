@@ -1,5 +1,32 @@
 class StandardReferencesSection{
-  normative: Boolean[0..1]
-  references: <<Bibliography>> BibliographicItem[0..*]
-  note: <<BasicDocument>> ParagraphBlock[0..*]
+  definition {
+  The `StandardReferencesSection` class within StandardDocument
+  is used to represent a bibliography section.
+  It is used to collate references within the document, where
+  there could be one or more of such sections within a document.
+
+  For example, some standardization documents differentiate
+  normative or informative references, some split references into
+  sections organized by concept relevance.
+
+  Similar to the `ReferencesSection` of the `BasicDocument` model,
+  they are leaf nodes which contain zero or more
+  bibliographical references (as modelled in Relaton), along with
+  any prefatory text.
+  }
+  normative: Boolean[0..1] {
+    definition {
+      Whether the references in the current section are normative or informative for the document.
+    }
+  }
+  references: <<Bibliography>> BibliographicItem[0..*] {
+    definition {
+      Bibliographic items cited in the document.
+    }
+  }
+  note: <<BasicDocument>> ParagraphBlock[0..*] {
+    definition {
+      Annotations accompanying bibliographic items.
+    }
+  }
 }

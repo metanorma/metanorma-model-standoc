@@ -1,4 +1,17 @@
 enum StandardDocumentType <<enumeration>> {
-   semantic
-   presentation
+   unstructured {
+     definition {
+       Type of standards document representation.
+     }
+   }
+   semantic {
+     definition {
+       Standards document representation representing the semantics of the document.
+     }
+   }
+   presentation {
+     definition {
+       Standards document representation denormalised to prioritise rendering concerns for the document.
+     }
+   }
 }

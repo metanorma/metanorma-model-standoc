@@ -1,3 +1,10 @@
 class StandardHierarchicalSection{
-  +subsections: StandardSection[0..*]
+  definition {
+    A hierarchical section containing other sections, within a StandardDocument.
+  }
+  +subsections: StandardSection[0..*] {
+    definition {
+      Subclauses of the section.
+    }
+  }
 }

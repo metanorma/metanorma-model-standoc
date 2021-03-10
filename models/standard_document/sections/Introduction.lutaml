@@ -1,2 +1,5 @@
 class Introduction {
+  definition {
+    Introduction of document.
+  }
 }

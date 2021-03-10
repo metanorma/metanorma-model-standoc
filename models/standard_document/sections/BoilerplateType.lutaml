@@ -1,6 +1,32 @@
 class BoilerplateType {
-  +copyright: HierarchicalSection[0..1]
-  +license: HierarchicalSection[0..1]
-  +legal: HierarchicalSection[0..1]
-  +feedback: HierarchicalSection[0..1]
+  definition {
+    Content addressing legal and licensing concerns around the document,
+    outside of the main flow of document content.
+  }
+  +copyright: HierarchicalSection[0..1] {
+    definition {
+      Preset templated text provided by the standardization body,
+      describing the copyright status of the document.
+    }
+  }
+  +license: HierarchicalSection[0..1] {
+    definition {
+      Preset templated text provided by the standardization body,
+      providing the licensing terms for the document content.
+    }
+  }
+  +legal: HierarchicalSection[0..1] {
+    definition {
+      Preset templated text provided by the standardization body,
+      providing the legal constraints and considerations around use of
+      the document.
+    }
+  }
+  +feedback: HierarchicalSection[0..1] {
+    definition {
+      Preset templated text provided by the standardization body,
+      providing information on where feedback on the document may be
+      addressed to.
+    }
+  }
 }

@@ -1,3 +1,8 @@
 class StandardPageBreakElement {
-   +orientation: OrientationType[0..1]
+   +orientation: OrientationType[0..1] {
+     definition {
+       Orientation of pages following this page break, until the next page break that
+       gives an explicit page orientation.
+     }
+   }
 }

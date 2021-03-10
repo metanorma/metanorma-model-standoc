@@ -1,2 +1,5 @@
 class Foreword {
+  definition {
+    Foreword of document.
+  }
 }

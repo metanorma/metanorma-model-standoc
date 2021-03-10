@@ -1,4 +1,9 @@
 enum OrientationType <<enumeration>>{
+  unstructured {
+     definition {
+       Orientation of pages in a section of text in paged media.
+     }
+   }
   portrait
   landscape
 }

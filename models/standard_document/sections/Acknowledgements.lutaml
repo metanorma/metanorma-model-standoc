@@ -1,2 +1,5 @@
 class Acknowledgements {
+  definition {
+    Acknowledgements for the document.
+  }
 }

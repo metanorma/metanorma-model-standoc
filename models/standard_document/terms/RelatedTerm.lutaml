@@ -1,4 +1,11 @@
 class RelatedTerm {
-  +type: RelatedTermType
-  +content: <<BasicDocument>> LocalizedString
+  definition {
+    Term related to the current term.
+  }
+  +type: RelatedTermType {
+    Type of relation of term applicable.
+  }
+  +content: <<BasicDocument>> LocalizedString {
+    Label of term related to the current term.
+  }
 }

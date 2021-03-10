@@ -1,13 +1,82 @@
 class Term <<Term>> {
-  +id: String[0..1]
-  +preferred: <<BasicDocument>> LocalizedString[1..*]
-  +admitted: <<BasicDocument>> LocalizedString[0..*]
-  +related: RelatedTerm[0..*]
-  +deprecates: <<BasicDocument>> LocalizedString[0..*]
-  +domain: <<BasicDocument>> LocalizedString[0..1]
-  +grammar: <<BasicDocument>> LocalizedString[0..*]
-  +definition: <<BasicDocument>> Definition[1..*]
-  +note: <<BasicDocument>> ParagraphBlock[0..*]
-  +example: <<BasicDocument>> ParagraphBlock[0..*]
-  +source: TermSource[0..*]
+  definition {
+  A term (`Term`) represents a terminology entry with
+  its definition.
+
+  NOTE: The `Term` definition fully aligns with the structure
+  and requirements of terms in ISO/IEC DIR 2, 16.6.
+  }
+  +id: String[0..1] {
+    definition {
+      An optional identifier for the term, to be used in
+      cross-references.
+    }
+  }
+  +preferred: <<BasicDocument>> LocalizedString[1..*] {
+    definition {
+      One or more names under which the term being defined
+      is canonically known.
+    }
+  }
+  +admitted: <<BasicDocument>> LocalizedString[0..*] {
+    definition {
+      Zero or more names which are acceptable synonyms for
+      the term being defined.
+    }
+  }
+  +related: RelatedTerm[0..*] {
+    definition {
+      Zero or more names which are related to the term being
+      defined. Each has a type, indicating how the term is related;
+      permitted values are compare (for "see also" references to terms),
+      contrast (for terms that illuminate the term definition as what it
+      is not), see (if this is a deprecated term, to reference the
+      preferred term)
+    }
+  }
+  +deprecates: <<BasicDocument>> LocalizedString[0..*] {
+    definition {
+      Zero or more names which are deprecated synonyms for
+      the term being defined.
+    }
+  }
+  +domain: <<BasicDocument>> LocalizedString[0..1] {
+    definition {
+      An optional semantic domain for the term being defined,
+      in case the term is ambiguous between several semantic domains.
+    }
+  }
+  +grammar: <<BasicDocument>> LocalizedString[0..*] {
+    definition {
+      Zero or more abbreviations giving grammatical
+      information about the term (e.g. part of speech, gender).
+    }
+  }
+  +definition: <<BasicDocument>> Definition[1..*] {
+    definition {
+      The definition of the term applied in the current
+      document.
+    }
+  }
+  +note: <<BasicDocument>> ParagraphBlock[0..*] {
+    definition {
+      Zero or more notes about the term.
+    }
+  }
+  +example: <<BasicDocument>> ParagraphBlock[0..*] {
+    definition {
+      Zero or more examples of how the term is to be used.
+    }
+  }
+  +source: TermSource[0..*] {
+    definition {
+      Zero or more bibliographical sources for the term. These
+      include the `origin` of the term, which is its bibliographical
+      citation (as defined in Relaton); the `status` of the
+      definition (whether `identical` to the definition given in the
+      origin cited, or `modified`); and, if the definition is modified, a
+      description of the `modification` to the definition applied for
+      this document.
+    }
+  }
 }

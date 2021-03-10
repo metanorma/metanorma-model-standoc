@@ -1,3 +1,15 @@
 class TermsSection{
-  +terms: <<Term>>TermCollection
+  definition {
+  Term sections (`TermsSection`) give elaborated definitions of terms used in
+  a standardization document.
+
+  NOTE: The `TermsSection` definition fully aligns with the structure
+  and requirements of the "Terms and definition" section given in
+  ISO/IEC DIR 2.
+  }
+  +terms: <<Term>>TermCollection {
+    definition {
+      Terms defined in the term section.
+    }
+  }
 }

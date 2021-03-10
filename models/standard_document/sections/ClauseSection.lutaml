@@ -1,3 +1,10 @@
 class ClauseSection{
-  +type: String[0..1]
+  definition {
+    A numbered clause constituting part of the main body of a StandardDocument.
+  }
+  +type: String[0..1] {
+    definition {
+      Semantic class of the numbered clause.
+    }
+  }
 }

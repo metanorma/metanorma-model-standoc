@@ -1,13 +1,62 @@
 class StructuredIdentifierType {
-  +type: String[0..1]
-  +agency: String[1..*]
-  +class: String[0..1]
-  +docnumber: String
-  +partnumber: String[0..1]
-  +edition: String[0..1]
-  +version: String[0..1]
-  +supplementtype: String[0..1]
-  +supplementnumber: String[0..1]
-  +year: String[0..1]
-  +language: String[0..1]
+  definition {
+    Representation of the identifier for a StandardDocument, giving its individual semantic components.
+  }
+  +type: String[0..1] {
+    definition {
+      Representation in the identifier of the type of standard document.
+    }
+  }
+  +agency: String[1..*] {
+    definition {
+      Representation in the identifier of the agency responsible for the standard document.
+    }
+  }
+  +class: String[0..1] {
+    definition {
+      Representation in the identifier of the class of standard document (as a subclass of the document type).
+    }
+  }
+  +docnumber: String {
+    definition {
+      Representation in the identifier of the (typically numeric) component uniquely identifying the document
+      or standard. If a document includes parts or supplements, the docnumber identifies the document as whole,
+      and not those document components.
+    }
+  }
+  +partnumber: String[0..1] {
+    definition {
+      Representation in the identifier of the document part, if this is a document part.
+    }
+  }
+  +edition: String[0..1] {
+    definition {
+      Representation in the identifier of the document edition, if this is a published document.
+    }
+  }
+  +version: String[0..1] {
+    definition {
+      Representation in the identifier of the document version, which can include document drafts.
+    }
+  }
+  +supplementtype: String[0..1] {
+    definition {
+      Representation in the identifier of the type of document supplement, if this is a document supplement.
+    }
+  }
+  +supplementnumber: String[0..1] {
+    definition {
+      Representation in the identifier of the document supplement, if this is a document supplement.
+    }
+  }
+  +year: String[0..1] {
+    definition {
+      Representation in the identifier of the year of publication or issuance of the document.
+    }
+  }
+  +language: String[0..1] {
+    definition {
+      Representation in the identifier of the language of the document.
+    }
+  }
 }
