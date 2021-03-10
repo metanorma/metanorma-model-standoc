@@ -1,12 +1,15 @@
 class ImageMapCoords {
   definition {
+    Coordinates of an image map.
   }
   +x: Float {
     definition {
+      X-coordinate of the image map.
     }
   }
   +y: Float {
     definition {
+      Y-coordinate of the image map.
     }
   }
 }
