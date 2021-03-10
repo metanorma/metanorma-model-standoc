@@ -40,7 +40,4 @@ diagram StandardDoc_Terms {
     member Definition
     owner_type direct
   }
-
-
-
 }
