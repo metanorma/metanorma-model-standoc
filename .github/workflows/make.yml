@@ -4,47 +4,45 @@ name: make
 
 on:
   push:
-    branches: [ master, main  ]
+    branches: [ master, main ]
     tags: [ v* ]
   pull_request:
 
 jobs:
-  make:
-    name: Test on PlantUML ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
+  test-macos:
+    name: Test on Ruby ${{ matrix.ruby }} macOS
+    runs-on: macos-latest
+    continue-on-error: ${{ matrix.experimental }}
     strategy:
       fail-fast: false
       matrix:
-        os: [ ubuntu-latest, windows-latest, macos-latest ]
-
+        ruby: [ '2.6', '2.5', '2.4' ]
+        experimental: [false]
+        include:
+          - ruby: '2.7'
+            experimental: true
     steps:
       - uses: actions/checkout@master
 
-      - name: install plantuml ubuntu
-        if: matrix.os == 'ubuntu-latest'
-        uses: nick-invision/retry@v1
+      - name: Use Ruby
+        uses: actions/setup-ruby@v1
         with:
-          polling_interval_seconds: 5
-          timeout_minutes: 5
-          max_attempts: 3
-          command: >
-            sudo apt-get update -y && sudo bash -c
-            "curl -L https://github.com/metanorma/plantuml-install/raw/master/ubuntu.sh | bash"
+          ruby-version: ${{ matrix.ruby }}
 
-      - if: matrix.os == 'macos-latest'
-        run: brew install plantuml
+      - name: Update gems
+        run: |
+          sudo gem install lutaml
+          sudo gem install lutaml-uml
 
-      - if: matrix.os == 'windows-latest'
-        run: cinst -y plantuml
+      - name: Install GraphViz macOS
+        run: brew install graphviz
 
-      - if: matrix.os != 'windows-latest'
-        run:  make clean all
-
-      - if: matrix.os == 'windows-latest'
-        run: make clean all SHELL=cmd
+      - name: Generate diagrams
+        run: |
+          make
 
   tests-passed:
-    needs: make
+    needs: test-macos
     runs-on: ubuntu-latest
     steps:
       - name: Trigger tests passed event
