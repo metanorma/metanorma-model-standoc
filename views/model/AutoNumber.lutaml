@@ -1,0 +1,4 @@
+class AutoNumber {
+  +type: ElementName
+  +value: String
+}
