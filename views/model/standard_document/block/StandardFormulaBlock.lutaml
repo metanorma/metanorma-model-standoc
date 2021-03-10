@@ -1,0 +1,5 @@
+class StandardFormulaBlock {
+  +number: String[0..1]
+  +keep-lines-together: Boolean[0..1]
+  +keep-with-next: Boolean[0..1]
+}

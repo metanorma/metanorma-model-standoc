@@ -1,0 +1,5 @@
+class StandocReferenceToIdElement {
+  +case: XrefCaseType[0..1]
+  +droploc: Boolean[0..1]
+  +to: IdElement[0..1]
+}

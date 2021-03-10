@@ -1,0 +1,5 @@
+class TermSource <<Term>>{
+  +status: TermOriginStatus
+  +origin: <<Bibliography>> Citation
+  +modification: <<BasicDocument>> ParagraphBlock[0..1]
+}

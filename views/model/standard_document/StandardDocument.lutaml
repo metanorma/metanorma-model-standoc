@@ -1,0 +1,12 @@
+class StandardDocument {
+  +bibdata: StandardBibData
+  +misc: MiscContainer[0..1]
+  +boilerplate: BoilerplateType[0..1]
+  +preface: StandardHierarchicalSection[0..*]
+  +sections: StandardHierarchicalSection[1..*]
+  +annex: StandardHierarchicalSection[0..*]
+  +bibliography: StandardReferencesSection[0..*]
+  +index: StandardHierarchicalSection[0..*]
+  +type: StandardDocumentType
+  +version: String
+}

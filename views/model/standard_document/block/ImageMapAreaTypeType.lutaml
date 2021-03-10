@@ -1,0 +1,6 @@
+enum ImageMapAreaTypeType <<enumeration>> {
+  rect
+  circle
+  ellipse
+  poly
+}

@@ -1,0 +1,4 @@
+class ImageMapCoords {
+  +x: Float
+  +y: Float
+}

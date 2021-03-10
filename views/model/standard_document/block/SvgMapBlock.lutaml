@@ -1,0 +1,5 @@
+class SvgMapBlock {
+  +source: String
+  +alt: String[0..1]
+  +target: SvgTargetType[0..*]
+}

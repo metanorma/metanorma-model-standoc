@@ -1,0 +1,3 @@
+class StandardPageBreakElement {
+   +orientation: OrientationType[0..1]
+}

@@ -1,0 +1,6 @@
+class Concept{
+  +term: String[0..1]
+  +xref: ReferenceToIdElement[0..1]
+  +eref: ReferenceToCitationElement[0..1]
+  +termref: ReferenceToTermbase[0..1]
+}

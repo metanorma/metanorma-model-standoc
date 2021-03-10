@@ -1,0 +1,5 @@
+enum ChangeType <<enumeration>>{
+  add
+  modify
+  delete
+}

@@ -1,0 +1,4 @@
+class UnorderedCheckableListItem {
+  +checkbox: Boolean
+  +checkedcheckbox: Boolean
+}

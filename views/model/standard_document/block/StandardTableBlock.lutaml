@@ -1,0 +1,7 @@
+class StandardTableBlock {
+  +width: String[0..1]
+  +number: String[0..1]
+  +keep-lines-together: Boolean[0..1]
+  +keep-with-next: Boolean[0..1]
+  +colgroup: TableCol[0..*]
+}

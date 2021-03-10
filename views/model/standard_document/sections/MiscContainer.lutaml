@@ -1,0 +1,3 @@
+class MiscContainer {
+  +element: Any[0..*]
+}

@@ -1,0 +1,5 @@
+class ReferenceToTermbase {
+  +base: String
+  +target: String
+  +text: TextElement
+}

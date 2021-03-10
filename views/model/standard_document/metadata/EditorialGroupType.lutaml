@@ -1,0 +1,3 @@
+class EditorialGroupType {
+  +technicalcommittee: TechnicalCommitteeType[1..*]
+}

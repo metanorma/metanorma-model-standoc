@@ -1,0 +1,5 @@
+class StandardDefinitionList {
+  +keep-lines-together: Boolean[0..1]
+  +keep-with-next: Boolean[0..1]
+  +key: Boolean[0..1]
+}

@@ -1,0 +1,4 @@
+class StandardQuoteBlock {
+  +keep-lines-together: Boolean[0..1]
+  +keep-with-next: Boolean[0..1]
+}

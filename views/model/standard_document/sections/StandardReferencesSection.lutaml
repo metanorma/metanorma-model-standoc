@@ -1,0 +1,5 @@
+class StandardReferencesSection{
+  normative: Boolean[0..1]
+  references: <<Bibliography>> BibliographicItem[0..*]
+  note: <<BasicDocument>> ParagraphBlock[0..*]
+}

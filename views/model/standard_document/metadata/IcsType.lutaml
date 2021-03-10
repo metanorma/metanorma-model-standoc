@@ -1,0 +1,4 @@
+class IcsType {
+  +code: String
+  +text: String[0..1]
+}

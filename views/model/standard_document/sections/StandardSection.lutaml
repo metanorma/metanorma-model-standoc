@@ -1,0 +1,5 @@
+class StandardSection {
+  +status: NormativeType
+  +amend: AmendBlock[0..1]
+  +number: String[0..1]
+}

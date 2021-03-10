@@ -1,0 +1,7 @@
+class StandardBibDataExtensionType {
+  +doctype: String
+  +doctype_abbreviation: String[0..1]
+  +editorialgroup: EditorialGroupType[0..1]
+  +ics: IcsType[0..*]
+  +structuredidentifier: StructuredIdentifierType[0..*]
+}

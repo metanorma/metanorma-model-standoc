@@ -1,0 +1,6 @@
+class ImageMapAreaType {
+  +type: ImageMapAreaTypeType
+  +ReferenceElement
+  +coords: ImageMapCoords[1..*]
+  +radius: ImageMapRadius[0..1]
+}

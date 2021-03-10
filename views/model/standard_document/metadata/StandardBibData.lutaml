@@ -1,0 +1,3 @@
+class StandardBibData {
+  +ext: StandardBibDataExtensionType
+}

@@ -1,68 +1,23 @@
 diagram StandardDoc_StandardDocument {
 
-  class BasicDocument <<BasicDocument>> {
+  include model/basic_document/BasicDocument.lutaml
 
-  }
+  include model/basic_document/refs/ReferenceElement.lutaml
+  include model/basic_document/refs/ReferenceToCitationElement.lutaml
+  include model/basic_document/refs/ReferenceToIdElement.lutaml
 
-  class ReferenceElement <<BasicDocument>> {
-  }
+  include model/standard_document/refs/ReferenceToTermbase.lutaml
+  include model/standard_document/refs/ReferenceToTerm.lutaml
 
-  class ReferenceToTerm {
-     +source: ReferenceToTermSource
-     +term: String[0..*]
-  }
+  include model/basic_document/elements/PageBreakElement.lutaml
+  include model/standard_document/elements/StandardPageBreakElement.lutaml
+  include model/standard_document/elements/OrientationType.lutaml
 
-  class ReferenceToCitationElement <<BasicDocument>> {
-  }
+  include model/standard_document/StandardDocument.lutaml
+  include model/standard_document/StandardDocumentType.lutaml
 
-  class ReferenceToIdElement <<BasicDocument>> {
-  }
-
-  class ReferenceToTermbase {
-    +termbase: String
-    +target: String[0..1]
-  }
-
-  class PageBreakElement <<BasicDocument>>{
-  }
-
-  class StandardPageBreakElement {
-     +orientation: OrientationType[0..1]
-  }
-
-  enum OrientationType <<enumeration>>{
-    portrait
-    landscape
-  }
-
-  class StandardDocument {
-    +bibdata: StandardBibData
-    +misc: MiscContainer[0..1]
-    +boilerplate: BoilerplateType[0..1]
-    +preface: StandardHierarchicalSection[0..*]
-    +sections: StandardHierarchicalSection[1..*]
-    +annex: StandardHierarchicalSection[0..*]
-    +bibliography: StandardReferencesSection[0..*]
-    +index: StandardHierarchicalSection[0..*]
-    +type: StandardDocumentType
-    +version: String
-  }
-
-  class MiscContainer {
-    +element: Any[0..*]
-  }
-
-  class BoilerplateType {
-    + copyright: HierarchicalSection[0..1]
-    + license: HierarchicalSection[0..1]
-    + legal: HierarchicalSection[0..1]
-    + feedback: HierarchicalSection[0..1]
-  }
-
-  enum StandardDocumentType <<enumeration>> {
-     semantic
-     presentation
-  }
+  include model/standard_document/sections/MiscContainer.lutaml
+  include model/standard_document/sections/BoilerplateType.lutaml
 
   association {
     owner BasicDocument
