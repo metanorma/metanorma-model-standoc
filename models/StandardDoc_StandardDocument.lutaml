@@ -1,67 +1,69 @@
 diagram StandardDoc_StandardDocument {
-  
-  
-  
+
   class BasicDocument <<BasicDocument>> {
-  
+
   }
-  
+
   class ReferenceElement <<BasicDocument>> {
   }
-  
+
   class ReferenceToTerm {
      +source: ReferenceToTermSource
      +term: String[0..*]
   }
-  
+
   class ReferenceToCitationElement <<BasicDocument>> {
   }
+
   class ReferenceToIdElement <<BasicDocument>> {
   }
-  
+
   class ReferenceToTermbase {
-      +termbase: String
-      +target: String[0..1]
+    +termbase: String
+    +target: String[0..1]
   }
-  
+
   class PageBreakElement <<BasicDocument>>{
   }
-  
+
   class StandardPageBreakElement {
      +orientation: OrientationType[0..1]
   }
-  
+
   enum OrientationType <<enumeration>>{
-      portrait
-      landscape
+    portrait
+    landscape
   }
-  
+
   class StandardDocument {
-      +bibdata: StandardBibData
-      +boilerplate: BoilerplateType[0..1]
-      +preface: StandardHierarchicalSection[0..*]
-      +sections: StandardHierarchicalSection[1..*]
-      +annex: StandardHierarchicalSection[0..*]
-      +bibliography: StandardReferencesSection[0..*]
-      +type: StandardDocumentType
-      +version: String
+    +bibdata: StandardBibData
+    +misc: MiscContainer[0..1]
+    +boilerplate: BoilerplateType[0..1]
+    +preface: StandardHierarchicalSection[0..*]
+    +sections: StandardHierarchicalSection[1..*]
+    +annex: StandardHierarchicalSection[0..*]
+    +bibliography: StandardReferencesSection[0..*]
+    +index: StandardHierarchicalSection[0..*]
+    +type: StandardDocumentType
+    +version: String
   }
-  
+
+  class MiscContainer {
+    +element: Any[0..*]
+  }
+
   class BoilerplateType {
-      + copyright: HierarchicalSection[0..1]
-      + license: HierarchicalSection[0..1]
-      + legal: HierarchicalSection[0..1]
-      + feedback: HierarchicalSection[0..1]
+    + copyright: HierarchicalSection[0..1]
+    + license: HierarchicalSection[0..1]
+    + legal: HierarchicalSection[0..1]
+    + feedback: HierarchicalSection[0..1]
   }
-  
+
   enum StandardDocumentType <<enumeration>> {
-       semantic
-       presentation
+     semantic
+     presentation
   }
-  
-  
-  
-  
+
   association {
     owner BasicDocument
     member StandardDocument
@@ -75,6 +77,11 @@ diagram StandardDoc_StandardDocument {
   association {
     owner StandardDocument
     member BoilerplateType
+    owner_type direct
+  }
+  association {
+    owner StandardDocument
+    member MiscContainer
     owner_type direct
   }
   association {
@@ -127,5 +134,5 @@ diagram StandardDoc_StandardDocument {
     member OrientationType
     owner_type direct
   }
-  
+
 }

@@ -1,71 +1,71 @@
 diagram StandardDoc_Sections {
-    
+
   class BasicSection <<BasicDocument>> {
   }
-  
+
   class HierarchicalSection <<BasicDocument>> {
   }
-  
+
   class StandardSection {
-      +status: NormativeType
-      +amend: AmendBlock[0..1]
+    +status: NormativeType
+    +amend: AmendBlock[0..1]
+    +number: String[0..1]
   }
-  
+
   class StandardHierarchicalSection{
-      +subsections: StandardSection[0..*]
+    +subsections: StandardSection[0..*]
   }
-  
-  class Abstract { 
+
+  class Abstract {
   }
-  class Foreword { 
+  class Foreword {
   }
-  class Introduction { 
+  class Introduction {
   }
-  class Acknowledgements { 
+  class Acknowledgements {
   }
-  
+
   class StandardContentSection{
-      +type: String[0..1]
+    +type: String[0..1]
   }
-  
+
   class ClauseSection{
-      +type: String[0..1]
+    +type: String[0..1]
   }
-  
+
   class ClauseHierarchicalSection{
-      +subsections: ClauseHierarchicalSection[0..*]
+    +subsections: ClauseHierarchicalSection[0..*]
   }
-  
+
   class TermsSection{
-      +terms: <<Term>>TermCollection
+    +terms: <<Term>>TermCollection
   }
-  
+
   class DefinitionSection{
-      +definitions: <<Term>>DefinitionCollection
+    +definitions: <<Term>>DefinitionCollection
   }
-  
+
   class AnnexSection{
-      +subsections: ClauseSection[0..*]
+    +subsections: ClauseSection[0..*]
   }
-  
+
   class StandardReferencesSection{
-      normative: Boolean[0..1]
-      references: <<Bibliography>>BibliographicItem[0..*]
-      note: <<BasicDocument>> ParagraphBlock[0..*]
+    normative: Boolean[0..1]
+    references: <<Bibliography>> BibliographicItem[0..*]
+    note: <<BasicDocument>> ParagraphBlock[0..*]
   }
-  
+
   enum NormativeType <<enumeration>>{
-      normative
-      informative
+    normative
+    informative
   }
-  
-  
+
   association {
     owner BasicSection
     member StandardSection
     owner_type inheritance
   }
-  
+
   association {
     owner StandardSection
     member NormativeType
@@ -91,13 +91,13 @@ diagram StandardDoc_Sections {
     member StandardReferencesSection
     owner_type inheritance
   }
-  
+
   association {
     owner StandardHierarchicalSection
     member StandardContentSection
     owner_type inheritance
   }
-  
+
   association {
     owner StandardContentSection
     member Abstract
@@ -118,7 +118,7 @@ diagram StandardDoc_Sections {
     member Acknowledgements
     owner_type inheritance
   }
-  
+
   association {
     owner ClauseSection
     member TermsSection
@@ -134,5 +134,5 @@ diagram StandardDoc_Sections {
     member ClauseHierarchicalSection
     owner_type inheritance
   }
-  
+
 }

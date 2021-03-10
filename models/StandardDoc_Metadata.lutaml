@@ -1,38 +1,52 @@
 diagram StandardDoc_Metadata {
-  
-  
+
   class BibDataExtensionType <<BasicDocument>> {
   }
-  
+
   class BibData <<BasicDocument>> {
   }
-  
+
   class StandardBibData {
-      +ext: StandardBibDataExtensionType
+    +ext: StandardBibDataExtensionType
   }
-  
+
   class StandardBibDataExtensionType {
-      +doctype: String
-      +doctype_abbreviation: String[0..1]
-      +structuredidentifier: StructuredIdentifierType[0..*]
+    +doctype: String
+    +doctype_abbreviation: String[0..1]
+    +editorialgroup: EditorialGroupType[0..1]
+    +ics: IcsType[0..*]
+    +structuredidentifier: StructuredIdentifierType[0..*]
   }
-  
+
+  class EditorialGroupType {
+    +technicalcommittee: TechnicalCommitteeType[1..*]
+  }
+
+  class TechnicalCommitteeType {
+    +number: Integer[0..1]
+    +type: String[0..1]
+    +text: String
+  }
+
+  class IcsType {
+    +code: String
+    +text: String[0..1]
+  }
+
   class StructuredIdentifierType {
-      +type: String[0..1]
-      +agency: String[1..*]
-      +class: String[0..1]
-      +docnumber: String
-      +partnumber: String[0..1]
-      +edition: String[0..1]
-      +version: String[0..1]
-      +supplementtype: String[0..1]
-      +supplementnumber: String[0..1]
-      +year: String[0..1]
-      +language: String[0..1]
+    +type: String[0..1]
+    +agency: String[1..*]
+    +class: String[0..1]
+    +docnumber: String
+    +partnumber: String[0..1]
+    +edition: String[0..1]
+    +version: String[0..1]
+    +supplementtype: String[0..1]
+    +supplementnumber: String[0..1]
+    +year: String[0..1]
+    +language: String[0..1]
   }
-  
-  
-  
+
   association {
     owner BibData
     member StandardBibData
@@ -53,5 +67,20 @@ diagram StandardDoc_Metadata {
     member StructuredIdentifierType
     owner_type direct
   }
-  
+  association {
+    owner StandardBibDataExtensionType
+    member IcsType
+    owner_type direct
+  }
+  association {
+    owner StandardBibDataExtensionType
+    member EditorialGroupType
+    owner_type direct
+  }
+  association {
+    owner EditorialGroupType
+    member TechnicalCommitteeType
+    owner_type direct
+  }
+
 }
