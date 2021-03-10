@@ -4,18 +4,22 @@ class ImageMapAreaType {
   }
   +type: ImageMapAreaTypeType {
     definition {
+      Type of an image map area of an image that is hyperlinked.
     }
   }
-  +ReferenceElement {
+  +element: ReferenceElement {
     definition {
+      Element that this image map area links to.
     }
   }
   +coords: ImageMapCoords[1..*] {
     definition {
+      Polygon defined shape of the image map area.
     }
   }
   +radius: ImageMapRadius[0..1] {
     definition {
+      Radius-defined shape of the image map area.
     }
   }
 }

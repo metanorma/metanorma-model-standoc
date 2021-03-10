@@ -1,12 +1,15 @@
 class ImageMapRadius {
   definition {
+    Radius of the image map.
   }
   +x: Float {
     definition {
+      X-coordinate of the center of the image map.
     }
   }
   +y: Float[0..1] {
     definition {
+      Y-coordinate of the center of the image map.
     }
   }
 }
