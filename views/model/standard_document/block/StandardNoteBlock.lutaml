@@ -1,10 +1,37 @@
 class StandardNoteBlock {
-  +keep-lines-together: Boolean[0..1]
-  +keep-with-next: Boolean[0..1]
-  +number: String[0..1]
-  +subsequence: String[0..1]
-  +unnumbered: Boolean[0..1]
-  +type: String[0..1]
+  +keep-lines-together: Boolean[0..1] {
+    definition {
+      Do not permit a page break between the lines of the block in paged media.
+    }
+  }
+  +keep-with-next: Boolean[0..1] {
+    definition {
+      Keep this block on the same page as the following block in paged media.
+    }
+  }
+  +number: String[0..1] {
+    definition {
+      Override the numbering of this block in numbering.
+    }
+  }
+  +subsequence: String[0..1] {
+    definition {
+      Define a subsequence for numbering of this block; e.g. if this block would be numbered
+      as 7, but it has a subsequence value of XYZ, this block, and all consecutive blocks
+      of the same class and with the same subsequence value, will be numbered consecutively
+      with the same number and in a subsequence: 7a, 7b, 7c etc.
+    }
+  }
+  +unnumbered: Boolean[0..1] {
+    definition {
+      Do not number this block in rendering.
+    }
+  }
+  +type: String[0..1] {
+    definition {
+      Semantic classification of note.
+    }
+  }
   +ul: UnorderedList[0..*]
   +ol: OrderedList[0..*]
   +dl: DefinitionList[0..*]

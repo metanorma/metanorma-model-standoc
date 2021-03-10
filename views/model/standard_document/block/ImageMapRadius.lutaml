@@ -1,4 +1,12 @@
 class ImageMapRadius {
-  +x: Float
-  +y: Float[0..1]
+  definition {
+  }
+  +x: Float {
+    definition {
+    }
+  }
+  +y: Float[0..1] {
+    definition {
+    }
+  }
 }

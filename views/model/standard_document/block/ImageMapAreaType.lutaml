@@ -1,6 +1,21 @@
 class ImageMapAreaType {
-  +type: ImageMapAreaTypeType
-  +ReferenceElement
-  +coords: ImageMapCoords[1..*]
-  +radius: ImageMapRadius[0..1]
+  definition {
+    Specification of an area of an image to be hyperlinked, as part of an image map.
+  }
+  +type: ImageMapAreaTypeType {
+    definition {
+    }
+  }
+  +ReferenceElement {
+    definition {
+    }
+  }
+  +coords: ImageMapCoords[1..*] {
+    definition {
+    }
+  }
+  +radius: ImageMapRadius[0..1] {
+    definition {
+    }
+  }
 }
