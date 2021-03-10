@@ -1,0 +1,13 @@
+class StructuredIdentifierType {
+  +type: String[0..1]
+  +agency: String[1..*]
+  +class: String[0..1]
+  +docnumber: String
+  +partnumber: String[0..1]
+  +edition: String[0..1]
+  +version: String[0..1]
+  +supplementtype: String[0..1]
+  +supplementnumber: String[0..1]
+  +year: String[0..1]
+  +language: String[0..1]
+}

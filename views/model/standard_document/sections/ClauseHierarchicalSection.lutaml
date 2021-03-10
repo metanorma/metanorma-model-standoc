@@ -1,0 +1,3 @@
+class ClauseHierarchicalSection{
+  +subsections: ClauseHierarchicalSection[0..*]
+}

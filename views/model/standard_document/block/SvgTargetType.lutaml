@@ -1,0 +1,4 @@
+class SvgTargetType {
+  +href: String
+  +ReferenceElement
+}

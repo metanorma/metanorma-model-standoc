@@ -1,0 +1,6 @@
+class TechnicalCommitteeType {
+  +number: Integer[0..1]
+  +type: String[0..1]
+  +text: String
+}
+

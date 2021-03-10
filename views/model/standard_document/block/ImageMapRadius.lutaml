@@ -1,0 +1,4 @@
+class ImageMapRadius {
+  +x: Float
+  +y: Float[0..1]
+}

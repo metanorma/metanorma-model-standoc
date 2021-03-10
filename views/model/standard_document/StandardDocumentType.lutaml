@@ -1,0 +1,4 @@
+enum StandardDocumentType <<enumeration>> {
+   semantic
+   presentation
+}

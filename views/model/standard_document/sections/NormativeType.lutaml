@@ -1,0 +1,4 @@
+enum NormativeType <<enumeration>>{
+  normative
+  informative
+}

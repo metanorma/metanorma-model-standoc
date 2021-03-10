@@ -1,0 +1,5 @@
+enum RelatedTermType <<enumeration>>{
+   compare
+   contrast
+   see
+}

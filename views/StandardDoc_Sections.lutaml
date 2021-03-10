@@ -1,64 +1,21 @@
 diagram StandardDoc_Sections {
 
-  class BasicSection <<BasicDocument>> {
-  }
-
-  class HierarchicalSection <<BasicDocument>> {
-  }
-
-  class StandardSection {
-    +status: NormativeType
-    +amend: AmendBlock[0..1]
-    +number: String[0..1]
-  }
-
-  class StandardHierarchicalSection{
-    +subsections: StandardSection[0..*]
-  }
-
-  class Abstract {
-  }
-  class Foreword {
-  }
-  class Introduction {
-  }
-  class Acknowledgements {
-  }
-
-  class StandardContentSection{
-    +type: String[0..1]
-  }
-
-  class ClauseSection{
-    +type: String[0..1]
-  }
-
-  class ClauseHierarchicalSection{
-    +subsections: ClauseHierarchicalSection[0..*]
-  }
-
-  class TermsSection{
-    +terms: <<Term>>TermCollection
-  }
-
-  class DefinitionSection{
-    +definitions: <<Term>>DefinitionCollection
-  }
-
-  class AnnexSection{
-    +subsections: ClauseSection[0..*]
-  }
-
-  class StandardReferencesSection{
-    normative: Boolean[0..1]
-    references: <<Bibliography>> BibliographicItem[0..*]
-    note: <<BasicDocument>> ParagraphBlock[0..*]
-  }
-
-  enum NormativeType <<enumeration>>{
-    normative
-    informative
-  }
+  include model/basic_document/BasicDocument.lutaml
+  include model/basic_document/sections/HierarchicalSection.lutaml
+  include model/standard_document/sections/StandardSection.lutaml
+  include model/standard_document/sections/StandardHierarchicalSection.lutaml
+  include model/standard_document/sections/Abstract.lutaml
+  include model/standard_document/sections/Foreword.lutaml
+  include model/standard_document/sections/Introduction.lutaml
+  include model/standard_document/sections/Acknowledgements.lutaml
+  include model/standard_document/sections/StandardContentSection.lutaml
+  include model/standard_document/sections/ClauseSection.lutaml
+  include model/standard_document/sections/ClauseHierarchicalSection.lutaml
+  include model/standard_document/sections/TermsSection.lutaml
+  include model/standard_document/sections/DefinitionSection.lutaml
+  include model/standard_document/sections/AnnexSection.lutaml
+  include model/standard_document/sections/StandardReferencesSection.lutaml
+  include model/standard_document/sections/NormativeType.lutaml
 
   association {
     owner BasicSection

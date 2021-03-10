@@ -1,0 +1,3 @@
+class DefinitionCollection{
+  +definitions: Definition[0..*]
+}

@@ -1,0 +1,6 @@
+class BoilerplateType {
+  +copyright: HierarchicalSection[0..1]
+  +license: HierarchicalSection[0..1]
+  +legal: HierarchicalSection[0..1]
+  +feedback: HierarchicalSection[0..1]
+}

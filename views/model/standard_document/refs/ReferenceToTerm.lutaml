@@ -1,0 +1,4 @@
+class ReferenceToTerm {
+   +source: ReferenceToTermSource
+   +term: String[0..*]
+}

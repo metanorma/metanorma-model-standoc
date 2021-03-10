@@ -1,51 +1,13 @@
 diagram StandardDoc_Metadata {
 
-  class BibDataExtensionType <<BasicDocument>> {
-  }
-
-  class BibData <<BasicDocument>> {
-  }
-
-  class StandardBibData {
-    +ext: StandardBibDataExtensionType
-  }
-
-  class StandardBibDataExtensionType {
-    +doctype: String
-    +doctype_abbreviation: String[0..1]
-    +editorialgroup: EditorialGroupType[0..1]
-    +ics: IcsType[0..*]
-    +structuredidentifier: StructuredIdentifierType[0..*]
-  }
-
-  class EditorialGroupType {
-    +technicalcommittee: TechnicalCommitteeType[1..*]
-  }
-
-  class TechnicalCommitteeType {
-    +number: Integer[0..1]
-    +type: String[0..1]
-    +text: String
-  }
-
-  class IcsType {
-    +code: String
-    +text: String[0..1]
-  }
-
-  class StructuredIdentifierType {
-    +type: String[0..1]
-    +agency: String[1..*]
-    +class: String[0..1]
-    +docnumber: String
-    +partnumber: String[0..1]
-    +edition: String[0..1]
-    +version: String[0..1]
-    +supplementtype: String[0..1]
-    +supplementnumber: String[0..1]
-    +year: String[0..1]
-    +language: String[0..1]
-  }
+  include model/basic_document/metadata/BibDataExtensionType.lutaml
+  include model/basic_document/metadata/BibData.lutaml
+  include model/standard_document/metadata/StandardBibData.lutaml
+  include model/standard_document/metadata/StandardBibDataExtensionType.lutaml
+  include model/standard_document/metadata/EditorialGroupType.lutaml
+  include model/standard_document/metadata/TechnicalCommitteeType.lutaml
+  include model/standard_document/metadata/IcsType.lutaml
+  include model/standard_document/metadata/StructuredIdentifierType.lutaml
 
   association {
     owner BibData

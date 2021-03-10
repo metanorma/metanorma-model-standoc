@@ -1,0 +1,4 @@
+class RelatedTerm {
+  +type: RelatedTermType
+  +content: <<BasicDocument>> LocalizedString
+}

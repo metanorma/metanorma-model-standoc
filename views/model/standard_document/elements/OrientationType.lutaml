@@ -1,0 +1,4 @@
+enum OrientationType <<enumeration>>{
+  portrait
+  landscape
+}

@@ -1,79 +1,20 @@
-include ./model/AmendBlock.lutaml
-include ./model/AutoNumber.lutaml
 
 diagram StandardDoc_Blocks_New {
 
-  class BasicDocument <<BasicDocument>> {
-  }
-
-  class BasicBlockNoNotes <<BasicDocument>> {
-  }
-
-  import model/AmendBlock
-  import model/AutoNumber
-
-  class BibItemLocality <<Relaton>> {
-  }
-
-  enum ChangeType <<enumeration>>{
-    add
-    modify
-    delete
-  }
-
-  enum ElementName <<enumeration>>{
-    requirement
-    recommendation
-    permission
-    table
-    figure
-    admonition
-    formula
-    sourcecode
-    example
-    note
-  }
-
-  class SvgMapBlock {
-    +source: String
-    +alt: String[0..1]
-    +target: SvgTargetType[0..*]
-  }
-
-  class SvgTargetType {
-    +href: String
-    +ReferenceElement
-  }
-
-  class ImageMapBlock {
-    +source: String
-    +alt: String[0..1]
-    +area: ImageMapAreaType[0..*]
-  }
-
-  class ImageMapAreaType {
-    +type: ImageMapAreaTypeType
-    +ReferenceElement
-    +coords: ImageMapCoords[1..*]
-    +radius: ImageMapRadius[0..1]
-  }
-
-  enum ImageMapAreaTypeType <<enumeration>> {
-    rect
-    circle
-    ellipse
-    poly
-  }
-
-  class ImageMapCoords {
-    +x: Float
-    +y: Float
-  }
-
-  class ImageMapRadius {
-    +x: Float
-    +y: Float[0..1]
-  }
+  include model/basic_document/BasicDocument.lutaml
+  include model/basic_document/block/BasicBlockNoNotes.lutaml
+  include model/standard_document/block/AmendBlock.lutaml
+  include model/standard_document/block/AutoNumber.lutaml
+  include model/standard_document/block/ImageMapBlock.lutaml
+  include model/relaton/BibItemLocality.lutaml
+  include model/standard_document/block/ChangeType.lutaml
+  include model/standard_document/block/ElementName.lutaml
+  include model/standard_document/block/SvgMapBlock.lutaml
+  include model/standard_document/block/SvgTargetType.lutaml
+  include model/standard_document/block/ImageMapAreaType.lutaml
+  include model/standard_document/block/ImageMapAreaTypeType.lutaml
+  include model/standard_document/block/ImageMapCoords.lutaml
+  include model/standard_document/block/ImageMapRadius.lutaml
 
   association {
     owner BasicDocument
@@ -100,21 +41,7 @@ diagram StandardDoc_Blocks_New {
     member ElementName
     owner_type direct
   }
-  association {
-    owner BasicBlockNoNotes
-    member AmendBlock
-    owner_type inheritance
-  }
-  association {
-    owner BasicBlockNoNotes
-    member SvgMapBlock
-    owner_type inheritance
-  }
-  association {
-    owner BasicBlockNoNotes
-    member ImageMapBlock
-    owner_type inheritance
-  }
+
   association {
     owner SvgMapBlock
     member SvgTargetType

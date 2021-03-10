@@ -1,44 +1,13 @@
 diagram StandardDoc_Inline {
-  
-  
-  
-  class BasicDocument <<BasicDocument>> {
-  }
-  
-  class ReferenceToIdElement <<BasicDocument>> {
-  }
-  
-  class ReferenceToCitationElement <<BasicDocument>> {
-  }
-  
-  class Concept{
-    +term: String[0..1]
-    +xref: ReferenceToIdElement[0..1]
-    +eref: ReferenceToCitationElement[0..1]
-    +termref: ReferenceToTermbase[0..1]
-  }
-  
-  class ReferenceToTermbase {
-    +base: String
-    +target: String
-    +text: TextElement
-  }
-  
-  class StandocReferenceToIdElement {
-    +case: XrefCaseType[0..1]
-    +droploc: Boolean[0..1]
-    +to: IdElement[0..1]
-  }
-  
-  class XrefCaseType <<enumeration>> {
-    capital
-    lowercase
-  }
-  
-  
-  
-  
-  
+
+  include model/basic_document/BasicDocument.lutaml
+  include model/standard_document/terms/Concept.lutaml
+  include model/basic_document/refs/ReferenceToIdElement.lutaml
+  include model/basic_document/refs/ReferenceToCitationElement.lutaml
+  include model/standard_document/refs/ReferenceToTermbase.lutaml
+  include model/standard_document/refs/StandocReferenceToIdElement.lutaml
+  include model/standard_document/refs/XrefCaseType.lutaml
+
   association {
     owner BasicDocument
     member ReferenceToIdElement
@@ -74,5 +43,5 @@ diagram StandardDoc_Inline {
     member XrefCaseType
     owner_type direct
   }
-  
+
 }

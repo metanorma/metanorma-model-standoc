@@ -1,0 +1,3 @@
+class TermCollection <<Term>> {
+  +terms: Term[0..*]
+}

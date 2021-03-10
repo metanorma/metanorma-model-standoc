@@ -1,0 +1,12 @@
+enum ElementName <<enumeration>>{
+  requirement
+  recommendation
+  permission
+  table
+  figure
+  admonition
+  formula
+  sourcecode
+  example
+  note
+}

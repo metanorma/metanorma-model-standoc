@@ -1,0 +1,4 @@
+class XrefCaseType <<enumeration>> {
+  capital
+  lowercase
+}

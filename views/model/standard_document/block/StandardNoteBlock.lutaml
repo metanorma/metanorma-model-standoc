@@ -1,0 +1,14 @@
+class StandardNoteBlock {
+  +keep-lines-together: Boolean[0..1]
+  +keep-with-next: Boolean[0..1]
+  +number: String[0..1]
+  +subsequence: String[0..1]
+  +unnumbered: Boolean[0..1]
+  +type: String[0..1]
+  +ul: UnorderedList[0..*]
+  +ol: OrderedList[0..*]
+  +dl: DefinitionList[0..*]
+  +formula: FormulaBlock[0..*]
+  +sourcecode: SourcecodeBlock[0..*]
+  +quotes: QuoteBlock[0..*]
+}

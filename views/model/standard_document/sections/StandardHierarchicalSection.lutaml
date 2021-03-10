@@ -1,0 +1,3 @@
+class StandardHierarchicalSection{
+  +subsections: StandardSection[0..*]
+}

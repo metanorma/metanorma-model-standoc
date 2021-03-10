@@ -1,0 +1,3 @@
+class ClauseSection{
+  +type: String[0..1]
+}

@@ -1,0 +1,3 @@
+class TermsSection{
+  +terms: <<Term>>TermCollection
+}
