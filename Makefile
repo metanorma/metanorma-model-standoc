@@ -1,11 +1,11 @@
-SRC := $(wildcard models/*.lutaml)
-PNG := $(patsubst models/%.lutaml,images/%.png,$(SRC))
+SRC := $(wildcard views/*.lutaml)
+PNG := $(patsubst views/%.lutaml,images/%.png,$(SRC))
 
 SHELL := /bin/bash
 
 all: $(PNG)
 
-images/%.png: models/%.lutaml
+images/%.png: views/%.lutaml
 	lutaml -t png -o $@ $<
 
 clean:

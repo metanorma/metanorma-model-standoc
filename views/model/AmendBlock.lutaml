@@ -1,0 +1,10 @@
+class AmendBlock {
+  +change: ChangeType
+  +bibLocality: BibItemLocality[0..*]
+  +path: String[0..1]
+  +path_end: String[0..1]
+  +name: String[0..1]
+  +description: BasicBlock[0..*]
+  +autonumber: AutoNumber[0..*]
+  +newcontent: BasicBlock[0..*]
+}
