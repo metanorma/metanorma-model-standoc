@@ -1,37 +1,117 @@
 diagram StandardDoc_Blocks {
 
-  include ../models/basic_document/BasicDocument.lutaml
-  include ../models/basic_document/block/BasicBlockNoNotes.lutaml
 
-  include ../models/basic_document/block/NoteBlock.lutaml
-  include ../models/basic_document/block/FigureBlock.lutaml
-  include ../models/basic_document/block/SourcecodeBlock.lutaml
-  include ../models/basic_document/block/FormulaBlock.lutaml
-  include ../models/basic_document/block/ExampleBlock.lutaml
-  include ../models/basic_document/block/ParagraphBlock.lutaml
-  include ../models/basic_document/block/QuoteBlock.lutaml
-  include ../models/basic_document/block/AdmonitionBlock.lutaml
-  include ../models/basic_document/block/TableBlock.lutaml
+  class StandardNoteBlock {
 
-  include ../models/basic_document/list/List.lutaml
-  include ../models/basic_document/list/UnorderedList.lutaml
-  include ../models/basic_document/list/DefinitionList.lutaml
-  include ../models/basic_document/list/ListItem.lutaml
+  }
 
-  include ../models/standard_document/block/StandardNoteBlock.lutaml
-  include ../models/standard_document/block/StandardTableBlock.lutaml
-  include ../models/standard_document/block/TableCol.lutaml
-  include ../models/standard_document/block/StandardFigureBlock.lutaml
-  include ../models/standard_document/block/StandardSourcecodeBlock.lutaml
-  include ../models/standard_document/block/StandardFormulaBlock.lutaml
-  include ../models/standard_document/block/StandardExampleBlock.lutaml
-  include ../models/standard_document/block/StandardParagraphBlock.lutaml
-  include ../models/standard_document/block/StandardQuoteBlock.lutaml
-  include ../models/standard_document/block/StandardAdmonitionBlock.lutaml
+  class UnorderedList <<BasicDocument>> {
+  }
 
-  include ../models/standard_document/list/StandardUnorderedList.lutaml
-  include ../models/standard_document/list/UnorderedCheckableListItem.lutaml
-  include ../models/standard_document/list/StandardDefinitionList.lutaml
+  class StandardUnorderedList {
+    +listitem: UnorderedCheckableListItem[0..*]
+  }
+
+  class ListItem <<BasicDocument>> {
+  }
+
+  class UnorderedCheckableListItem {
+  }
+
+  class TableBlock <<BasicDocument>> {
+  }
+
+  class StandardTableBlock {
+
+  class TableCol {
+    +width: String[0..1] {
+      definition {
+        The width of an individual table column.
+      }
+    }
+  }
+
+  class StandardFigureBlock {
+  }
+
+  class StandardSourcecodeBlock {
+    +number: String[0..1] {
+      definition {
+        Override the numbering of this block in numbering.
+      }
+    }
+    +keep-lines-together: Boolean[0..1] {
+      definition {
+        Do not permit a page break between the lines of the block in paged media.
+      }
+    }
+    +keep-with-next: Boolean[0..1] {
+      definition {
+        Keep this block on the same page as the following block in paged media.
+      }
+    }
+  }
+
+  class StandardFormulaBlock {
+  }
+
+  class StandardExampleBlock {
+    +number: String[0..1] {
+      definition {
+        Override the numbering of this block in numbering.
+      }
+    }
+    +keep-lines-together: Boolean[0..1] {
+      definition {
+        Do not permit a page break between the lines of the block in paged media.
+      }
+    }
+    +keep-with-next: Boolean[0..1] {
+      definition {
+        Keep this block on the same page as the following block in paged media.
+      }
+    }
+  }
+
+  class StandardParagraphBlock {
+  }
+
+  class StandardQuoteBlock {
+  }
+
+  class StandardAdmonitionBlock {
+    +keep-lines-together: Boolean[0..1] {
+      definition {
+        Do not permit a page break between the lines of the block in paged media.
+      }
+    }
+    +keep-with-next: Boolean[0..1] {
+      definition {
+        Keep this block on the same page as the following block in paged media.
+      }
+    }
+  }
+
+  class StandardUnorderedList {
+  }
+
+  class StandardDefinitionList {
+    +keep-lines-together: Boolean[0..1] {
+      definition {
+        Do not permit a page break between the lines of the block in paged media.
+      }
+    }
+    +keep-with-next: Boolean[0..1] {
+      definition {
+        Keep this block on the same page as the following block in paged media.
+      }
+    }
+    +key: Boolean[0..1] {
+      definition {
+        This definition list is the key of a figure or formula.
+      }
+    }
+  }
 
   association {
     owner BasicDocument

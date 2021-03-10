@@ -1,0 +1,131 @@
+diagram StandardDoc_Blocks_New {
+
+  class BasicDocument <<BasicDocument>> {
+  }
+
+  class BasicBlockNoNotes <<BasicDocument>> {
+  }
+
+
+
+  enum ElementName <<enumeration>>{
+    unstructured {
+      definition {
+        The classes of block subject to autonumbering within an AmendBlock newcontent element.
+      }
+    }
+    requirement
+    recommendation
+    permission
+    table
+    figure
+    admonition
+    formula
+    sourcecode
+    example
+    note
+  }
+
+  class SvgMapBlock {
+  }
+
+  class SvgTargetType {
+  }
+
+  class ImageMapBlock {
+  }
+
+  class ImageMapAreaType {
+    definition {
+      Specification of an area of an image to be hyperlinked, as part of an image map.
+    }
+    +type: ImageMapAreaTypeType {
+      definition {
+      }
+    }
+    +ReferenceElement {
+      definition {
+      }
+    }
+    +coords: ImageMapCoords[1..*] {
+      definition {
+      }
+    }
+    +radius: ImageMapRadius[0..1] {
+      definition {
+      }
+    }
+  }
+
+  class ImageMapCoords {
+
+  class ImageMapRadius {
+  }
+
+  association {
+    owner BasicDocument
+    member BasicBlockNoNotes
+    owner_type direct
+  }
+  association {
+    owner AmendBlock
+    member ChangeType
+    owner_type direct
+  }
+  association {
+    owner AmendBlock
+    member AutoNumber
+    owner_type direct
+  }
+  association {
+    owner AmendBlock
+    member BibItemLocality
+    owner_type direct
+  }
+  association {
+    owner AmendBlock
+    member ElementName
+    owner_type direct
+  }
+  association {
+    owner BasicBlockNoNotes
+    member AmendBlock
+    owner_type inheritance
+  }
+  association {
+    owner BasicBlockNoNotes
+    member SvgMapBlock
+    owner_type inheritance
+  }
+  association {
+    owner BasicBlockNoNotes
+    member ImageMapBlock
+    owner_type inheritance
+  }
+  association {
+    owner SvgMapBlock
+    member SvgTargetType
+    owner_type direct
+  }
+  association {
+    owner ImageMapBlock
+    member ImageMapAreaType
+    owner_type direct
+  }
+  association {
+    owner ImageMapAreaType
+    member ImageMapAreaTypeType
+    owner_type direct
+  }
+  association {
+    owner ImageMapAreaType
+    member ImageMapCoords
+    owner_type direct
+  }
+  association {
+    owner ImageMapAreaType
+    member ImageMapRadius
+    owner_type direct
+  }
+
+}

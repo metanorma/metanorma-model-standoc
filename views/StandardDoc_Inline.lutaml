@@ -1,12 +1,12 @@
 diagram StandardDoc_Inline {
 
-  include model/basic_document/BasicDocument.lutaml
-  include model/standard_document/terms/Concept.lutaml
-  include model/basic_document/refs/ReferenceToIdElement.lutaml
-  include model/basic_document/refs/ReferenceToCitationElement.lutaml
-  include model/standard_document/refs/ReferenceToTermbase.lutaml
-  include model/standard_document/refs/StandocReferenceToIdElement.lutaml
-  include model/standard_document/refs/XrefCaseType.lutaml
+  include ../models/basic_document/BasicDocument.lutaml
+  include ../models/standard_document/terms/Concept.lutaml
+  include ../models/basic_document/refs/ReferenceToIdElement.lutaml
+  include ../models/basic_document/refs/ReferenceToCitationElement.lutaml
+  include ../models/standard_document/refs/ReferenceToTermbase.lutaml
+  include ../models/standard_document/refs/StandocReferenceToIdElement.lutaml
+  include ../models/standard_document/refs/XrefCaseType.lutaml
 
   association {
     owner BasicDocument
