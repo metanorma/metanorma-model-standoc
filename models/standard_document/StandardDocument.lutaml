@@ -59,7 +59,7 @@ class StandardDocument {
       Zero or more _bibliographies_.
     }
   }
-  +index: StandardHierarchicalSection[0..*] {
+  +indexsect: StandardHierarchicalSection[0..*] {
     definition {
       Index of a standards document.
     }
