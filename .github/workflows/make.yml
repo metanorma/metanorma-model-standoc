@@ -4,51 +4,33 @@ name: make
 
 on:
   push:
-    branches: [ master, main ]
+    branches: [ master, main  ]
     tags: [ v* ]
   pull_request:
 
 jobs:
-  test-macos:
-    name: Test on Ruby ${{ matrix.ruby }} macOS
-    runs-on: macos-latest
-    continue-on-error: ${{ matrix.experimental }}
+  make:
+    name: Test on PlantUML ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
-        ruby: [ '2.6', '2.5' ]
-        experimental: [false]
-        include:
-          - ruby: '2.7'
-            experimental: true
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
+
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
 
-      - name: Use Ruby
-        uses: actions/setup-ruby@v1
-        with:
-          ruby-version: ${{ matrix.ruby }}
+      - uses: metanorma/metanorma-build-scripts/plantuml-setup-action@master
 
-      - name: Install GraphViz macOS
-        run: brew install graphviz
-
-      - name: Install gems
-        run: |
-          sudo gem install lutaml
-
-      - name: Generate diagrams
-        run: |
-          make clean all
+      - run: make clean all
 
   tests-passed:
-    needs: test-macos
+    needs: make
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger tests passed event
-        uses: Sibz/github-status-action@v1
+      - uses: peter-evans/repository-dispatch@v1
         with:
-          authToken: ${{ secrets.GITHUB_TOKEN }}
-          context: 'tests-passed-successfully'
-          description: 'Tests passed successfully'
-          state: 'success'
-          sha: ${{ github.event.pull_request.head.sha || github.sha }}
+          token: ${{ secrets.METANORMA_CI_PAT_TOKEN || secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          event-type: notify
+          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
