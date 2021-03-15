@@ -67,6 +67,7 @@ class StandardDocument {
   +type: StandardDocumentType {
     definition {
       Type of standards document representation given in this class instance.
+      Set to "standard" for all standards documents.
     }
   }
   +version: String {
