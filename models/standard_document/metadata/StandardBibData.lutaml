@@ -1,10 +1,10 @@
 class StandardBibData {
   definition {
-    The bibliographic description of a StandardDocument.
+    The bibliographic description of a _StandardDocument_.
   }
   +ext: StandardBibDataExtensionType {
     definition {
-      The extension point of the bibliographic description of a StandardDocument.
+      The extension point of the bibliographic description of a _StandardDocument_.
     }
   }
 }

@@ -1,7 +1,7 @@
 enum NormativeType <<enumeration>>{
   unstructured {
     definition {
-      The force of a clause of text in a StandardDocument.
+      The force of a clause of text in a _StandardDocument_.
     }
   }
   normative {

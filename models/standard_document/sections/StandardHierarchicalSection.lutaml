@@ -1,6 +1,6 @@
 class StandardHierarchicalSection{
   definition {
-    A hierarchical section containing other sections, within a StandardDocument.
+    A hierarchical section containing other sections, within a _StandardDocument_.
   }
   +subsections: StandardSection[0..*] {
     definition {

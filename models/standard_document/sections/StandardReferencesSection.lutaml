@@ -1,6 +1,6 @@
 class StandardReferencesSection{
   definition {
-  The `StandardReferencesSection` class within StandardDocument
+  The `StandardReferencesSection` class within _StandardDocument_
   is used to represent a bibliography section.
   It is used to collate references within the document, where
   there could be one or more of such sections within a document.
@@ -9,7 +9,7 @@ class StandardReferencesSection{
   normative or informative references, some split references into
   sections organized by concept relevance.
 
-  Similar to the `ReferencesSection` of the `BasicDocument` model,
+  Similar to the `ReferencesSection` of the _BasicDocument_ model,
   they are leaf nodes which contain zero or more
   bibliographical references (as modelled in Relaton), along with
   any prefatory text.

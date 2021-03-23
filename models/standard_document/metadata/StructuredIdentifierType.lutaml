@@ -1,6 +1,6 @@
 class StructuredIdentifierType {
   definition {
-    Representation of the identifier for a StandardDocument, giving its individual semantic components.
+    Representation of the identifier for a _StandardDocument_, giving its individual semantic components.
   }
   +type: String[0..1] {
     definition {

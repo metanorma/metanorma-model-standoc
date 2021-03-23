@@ -1,6 +1,6 @@
 class StandardSection {
   definition {
-    Section of a StandardDocument.
+    Section of a _StandardDocument_.
   }
   +status: NormativeType {
     definition {

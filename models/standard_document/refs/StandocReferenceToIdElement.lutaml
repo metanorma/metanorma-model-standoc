@@ -1,6 +1,6 @@
 class StandocReferenceToIdElement {
   definition {
-    Cross-reference to an identified element within a StandardDocument.
+    Cross-reference to an identified element within a _StandardDocument_.
   }
   +case: XrefCaseType[0..1] {
     definition {

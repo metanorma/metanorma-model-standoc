@@ -1,6 +1,6 @@
 class StandardContentSection{
   definition {
-    An unnumbered clause, outside the main body of text of a StandardDocument.
+    An unnumbered clause, outside the main body of text of a _StandardDocument_.
   }
   +type: String[0..1] {
     definition {

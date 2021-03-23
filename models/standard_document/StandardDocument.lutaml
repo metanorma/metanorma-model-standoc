@@ -1,6 +1,6 @@
 class StandardDocument {
   definition {
-  The `StandardDocument` model is used to represent a standardization
+  The _StandardDocument_ model is used to represent a standardization
   document.
 
   Typically, a standardization document contains at least the
@@ -16,7 +16,7 @@ class StandardDocument {
   Specialization is necessary to adopt the `StandardDocument`
   model for such standardization bodies.
 
-  The `StandardDocument` model extends the `BasicDocument`
+  The _StandardDocument_ model extends the _BasicDocument_
   modelling of the document by requiring specific types
   of sections.
   }

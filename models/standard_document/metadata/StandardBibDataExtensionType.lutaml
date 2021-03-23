@@ -1,10 +1,10 @@
 class StandardBibDataExtensionType {
   definition {
-    The extension point of the bibliographic description of a StandardDocument.
+    The extension point of the bibliographic description of a _StandardDocument_.
   }
   +doctype: String {
     definition {
-      Classification of the StandardDocument that is treated as a distinct series by the
+      Classification of the _StandardDocument_ that is treated as a distinct series by the
       standards defining organization, and that is rendered in a distinct manner.
     }
   }
@@ -26,7 +26,7 @@ class StandardBibDataExtensionType {
   }
   +structuredidentifier: StructuredIdentifierType[0..*] {
     definition {
-      Representation of the identifier for the StandardDocument, giving its individual semantic components.
+      Representation of the identifier for the _StandardDocument_, giving its individual semantic components.
     }
   }
 }

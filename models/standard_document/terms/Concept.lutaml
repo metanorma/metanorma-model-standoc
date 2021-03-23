@@ -1,6 +1,6 @@
 class Concept{
   definition {
-    Formally defined concept used in a StandardDocument, aligned to a definition.
+    Formally defined concept used in a _StandardDocument_, aligned to a definition.
     That concept may be defined as a term within the current document, or it may
     be defined externally.
   }
