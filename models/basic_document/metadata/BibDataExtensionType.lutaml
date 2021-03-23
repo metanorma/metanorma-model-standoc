@@ -1,2 +1,5 @@
 class BibDataExtensionType <<BasicDocument>> {
+  definition {
+    Extension point for `Bibdata`, containing elaborations of description of current document specific to the publishing organization.
+  }
 }

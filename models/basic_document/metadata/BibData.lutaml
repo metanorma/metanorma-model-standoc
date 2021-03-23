@@ -1,2 +1,5 @@
 class BibData <<BasicDocument>> {
+  definition {
+    Bibliographic description of document, expressed through <<relaton>>.
+  }
 }
