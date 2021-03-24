@@ -1,9 +1,8 @@
-enum StandardDocumentType <<enumeration>> {
-   unstructured {
-     definition {
-       Type of standards document representation.
-     }
+enum StandardDocumentType {
+   definition {
+     Type of standards document representation.
    }
+
    semantic {
      definition {
        Standards document representation representing the semantics of the document.

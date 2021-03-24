@@ -1,10 +1,10 @@
 class Term <<Term>> {
   definition {
-  A term (`Term`) represents a terminology entry with
-  its definition.
+    A term (`Term`) represents a terminology entry with
+    its definition.
 
-  NOTE: The `Term` definition fully aligns with the structure
-  and requirements of terms in ISO/IEC DIR 2, 16.6.
+    NOTE: The `Term` definition fully aligns with the structure
+    and requirements of terms in ISO/IEC DIR 2, 16.6.
   }
   +id: String[0..1] {
     definition {

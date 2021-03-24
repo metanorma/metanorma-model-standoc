@@ -1,9 +1,16 @@
-enum OrientationType <<enumeration>>{
-  unstructured {
-     definition {
-       Orientation of pages in a section of text in paged media.
-     }
-   }
-  portrait
-  landscape
+enum OrientationType {
+  definition {
+    Orientation of pages in a section of text in paged media.
+  }
+
+  portrait {
+    definition {
+      This page should be rendered in portrait layout in a paged medium.
+    }
+  }
+  landscape {
+    definition {
+      This page should be rendered in landscape layout in a paged medium.
+    }
+  }
 }

@@ -1,9 +1,9 @@
-enum NormativeType <<enumeration>>{
-  unstructured {
-    definition {
-      The force of a clause of text in a _StandardDocument_.
-    }
+enum NormativeType {
+
+  definition {
+    The force of a clause of text in a _StandardDocument_.
   }
+
   normative {
     definition {
       The content in this section has normative effect.

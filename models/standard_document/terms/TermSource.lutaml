@@ -1,10 +1,13 @@
 class TermSource <<Term>>{
   definition {
-    The bibliographic source where a term is defined in the sense applicable in this _StandardDocument_.
+    The bibliographic source where a term is defined in the
+    sense applicable in this _StandardDocument_.
   }
-  +status: TermOriginStatus {
+
+  +status: TermSourceStatus {
     definition {
-      The status of the term as it is used in this document, relative to its definition in the original document.
+      The status of the term as it is used in this document,
+      relative to its definition in the original document.
     }
   }
   +origin: <<Bibliography>> Citation {
@@ -14,7 +17,7 @@ class TermSource <<Term>>{
   }
   +modification: <<BasicDocument>> ParagraphBlock[0..1] {
     definition {
-      Any changes that the definition of the term has undergone relative to the original document, 
+      Any changes that the definition of the term has undergone relative to the original document,
       in order to be applicable in this _StandardDocument_.
     }
   }
