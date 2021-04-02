@@ -15,7 +15,7 @@ Metanorma StandardDocument itself is a document model can form the basis of mult
 standard document types, including:
 
 * https://github.com/metanorma/metanorma-model-iso[ISO Standards]
-* https://github.com/metanorma/metanorma-model-csd[CSD Standards]
+* https://github.com/metanorma/metanorma-model-cc[CalConnect Standards]
 * https://github.com/metanorma/metanorma-model-gb[Chinese Standards (GB and family)]
 
 The Relaton Bibliography UML models used within these models are located here:

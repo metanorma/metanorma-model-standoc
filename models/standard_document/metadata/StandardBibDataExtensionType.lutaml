@@ -8,12 +8,12 @@ class StandardBibDataExtensionType {
       standards defining organization, and that is rendered in a distinct manner.
     }
   }
-  +doctype_abbreviation: String[0..1] {
+  +doctypeAbbreviation: String[0..1] {
     definition {
       Standard abbreviation for the doctype value used by the standards defining organization.
     }
   }
-  +editorialgroup: EditorialGroupType[0..1] {
+  +editorialGroup: EditorialGroupType[0..1] {
     definition {
       Groups associated with the production of the standards document, typically within
       a standards definition organization.

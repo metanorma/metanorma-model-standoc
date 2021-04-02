@@ -1,9 +1,8 @@
-enum RelatedTermType <<enumeration>>{
-  unstructured {
-    definition {
-      Type of relation between terms.
-    }
+enum RelatedTermType {
+  definition {
+    Type of relation between terms.
   }
+
    compare {
      definition {
        The related term is mentioned as something the current term is comparable to.

@@ -1,9 +1,8 @@
-enum ImageMapAreaTypeType <<enumeration>> {
-  unstructured {
-    definition {
-      The type of area in an image map to be hyperlinked.
-    }
+enum ImageMapAreaTypeType {
+  definition {
+    The type of area in an image map to be hyperlinked.
   }
+
   rect {
     definition {
       Rectangle.

@@ -1,4 +1,6 @@
 diagram StandardDoc_StandardDocument {
+  title 'StandardDocument relationships'
+  caption 'Elements of the StandardDocument model'
 
   include ../models/basic_document/BasicDocument.lutaml
 

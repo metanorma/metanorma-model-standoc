@@ -1,2 +1,5 @@
 class HierarchicalSection <<BasicDocument>> {
+  definition {
+    Section of text hierarchically containing other sections texts.
+  }
 }

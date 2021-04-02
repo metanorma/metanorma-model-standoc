@@ -19,7 +19,7 @@ class AmendBlock {
       if bibLocality defines a container larger than the scope of the change.
     }
   }
-  +path_end: String[0..1] {
+  +pathEnd: String[0..1] {
     definition {
       The end of the span within the bibLocality where the change applies to;
       applicable to modify or delete.
@@ -35,13 +35,13 @@ class AmendBlock {
       Description of the change described in this block.
     }
   }
-  +autonumber: AutoNumber[0..*] {
+  +autoNumber: AutoNumber[0..*] {
     definition {
       Specification of how blocks of a given class should be autonumbered
-      within an AmendBlock newcontent element.
+      within an AmendBlock newContent element.
     }
   }
-  +newcontent: BasicBlock[0..*] {
+  +newContent: BasicBlock[0..*] {
     definition {
       New content to be added to the document; applicable to add and modify.
     }

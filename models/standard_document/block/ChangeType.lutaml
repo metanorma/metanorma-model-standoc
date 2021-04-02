@@ -1,10 +1,22 @@
-enum ChangeType <<enumeration>>{
-  unstructured {
+enum ChangeType {
+
+  definition {
+    The type of change described in AmendBlock.
+  }
+
+  add {
     definition {
-      The type of change described in AmendBlock.
+      Indicates a change that adds content.
     }
   }
-  add
-  modify
-  delete
+  modify {
+    definition {
+      Indicates a change that modifies existing content.
+    }
+  }
+  delete {
+    definition {
+      Indicates a change that deletes content.
+    }
+  }
 }
