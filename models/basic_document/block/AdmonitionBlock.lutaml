@@ -1,0 +1,5 @@
+class AdmonitionBlock <<BasicDocument>> {
+  definition {
+    Warnings, cautions, tips, and other blocks outside the normal document flow.
+  }
+}

@@ -6,6 +6,7 @@ diagram StandardDoc_Inline {
   include ../models/basic_document/refs/ReferenceToCitationElement.lutaml
   include ../models/standard_document/refs/ReferenceToTermbase.lutaml
   include ../models/standard_document/refs/StandocReferenceToIdElement.lutaml
+  include ../models/standard_document/refs/StandocReferenceToCitationElement.lutaml
   include ../models/standard_document/refs/XrefCaseType.lutaml
 
   association {
@@ -19,12 +20,12 @@ diagram StandardDoc_Inline {
     owner_type direct
   }
   association {
-    owner ReferenceToIdElement
+    owner StandocReferenceToIdElement
     member Concept
     owner_type direct
   }
   association {
-    owner ReferenceToCitationElement
+    owner StandocReferenceToCitationElement
     member Concept
     owner_type direct
   }
@@ -39,9 +40,13 @@ diagram StandardDoc_Inline {
     owner_type inheritance
   }
   association {
+    owner ReferenceToCitationElement
+    member StandocReferenceToCitationElement
+    owner_type inheritance
+  }
+  association {
     owner StandocReferenceToIdElement
     member XrefCaseType
     owner_type direct
   }
-
 }

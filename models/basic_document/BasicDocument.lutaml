@@ -1,2 +1,5 @@
 class BasicDocument <<BasicDocument>> {
+  definition {
+    Basic Document class, applicable to documents generically; _StandardDocument_ is a subclass of _BasicDocument_.
+  }
 }
