@@ -4,10 +4,15 @@ diagram StandardDoc_Inline {
   include ../models/standard_document/terms/Concept.lutaml
   include ../models/basic_document/refs/ReferenceToIdElement.lutaml
   include ../models/basic_document/refs/ReferenceToCitationElement.lutaml
+  include ../models/basic_document/elements/PageBreakElement.lutaml
+  include ../models/basic_document/elements/TextElement.lutaml
   include ../models/standard_document/refs/ReferenceToTermbase.lutaml
   include ../models/standard_document/refs/StandocReferenceToIdElement.lutaml
   include ../models/standard_document/refs/StandocReferenceToCitationElement.lutaml
   include ../models/standard_document/refs/XrefCaseType.lutaml
+  include ../models/standard_document/elements/StandardPageBreakElement.lutaml
+  include ../models/standard_document/elements/Add.lutaml
+  include ../models/standard_document/elements/Del.lutaml
 
   association {
     owner BasicDocument
@@ -17,6 +22,16 @@ diagram StandardDoc_Inline {
   association {
     owner BasicDocument
     member ReferenceToCitationElement
+    owner_type direct
+  }
+  association {
+    owner BasicDocument
+    member PageBreakElement
+    owner_type direct
+  }
+  association {
+    owner BasicDocument
+    member TextElement
     owner_type direct
   }
   association {
@@ -48,5 +63,20 @@ diagram StandardDoc_Inline {
     owner StandocReferenceToIdElement
     member XrefCaseType
     owner_type direct
+  }
+  association {
+    owner PageBreakElement
+    member StandardPageBreakElement
+    owner_type inheritance
+  }
+  association {
+    owner TextElement
+    member Add
+    owner_type inheritance
+  }
+  association {
+    owner TextElement
+    member Del
+    owner_type inheritance
   }
 }

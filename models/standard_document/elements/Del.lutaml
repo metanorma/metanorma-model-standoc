@@ -1,0 +1,5 @@
+class Del {
+  definition {
+    Indication of text deleted through editorial intervention.
+  }
+}

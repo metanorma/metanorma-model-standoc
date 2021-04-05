@@ -1,0 +1,5 @@
+class Add {
+  definition {
+    Indication of text added through editorial intervention.
+  }
+}
