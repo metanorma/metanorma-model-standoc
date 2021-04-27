@@ -1,0 +1,46 @@
+enum InputType {
+  definition {
+    Type of simple Input element
+  }
+
+  button {
+    definition {
+      Input element is a button
+    }
+  }
+  checkbox {
+    definition {
+      Input element is a checkbox
+    }
+  }
+  date {
+    definition {
+      Input element contains date
+    }
+  }
+  file {
+    definition {
+      Input element selects file for upload
+    }
+  }
+  password {
+    definition {
+      Input element is a password field
+    }
+  }
+  radio {
+    definition {
+      Input element is a radio button
+    }
+  }
+  submit {
+    definition {
+      Input element is a submit button
+    }
+  }
+  text {
+    definition {
+      Input element contains text
+    }
+  }
+}

@@ -1,0 +1,30 @@
+class Form {
+  definition {
+    Input form, for use under HTML.
+  }
+  +id: String {
+    definition {
+      Identifier of the input form block
+    }
+  }
+  +name: String {
+    definition {
+      Name of the input form block
+    }
+  }
+  +action: String {
+    definition {
+      Action to be taken on submission of the input form
+    }
+  }
+  +text: TextElement[0..*] {
+    definition {
+      Text element content of the form
+    }
+  }
+  +input: FormInput[0..*] {
+    definition {
+      Form input elements
+    }
+  }
+}

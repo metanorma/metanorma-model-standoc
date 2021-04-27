@@ -7,6 +7,7 @@ diagram StandardDoc_Blocks_New {
   include ../models/standard_document/block/AutoNumber.lutaml
   include ../models/standard_document/block/ImageMapBlock.lutaml
   include ../models/relaton/BibItemLocality.lutaml
+  include ../models/standard_document/block/Form.lutaml
   include ../models/standard_document/block/ChangeType.lutaml
   include ../models/standard_document/block/ElementName.lutaml
   include ../models/standard_document/block/SvgMapBlock.lutaml

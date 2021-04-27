@@ -1,0 +1,35 @@
+class Input {
+  definition {
+    Indication of text added through editorial intervention.
+  }
+  type: InputType {
+    definition {
+      Type of input element
+    }
+  }
+  checked: Boolean[0..1] {
+    definition {
+      Input element is checkbox, and has checked value
+    }
+  }
+  disabled: Boolean[0..1] {
+    definition {
+      Input element is disabled
+    }
+  }
+  readonly: Boolean[0..1] {
+    definition {
+      Input element is read-only
+    }
+  }
+  maxlength: Int[0..1] {
+    definition {
+      Maximum length of input in characters, for character input
+    }
+  }
+  minlength: Int[0..1] {
+    definition {
+      Minimum length of input in characters, for character input
+    }
+  }
+} 

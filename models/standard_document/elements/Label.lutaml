@@ -1,0 +1,5 @@
+class Label {
+  definition {
+    Label associated with input element
+  }
+}

@@ -1,0 +1,26 @@
+class Select {
+  definition {
+    Input allowing the selection of a value from a list of values. The value attribute is used instead of a selected
+    attribute on a component option
+  }
+  disabled: Boolean[0..1] {
+    definition {
+      Input is disabled
+    }
+  }
+  multiple: Boolean[0..1] {
+    definition {
+      Input can return multiple option values
+    }
+  }
+  size: Int[0..1] {
+    definition {
+      Suggested number of options to display
+    }
+  }
+  option: Option[1..*] {
+    definition {
+      Options to select from as value of the input
+    }
+  }
+}

@@ -1,0 +1,15 @@
+class Textarea {
+  definition {
+    Input involving extended text. The value attribute is used instead of text area content
+  }
+  rows: Int[0..1] {
+    definition {
+      Suggested number of rows for the input area
+    }
+  }
+  cols: Int[0..1] {
+    definition {
+      Suggested number of columns for the input area
+    }
+  }
+}

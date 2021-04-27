@@ -1,0 +1,20 @@
+class FormInput {
+  definition {
+    Input element for forms, associated with name/value pair to be submitted
+  }
+  id: String[0..1] {
+    definition {
+      Identifier of input element
+    }
+  }
+  name: String[0..1] {
+    definition {
+      Name of value of input element to be submitted
+    }
+  }
+  value: String[0..1] {
+    definition {
+      Preset or default of value of input element to be submitted
+    }
+  }
+}
