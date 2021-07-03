@@ -2,11 +2,12 @@ class Concept{
   definition {
     Formally defined concept used in a _StandardDocument_, aligned to a definition.
     That concept may be defined as a term within the current document, or it may
-    be defined externally.
+    be defined externally. 
   }
-  +term: String[0..1] {
+  +refterm: String[0..1] {
     definition {
-      The name of the concept being defined.
+      The canonical name of the concept being defined. The rendering of the concept
+      is given as the content of the xref, eref or termref tag.
     }
   }
   +xref: ReferenceToIdElement[0..1] {
