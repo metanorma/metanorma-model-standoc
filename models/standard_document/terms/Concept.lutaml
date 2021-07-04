@@ -4,10 +4,14 @@ class Concept{
     That concept may be defined as a term within the current document, or it may
     be defined externally. 
   }
-  +refterm: String[0..1] {
+  +refterm: PureTextElement[0..1] {
     definition {
-      The canonical name of the concept being defined. The rendering of the concept
-      is given as the content of the xref, eref or termref tag.
+      The canonical name of the concept being defined. 
+    }
+  }
+  +renderterm: PureTextElement[0..1] {
+    definition {
+      The rendering to be used for the concept.
     }
   }
   +xref: ReferenceToIdElement[0..1] {
