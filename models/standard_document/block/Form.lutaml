@@ -17,6 +17,11 @@ class Form {
       Action to be taken on submission of the input form
     }
   }
+  +class: String[0..1] {
+    definition {
+      Class of input form.
+    }
+  }
   +text: TextElement[0..*] {
     definition {
       Text element content of the form
