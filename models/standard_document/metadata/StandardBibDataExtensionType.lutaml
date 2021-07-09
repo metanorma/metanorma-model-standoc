@@ -13,6 +13,11 @@ class StandardBibDataExtensionType {
       Standard abbreviation for the doctype value used by the standards defining organization.
     }
   }
+  +subdoctype: String[0..1] {
+    definition {
+      Subclass of the _StandardDocument_, that is treated or processed differently.
+    }
+  }
   +editorialGroup: EditorialGroupType[0..1] {
     definition {
       Groups associated with the production of the standards document, typically within
