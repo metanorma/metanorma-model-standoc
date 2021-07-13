@@ -1,0 +1,7 @@
+class StandardDefinition {
+  +item: StandardDefinitionTerm[0..*] {
+    definition {
+      Entry being defined in the definition.
+    }
+  }
+}

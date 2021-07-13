@@ -1,0 +1,12 @@
+class StandardDefinitionTerm {
+  +id: String[0..1] {
+    definition {
+      Optional identifier for definition term (enabling crossreferencing of definitions).
+    }
+  }
+  +content: TextElement[0..*] {
+    definition {
+      Entry being defined in the definition.
+    }
+  }
+}

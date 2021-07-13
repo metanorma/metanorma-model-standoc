@@ -16,6 +16,7 @@ diagram StandardDoc_Blocks {
   include ../models/basic_document/list/List.lutaml
   include ../models/basic_document/list/UnorderedList.lutaml
   include ../models/basic_document/list/DefinitionList.lutaml
+  include ../models/basic_document/list/Definition.lutaml
   include ../models/basic_document/list/ListItem.lutaml
 
   include ../models/standard_document/block/StandardNoteBlock.lutaml
@@ -32,6 +33,8 @@ diagram StandardDoc_Blocks {
   include ../models/standard_document/list/StandardUnorderedList.lutaml
   include ../models/standard_document/list/UnorderedCheckableListItem.lutaml
   include ../models/standard_document/list/StandardDefinitionList.lutaml
+  include ../models/standard_document/list/StandardDefinition.lutaml
+  include ../models/standard_document/list/StandardDefinitionTerm.lutaml
 
   association {
     owner BasicDocument
@@ -173,5 +176,19 @@ diagram StandardDoc_Blocks {
     member StandardDefinitionList
     owner_type inheritance
   }
-
+  association {
+    owner Definition
+    member StandardDefinition
+    owner_type inheritance
+  }
+  association {
+    owner StandardDefinition
+    member StandardDefinitionTerm
+    owner_type direct
+  }
+  association {
+    owner DefinitionList
+    member Definition
+    owner_type direct
+  }
 }
