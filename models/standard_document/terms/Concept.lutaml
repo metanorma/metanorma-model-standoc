@@ -4,14 +4,14 @@ class Concept{
     That concept may be defined as a term within the current document, or it may
     be defined externally. 
   }
-  +noital: Boolean[0..1] {
+  +ital: Boolean[0..1] {
     definition {
-      Do not render the term in the concept in italics.
+      Render the term in the concept in italics.
     }
   }
-  +noref: Boolean[0..1] {
+  +ref: Boolean[0..1] {
     definition {
-      Do not render a link to a definition for the concept.
+      Render a reference and link to a definition for the concept.
     }
   }
   +refterm: PureTextElement[0..1] {
