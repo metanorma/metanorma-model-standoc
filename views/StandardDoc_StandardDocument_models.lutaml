@@ -1,0 +1,95 @@
+diagram StandardDoc_StandardDocument {
+  title 'StandardDocument relationships'
+  caption 'Elements of the StandardDocument model'
+
+  include models/metanorma-model-standoc/models/basic_document/BasicDocument.lutaml
+
+  include models/metanorma-model-standoc/models/basic_document/refs/ReferenceElement.lutaml
+  include models/metanorma-model-standoc/models/basic_document/refs/ReferenceToCitationElement.lutaml
+  include models/metanorma-model-standoc/models/basic_document/refs/ReferenceToIdElement.lutaml
+
+  include models/metanorma-model-standoc/models/standard_document/refs/ReferenceToTermbase.lutaml
+  include models/metanorma-model-standoc/models/standard_document/refs/ReferenceToTerm.lutaml
+
+  include models/metanorma-model-standoc/models/basic_document/elements/PageBreakElement.lutaml
+  include models/metanorma-model-standoc/models/standard_document/elements/StandardPageBreakElement.lutaml
+  include models/metanorma-model-standoc/models/standard_document/elements/OrientationType.lutaml
+
+  include models/metanorma-model-standoc/models/standard_document/StandardDocument.lutaml
+  include models/metanorma-model-standoc/models/standard_document/StandardDocumentType.lutaml
+
+  include models/metanorma-model-standoc/models/standard_document/sections/MiscContainer.lutaml
+  include models/metanorma-model-standoc/models/standard_document/sections/BoilerplateType.lutaml
+
+  association {
+    owner BasicDocument
+    member StandardDocument
+    owner_type inheritance
+  }
+  association {
+    owner StandardDocument
+    member StandardDocumentType
+    owner_type direct
+  }
+  association {
+    owner StandardDocument
+    member BoilerplateType
+    owner_type direct
+  }
+  association {
+    owner StandardDocument
+    member MiscContainer
+    owner_type direct
+  }
+  association {
+    owner BasicDocument
+    member ReferenceElement
+    owner_type direct
+  }
+  association {
+    owner BasicDocument
+    member PageBreakElement
+    owner_type direct
+  }
+  association {
+    owner PageBreakElement
+    member StandardPageBreakElement
+    owner_type inheritance
+  }
+  association {
+    owner ReferenceElement
+    member ReferenceToTerm
+    owner_type inheritance
+  }
+  association {
+    owner ReferenceElement
+    member ReferenceToTermbase
+    owner_type inheritance
+  }
+  association {
+    owner ReferenceToTerm
+    member ReferenceToTermSource
+    owner_type direct
+  }
+  association {
+    owner ReferenceToTermSource
+    member ReferenceToCitationElement
+    owner_type inheritance
+  }
+  association {
+    owner ReferenceToTermSource
+    member ReferenceToIdElement
+    owner_type inheritance
+  }
+  association {
+    owner ReferenceToTermSource
+    member ReferenceToTermbase
+    owner_type inheritance
+  }
+  association {
+    owner StandardPageBreakElement
+    member OrientationType
+    owner_type direct
+  }
+
+}
