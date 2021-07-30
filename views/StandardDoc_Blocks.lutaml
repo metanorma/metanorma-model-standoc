@@ -29,6 +29,7 @@ diagram StandardDoc_Blocks {
   include ../models/standard_document/block/StandardParagraphBlock.lutaml
   include ../models/standard_document/block/StandardQuoteBlock.lutaml
   include ../models/standard_document/block/StandardAdmonitionBlock.lutaml
+  include ../models/standard_document/block/ToC.lutaml
 
   include ../models/standard_document/list/StandardUnorderedList.lutaml
   include ../models/standard_document/list/UnorderedCheckableListItem.lutaml
@@ -69,7 +70,7 @@ diagram StandardDoc_Blocks {
   association {
     owner BasicBlock
     member TableBlock
-    owner_type direct
+    owner_type inheritance
   }
   association {
     owner StandardNoteBlock
@@ -87,6 +88,11 @@ diagram StandardDoc_Blocks {
     owner_type inheritance
   }
   association {
+    owner StandardUnorderedList
+    member UnorderedCheckableListItem
+    owner_type direct
+  }
+  association {
     owner TableBlock
     member StandardTableBlock
     owner_type inheritance
@@ -99,7 +105,7 @@ diagram StandardDoc_Blocks {
   association {
     owner BasicBlock
     member FigureBlock
-    owner_type direct
+    owner_type inheritance
   }
   association {
     owner FigureBlock
@@ -109,7 +115,7 @@ diagram StandardDoc_Blocks {
   association {
     owner BasicBlock
     member SourcecodeBlock
-    owner_type direct
+    owner_type inheritance
   }
   association {
     owner SourcecodeBlock
@@ -119,7 +125,7 @@ diagram StandardDoc_Blocks {
   association {
     owner BasicBlock
     member FormulaBlock
-    owner_type direct
+    owner_type inheritance
   }
   association {
     owner FormulaBlock
@@ -129,7 +135,7 @@ diagram StandardDoc_Blocks {
   association {
     owner BasicBlock
     member ExampleBlock
-    owner_type direct
+    owner_type inheritance
   }
   association {
     owner ExampleBlock
@@ -139,7 +145,7 @@ diagram StandardDoc_Blocks {
   association {
     owner BasicBlock
     member ParagraphBlock
-    owner_type direct
+    owner_type inheritance
   }
   association {
     owner ParagraphBlock
@@ -149,7 +155,7 @@ diagram StandardDoc_Blocks {
   association {
     owner BasicBlock
     member QuoteBlock
-    owner_type direct
+    owner_type inheritance
   }
   association {
     owner QuoteBlock
@@ -159,7 +165,7 @@ diagram StandardDoc_Blocks {
   association {
     owner BasicBlock
     member AdmonitionBlock
-    owner_type direct
+    owner_type inheritance
   }
   association {
     owner AdmonitionBlock
@@ -167,9 +173,14 @@ diagram StandardDoc_Blocks {
     owner_type inheritance
   }
   association {
+    owner BasicBlock
+    member ToC
+    owner_type inheritance
+  }
+  association {
     owner List
     member DefinitionList
-    owner_type direct
+    owner_type inheritance
   }
   association {
     owner DefinitionList
@@ -189,6 +200,11 @@ diagram StandardDoc_Blocks {
   association {
     owner DefinitionList
     member Definition
+    owner_type direct
+  }
+  association {
+    owner ToC
+    member StandardUnorderedList
     owner_type direct
   }
 }

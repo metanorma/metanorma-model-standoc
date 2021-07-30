@@ -1,0 +1,10 @@
+class ToC {
+  definition {
+    Table of contents, represented as a list of crossreferences, each with textual content.
+  }
+  +list: StandardUnorderedList {
+    definition {
+      List of crossreferences.
+    }
+  }
+}
