@@ -2,6 +2,7 @@
 diagram StandardDoc_Blocks_New {
 
   include ../models/basic_document/BasicDocument.lutaml
+  include ../models/basic_document/refs/ReferenceElement.lutaml
   include ../models/basic_document/block/BasicBlockNoNotes.lutaml
   include ../models/standard_document/block/AmendBlock.lutaml
   include ../models/standard_document/block/AutoNumber.lutaml

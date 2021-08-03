@@ -34,6 +34,11 @@ diagram StandardDoc_Sections {
     owner_type inheritance
   }
   association {
+    owner HierarchicalSection
+    member StandardHierarchicalSection
+    owner_type inheritance
+  }
+  association {
     owner StandardSection
     member ClauseSection
     owner_type inheritance

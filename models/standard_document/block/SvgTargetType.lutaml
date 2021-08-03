@@ -8,7 +8,7 @@ class SvgTargetType {
       The value of the `href` attribute in the SVG file to be overwritten.
     }
   }
-  +ReferenceElement {
+  +ReferenceElement: ReferenceElement {
     definition {
       The cross-reference or hyperlink, whose value is to overwrite the value of the `href` attribute in the SVG file.
     }
