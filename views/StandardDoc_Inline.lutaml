@@ -2,15 +2,18 @@ diagram StandardDoc_Inline {
 
   include ../models/basic_document/BasicDocument.lutaml
   include ../models/standard_document/terms/Concept.lutaml
+  include ../models/basic_document/refs/ReferenceElement.lutaml
   include ../models/basic_document/refs/ReferenceToIdElement.lutaml
   include ../models/basic_document/refs/ReferenceToCitationElement.lutaml
   include ../models/basic_document/elements/PageBreakElement.lutaml
   include ../models/basic_document/elements/TextElement.lutaml
   include ../models/standard_document/refs/ReferenceToTermbase.lutaml
+  include ../models/standard_document/refs/ReferenceToTerm.lutaml
   include ../models/standard_document/refs/StandocReferenceToIdElement.lutaml
   include ../models/standard_document/refs/StandocReferenceToCitationElement.lutaml
   include ../models/standard_document/refs/XrefCaseType.lutaml
   include ../models/standard_document/elements/StandardPageBreakElement.lutaml
+  include ../models/standard_document/elements/OrientationType.lutaml
   include ../models/standard_document/elements/Add.lutaml
   include ../models/standard_document/elements/Del.lutaml
   include ../models/standard_document/elements/FormInput.lutaml
@@ -23,13 +26,38 @@ diagram StandardDoc_Inline {
 
   association {
     owner BasicDocument
-    member ReferenceToIdElement
+    member ReferenceElement
     owner_type direct
   }
   association {
-    owner BasicDocument
+    owner ReferenceElement
+    member ReferenceToIdElement
+    owner_type inheritance
+  }
+  association {
+    owner ReferenceElement
     member ReferenceToCitationElement
+    owner_type inheritance
+  }
+  association {
+    owner ReferenceToTermSource
+    member ReferenceToIdElement
+    owner_type inheritance
+  }
+  association {
+    owner ReferenceToTerm
+    member ReferenceToTermSource
     owner_type direct
+  }
+  association {
+    owner ReferenceToTermSource
+    member ReferenceToTermbase
+    owner_type inheritance
+  }
+  association {
+    owner ReferenceToTermSource
+    member ReferenceToCitationElement
+    owner_type inheritance
   }
   association {
     owner BasicDocument
@@ -52,9 +80,19 @@ diagram StandardDoc_Inline {
     owner_type direct
   }
   association {
+    owner ReferenceElement
+    member ReferenceToTermbase
+    owner_type inheritance
+  }
+  association {
     owner ReferenceToTermbase
     member Concept
     owner_type direct
+  }
+  association {
+    owner ReferenceElement
+    member ReferenceToTerm
+    owner_type inheritance
   }
   association {
     owner ReferenceToIdElement
@@ -75,6 +113,11 @@ diagram StandardDoc_Inline {
     owner PageBreakElement
     member StandardPageBreakElement
     owner_type inheritance
+  }
+  association {
+    owner StandardPageBreakElement
+    member OrientationType
+    owner_type direct
   }
   association {
     owner TextElement
