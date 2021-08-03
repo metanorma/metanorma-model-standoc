@@ -1,13 +1,13 @@
 diagram StandardDoc_Terms {
 
-  include models/metanorma-model-standoc/models/standard_document/terms/TermCollection.lutaml
-  include models/metanorma-model-standoc/models/standard_document/terms/Term.lutaml
-  include models/metanorma-model-standoc/models/standard_document/terms/RelatedTerm.lutaml
-  include models/metanorma-model-standoc/models/standard_document/terms/RelatedTermType.lutaml
-  include models/metanorma-model-standoc/models/standard_document/terms/TermSource.lutaml
-  include models/metanorma-model-standoc/models/standard_document/terms/TermSourceStatus.lutaml
-  include models/metanorma-model-standoc/models/standard_document/terms/DefinitionCollection.lutaml
-  include models/metanorma-model-standoc/models/basic_document/list/Definition.lutaml
+  include ../models/standard_document/terms/TermCollection.lutaml
+  include ../models/standard_document/terms/Term.lutaml
+  include ../models/standard_document/terms/RelatedTerm.lutaml
+  include ../models/standard_document/terms/RelatedTermType.lutaml
+  include ../models/standard_document/terms/TermSource.lutaml
+  include ../models/standard_document/terms/TermSourceStatus.lutaml
+  include ../models/standard_document/terms/DefinitionCollection.lutaml
+  include ../models/basic_document/list/Definition.lutaml
 
   association {
     owner TermCollection

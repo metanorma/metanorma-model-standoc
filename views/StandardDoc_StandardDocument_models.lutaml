@@ -2,24 +2,24 @@ diagram StandardDoc_StandardDocument {
   title 'StandardDocument relationships'
   caption 'Elements of the StandardDocument model'
 
-  include models/metanorma-model-standoc/models/basic_document/BasicDocument.lutaml
+  include ../models/basic_document/BasicDocument.lutaml
 
-  include models/metanorma-model-standoc/models/basic_document/refs/ReferenceElement.lutaml
-  include models/metanorma-model-standoc/models/basic_document/refs/ReferenceToCitationElement.lutaml
-  include models/metanorma-model-standoc/models/basic_document/refs/ReferenceToIdElement.lutaml
+  include ../models/basic_document/refs/ReferenceElement.lutaml
+  include ../models/basic_document/refs/ReferenceToCitationElement.lutaml
+  include ../models/basic_document/refs/ReferenceToIdElement.lutaml
 
-  include models/metanorma-model-standoc/models/standard_document/refs/ReferenceToTermbase.lutaml
-  include models/metanorma-model-standoc/models/standard_document/refs/ReferenceToTerm.lutaml
+  include ../models/standard_document/refs/ReferenceToTermbase.lutaml
+  include ../models/standard_document/refs/ReferenceToTerm.lutaml
 
-  include models/metanorma-model-standoc/models/basic_document/elements/PageBreakElement.lutaml
-  include models/metanorma-model-standoc/models/standard_document/elements/StandardPageBreakElement.lutaml
-  include models/metanorma-model-standoc/models/standard_document/elements/OrientationType.lutaml
+  include ../models/basic_document/elements/PageBreakElement.lutaml
+  include ../models/standard_document/elements/StandardPageBreakElement.lutaml
+  include ../models/standard_document/elements/OrientationType.lutaml
 
-  include models/metanorma-model-standoc/models/standard_document/StandardDocument.lutaml
-  include models/metanorma-model-standoc/models/standard_document/StandardDocumentType.lutaml
+  include ../models/standard_document/StandardDocument.lutaml
+  include ../models/standard_document/StandardDocumentType.lutaml
 
-  include models/metanorma-model-standoc/models/standard_document/sections/MiscContainer.lutaml
-  include models/metanorma-model-standoc/models/standard_document/sections/BoilerplateType.lutaml
+  include ../models/standard_document/sections/MiscContainer.lutaml
+  include ../models/standard_document/sections/BoilerplateType.lutaml
 
   association {
     owner BasicDocument

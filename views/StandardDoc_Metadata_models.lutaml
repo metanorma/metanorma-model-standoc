@@ -2,14 +2,14 @@ diagram StandardDoc_Metadata {
   title 'StandardDocument Metadata'
   caption 'Metadata elements of StandardDocument'
 
-  include models/metanorma-model-standoc/models/basic_document/metadata/BibDataExtensionType.lutaml
-  include models/metanorma-model-standoc/models/basic_document/metadata/BibData.lutaml
-  include models/metanorma-model-standoc/models/standard_document/metadata/StandardBibData.lutaml
-  include models/metanorma-model-standoc/models/standard_document/metadata/StandardBibDataExtensionType.lutaml
-  include models/metanorma-model-standoc/models/standard_document/metadata/EditorialGroupType.lutaml
-  include models/metanorma-model-standoc/models/standard_document/metadata/TechnicalCommitteeType.lutaml
-  include models/metanorma-model-standoc/models/standard_document/metadata/IcsType.lutaml
-  include models/metanorma-model-standoc/models/standard_document/metadata/StructuredIdentifierType.lutaml
+  include ../models/basic_document/metadata/BibDataExtensionType.lutaml
+  include ../models/basic_document/metadata/BibData.lutaml
+  include ../models/standard_document/metadata/StandardBibData.lutaml
+  include ../models/standard_document/metadata/StandardBibDataExtensionType.lutaml
+  include ../models/standard_document/metadata/EditorialGroupType.lutaml
+  include ../models/standard_document/metadata/TechnicalCommitteeType.lutaml
+  include ../models/standard_document/metadata/IcsType.lutaml
+  include ../models/standard_document/metadata/StructuredIdentifierType.lutaml
 
   association {
     owner BibData
