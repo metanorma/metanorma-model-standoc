@@ -1,2 +1,5 @@
 class DefinitionList <<BasicDocument>> {
+  definition {
+    Definition list, composed of definitions rather than list items.
+  }
 }

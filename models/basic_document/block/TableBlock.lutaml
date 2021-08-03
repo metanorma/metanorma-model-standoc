@@ -1,2 +1,5 @@
 class TableBlock <<BasicDocument>> {
+  definition {
+    Tabular arrangement of text
+  }
 }

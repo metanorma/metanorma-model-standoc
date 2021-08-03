@@ -1,0 +1,5 @@
+class FigureBlock <<BasicDocument>> {
+  definition {
+    Block containing a figure: a visual rather than textual asset, possibly with accompanying text.
+  }
+}

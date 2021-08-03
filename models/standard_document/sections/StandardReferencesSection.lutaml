@@ -14,7 +14,7 @@ class StandardReferencesSection{
   bibliographical references (as modelled in Relaton), along with
   any prefatory text.
   }
-  normative: Boolean[0..1] {
+  normative: NormativeType {
     definition {
       Whether the references in the current section are normative or informative for the document.
     }

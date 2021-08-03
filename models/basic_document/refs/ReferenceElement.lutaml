@@ -1,2 +1,5 @@
 class ReferenceElement <<BasicDocument>> {
+  definition {
+    Inline element, which references an identifier of a document, a block in a document, or an element in a document.
+  }
 }

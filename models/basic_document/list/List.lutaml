@@ -1,2 +1,5 @@
 class List <<BasicDocument>> {
+  definition {
+   List block.
+  }
 }

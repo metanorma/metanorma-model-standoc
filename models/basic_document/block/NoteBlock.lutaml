@@ -1,2 +1,5 @@
 class NoteBlock <<BasicDocument>> {
+  definition {
+    Note block, modelled to consist only of paragraphs.
+  }
 }

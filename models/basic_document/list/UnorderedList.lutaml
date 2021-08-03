@@ -1,2 +1,5 @@
 class UnorderedList <<BasicDocument>> {
+  definition {
+    Unordered list block.
+  }
 }

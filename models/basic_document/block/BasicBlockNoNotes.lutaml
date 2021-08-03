@@ -1,2 +1,5 @@
 class BasicBlockNoNotes <<BasicDocument>> {
+  definition {
+    Base class of blocks for a BasicDocument, omitting notes.
+  }
 }

@@ -1,0 +1,5 @@
+class FormulaBlock <<BasicDocument>> {
+  definition {
+    Block containing a mathematical expression or other formulas.
+  }
+}

@@ -1,0 +1,5 @@
+class ParagraphBlock <<BasicDocument>> {
+  definition {
+    Default block of textual content.
+  }
+}

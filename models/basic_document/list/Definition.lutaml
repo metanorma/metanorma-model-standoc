@@ -1,3 +1,5 @@
 class Definition <<BasicDocument>>{
-
+  definition {
+    Definition used to constitute a definition list.
+  }
 }

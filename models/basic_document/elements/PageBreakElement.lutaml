@@ -1,2 +1,5 @@
 class PageBreakElement <<BasicDocument>>{
+  definition {
+    Page break.
+  }
 }

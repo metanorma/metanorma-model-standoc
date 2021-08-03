@@ -1,0 +1,5 @@
+class SourcecodeBlock <<BasicDocument>> {
+  definition {
+    Block containing computer code or comparable text.
+  }
+}

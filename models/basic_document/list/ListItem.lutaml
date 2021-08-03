@@ -1,2 +1,5 @@
 class ListItem <<BasicDocument>> {
+  definition {
+      Item in a list block.
+  }
 }

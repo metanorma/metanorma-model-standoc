@@ -1,2 +1,6 @@
 class TextElement <<BasicDocument>>{
+  definition {
+    Inline element containing text and associated formatting information,
+    but which does not contain any associated identifiers or references to identifiers.
+  }
 }

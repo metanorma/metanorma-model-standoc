@@ -1,0 +1,5 @@
+class ExampleBlock <<BasicDocument>> {
+  definition {
+    Block containing an example illustrating a claim made in the main flow of text.
+  }
+}
