@@ -1,0 +1,5 @@
+class ReferenceToIdElement <<BasicDocument>>{
+  definition {
+    An internal reference to an element of the current document.
+  }
+}
