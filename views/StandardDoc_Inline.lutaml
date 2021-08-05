@@ -1,4 +1,7 @@
 diagram StandardDoc_Inline {
+  title 'StandardDocument Inline'
+  caption 'Inline elements of StandardDocument'
+
 
   include ../models/basic_document/BasicDocument.lutaml
   include ../models/standard_document/terms/Concept.lutaml

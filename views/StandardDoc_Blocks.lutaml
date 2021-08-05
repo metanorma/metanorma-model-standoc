@@ -1,4 +1,6 @@
 diagram StandardDoc_Blocks {
+  title 'StandardDocument Blocks'
+  caption 'Block elements of StandardDocument adapted from BasicDocument'
 
   include ../models/basic_document/BasicDocument.lutaml
   include ../models/basic_document/block/BasicBlockNoNotes.lutaml

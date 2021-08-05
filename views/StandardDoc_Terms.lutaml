@@ -1,4 +1,7 @@
 diagram StandardDoc_Terms {
+  title 'StandardDocument Terms and Definitions'
+  caption 'Terms and Definitions elements of StandardDocument'
+
 
   include ../models/standard_document/sections/ClauseSection.lutaml
   include ../models/standard_document/terms/TermCollection.lutaml

@@ -1,4 +1,7 @@
 diagram StandardDoc_Sections {
+  title 'StandardDocument Sections'
+  caption 'Section elements of StandardDocument'
+
 
   include ../models/basic_document/BasicDocument.lutaml
   include ../models/basic_document/sections/BasicSection.lutaml

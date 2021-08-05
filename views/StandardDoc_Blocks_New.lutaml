@@ -1,5 +1,7 @@
 
 diagram StandardDoc_Blocks_New {
+  title 'StandardDocument Blocks'
+  caption 'Block elements of StandardDocument new to BasicDocument'
 
   include ../models/basic_document/BasicDocument.lutaml
   include ../models/basic_document/refs/ReferenceElement.lutaml
