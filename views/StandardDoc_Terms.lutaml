@@ -1,5 +1,6 @@
 diagram StandardDoc_Terms {
 
+  include ../models/standard_document/sections/ClauseSection.lutaml
   include ../models/standard_document/terms/TermCollection.lutaml
   include ../models/standard_document/terms/Term.lutaml
   include ../models/standard_document/terms/RelatedTerm.lutaml
@@ -9,6 +10,16 @@ diagram StandardDoc_Terms {
   include ../models/standard_document/terms/DefinitionCollection.lutaml
   include ../models/basic_document/list/Definition.lutaml
 
+  association {
+    owner ClauseSection
+    member TermCollection
+    owner_type inheritance
+  }
+  association {
+    owner ClauseSection
+    member DefinitionCollection
+    owner_type inheritance
+  }
   association {
     owner TermCollection
     member Term
