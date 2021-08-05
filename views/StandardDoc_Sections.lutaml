@@ -1,6 +1,7 @@
 diagram StandardDoc_Sections {
 
   include ../models/basic_document/BasicDocument.lutaml
+  include ../models/basic_document/sections/BasicSection.lutaml
   include ../models/basic_document/sections/HierarchicalSection.lutaml
   include ../models/standard_document/sections/StandardSection.lutaml
   include ../models/standard_document/sections/StandardHierarchicalSection.lutaml
@@ -22,7 +23,11 @@ diagram StandardDoc_Sections {
     member StandardSection
     owner_type inheritance
   }
-
+  association {
+    owner BasicSection
+    member HierarchicalSection
+    owner_type inheritance
+  }
   association {
     owner StandardSection
     member NormativeType

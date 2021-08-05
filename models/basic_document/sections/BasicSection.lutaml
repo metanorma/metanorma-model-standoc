@@ -1,0 +1,5 @@
+class BasicSection <<BasicDocument>> {
+  definition {
+    Section of text.
+  }
+}
