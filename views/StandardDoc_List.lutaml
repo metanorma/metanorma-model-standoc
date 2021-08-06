@@ -2,7 +2,6 @@ diagram StandardDoc_List {
   title 'StandardDocument List Blocks'
   caption 'List Block elements of StandardDocument adapted from BasicDocument'
 
-  include ../models/basic_document/BasicDocument.lutaml
   include ../models/basic_document/block/BasicBlockNoNotes.lutaml
 
   include ../models/basic_document/list/List.lutaml
@@ -18,7 +17,7 @@ diagram StandardDoc_List {
   include ../models/standard_document/list/StandardDefinitionTerm.lutaml
 
   association {
-    owner BasicBlock
+    owner BasicBlockNoNotes
     member List
     owner_type inheritance
   }

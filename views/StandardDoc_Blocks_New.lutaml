@@ -31,6 +31,11 @@ diagram StandardDoc_Blocks_New {
     owner_type inheritance
   }
   association {
+    owner BasicBlockNoNotes
+    member Form
+    owner_type inheritance
+  }
+  association {
     owner ToC
     member StandardUnorderedList
     owner_type direct

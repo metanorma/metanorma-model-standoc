@@ -1,7 +1,7 @@
 enum ElementName {
 
   definition {
-    The classes of block subject to autonumbering within an AmendBlock newContent element.
+    The classes of block subject to autonumbering within an `AmendBlock` `newContent` element.
   }
 
   requirement
