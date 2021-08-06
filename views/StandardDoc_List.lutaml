@@ -1,0 +1,75 @@
+diagram StandardDoc_List {
+  title 'StandardDocument List Blocks'
+  caption 'List Block elements of StandardDocument adapted from BasicDocument'
+
+  include ../models/basic_document/BasicDocument.lutaml
+  include ../models/basic_document/block/BasicBlockNoNotes.lutaml
+
+  include ../models/basic_document/list/List.lutaml
+  include ../models/basic_document/list/UnorderedList.lutaml
+  include ../models/basic_document/list/DefinitionList.lutaml
+  include ../models/basic_document/list/Definition.lutaml
+  include ../models/basic_document/list/ListItem.lutaml
+
+  include ../models/standard_document/list/StandardUnorderedList.lutaml
+  include ../models/standard_document/list/UnorderedCheckableListItem.lutaml
+  include ../models/standard_document/list/StandardDefinitionList.lutaml
+  include ../models/standard_document/list/StandardDefinition.lutaml
+  include ../models/standard_document/list/StandardDefinitionTerm.lutaml
+
+  association {
+    owner BasicBlock
+    member List
+    owner_type inheritance
+  }
+  association {
+    owner List
+    member UnorderedList
+    owner_type inheritance
+  }
+  association {
+    owner List
+    member ListItem
+    owner_type direct
+  }
+  association {
+    owner UnorderedList
+    member StandardUnorderedList
+    owner_type inheritance
+  }
+  association {
+    owner ListItem
+    member UnorderedCheckableListItem
+    owner_type inheritance
+  }
+  association {
+    owner StandardUnorderedList
+    member UnorderedCheckableListItem
+    owner_type direct
+  }
+  association {
+    owner List
+    member DefinitionList
+    owner_type inheritance
+  }
+  association {
+    owner DefinitionList
+    member StandardDefinitionList
+    owner_type inheritance
+  }
+  association {
+    owner Definition
+    member StandardDefinition
+    owner_type inheritance
+  }
+  association {
+    owner StandardDefinition
+    member StandardDefinitionTerm
+    owner_type direct
+  }
+  association {
+    owner DefinitionList
+    member Definition
+    owner_type direct
+  }
+}

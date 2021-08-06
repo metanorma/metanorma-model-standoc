@@ -15,12 +15,6 @@ diagram StandardDoc_Blocks {
   include ../models/basic_document/block/AdmonitionBlock.lutaml
   include ../models/basic_document/block/TableBlock.lutaml
 
-  include ../models/basic_document/list/List.lutaml
-  include ../models/basic_document/list/UnorderedList.lutaml
-  include ../models/basic_document/list/DefinitionList.lutaml
-  include ../models/basic_document/list/Definition.lutaml
-  include ../models/basic_document/list/ListItem.lutaml
-
   include ../models/standard_document/block/StandardNoteBlock.lutaml
   include ../models/standard_document/block/StandardTableBlock.lutaml
   include ../models/standard_document/block/TableCol.lutaml
@@ -31,13 +25,6 @@ diagram StandardDoc_Blocks {
   include ../models/standard_document/block/StandardParagraphBlock.lutaml
   include ../models/standard_document/block/StandardQuoteBlock.lutaml
   include ../models/standard_document/block/StandardAdmonitionBlock.lutaml
-  include ../models/standard_document/block/ToC.lutaml
-
-  include ../models/standard_document/list/StandardUnorderedList.lutaml
-  include ../models/standard_document/list/UnorderedCheckableListItem.lutaml
-  include ../models/standard_document/list/StandardDefinitionList.lutaml
-  include ../models/standard_document/list/StandardDefinition.lutaml
-  include ../models/standard_document/list/StandardDefinitionTerm.lutaml
 
   association {
     owner BasicDocument
@@ -56,21 +43,6 @@ diagram StandardDoc_Blocks {
   }
   association {
     owner BasicBlock
-    member List
-    owner_type inheritance
-  }
-  association {
-    owner List
-    member UnorderedList
-    owner_type inheritance
-  }
-  association {
-    owner List
-    member ListItem
-    owner_type direct
-  }
-  association {
-    owner BasicBlock
     member TableBlock
     owner_type inheritance
   }
@@ -78,21 +50,6 @@ diagram StandardDoc_Blocks {
     owner StandardNoteBlock
     member NoteBlock
     member_type inheritance
-  }
-  association {
-    owner UnorderedList
-    member StandardUnorderedList
-    owner_type inheritance
-  }
-  association {
-    owner ListItem
-    member UnorderedCheckableListItem
-    owner_type inheritance
-  }
-  association {
-    owner StandardUnorderedList
-    member UnorderedCheckableListItem
-    owner_type direct
   }
   association {
     owner TableBlock
@@ -173,40 +130,5 @@ diagram StandardDoc_Blocks {
     owner AdmonitionBlock
     member StandardAdmonitionBlock
     owner_type inheritance
-  }
-  association {
-    owner BasicBlock
-    member ToC
-    owner_type inheritance
-  }
-  association {
-    owner List
-    member DefinitionList
-    owner_type inheritance
-  }
-  association {
-    owner DefinitionList
-    member StandardDefinitionList
-    owner_type inheritance
-  }
-  association {
-    owner Definition
-    member StandardDefinition
-    owner_type inheritance
-  }
-  association {
-    owner StandardDefinition
-    member StandardDefinitionTerm
-    owner_type direct
-  }
-  association {
-    owner DefinitionList
-    member Definition
-    owner_type direct
-  }
-  association {
-    owner ToC
-    member StandardUnorderedList
-    owner_type direct
   }
 }

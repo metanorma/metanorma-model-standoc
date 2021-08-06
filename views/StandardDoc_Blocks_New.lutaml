@@ -10,6 +10,7 @@ diagram StandardDoc_Blocks_New {
   include ../models/standard_document/block/AutoNumber.lutaml
   include ../models/standard_document/block/ImageMapBlock.lutaml
   include ../models/relaton/BibItemLocality.lutaml
+  include ../models/standard_document/block/ToC.lutaml
   include ../models/standard_document/block/Form.lutaml
   include ../models/standard_document/block/ChangeType.lutaml
   include ../models/standard_document/block/ElementName.lutaml
@@ -23,6 +24,16 @@ diagram StandardDoc_Blocks_New {
   association {
     owner BasicDocument
     member BasicBlockNoNotes
+    owner_type direct
+  }
+  association {
+    owner BasicBlockNoNotes
+    member ToC
+    owner_type inheritance
+  }
+  association {
+    owner ToC
+    member StandardUnorderedList
     owner_type direct
   }
   association {
