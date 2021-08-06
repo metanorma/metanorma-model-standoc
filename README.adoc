@@ -27,12 +27,10 @@ https://github.com/metanorma/relaton-models[Relaton BibModels]
 === StandardDocument
 
 image::images/StandardDoc_StandardDocument.png[]
-image::images/StandardDoc_StandardDocument_models.png[]
 
 === Metadata
 
 image::images/StandardDoc_Metadata.png[]
-image::images/StandardDoc_Metadata_models.png[]
 
 === Sections
 
@@ -41,7 +39,6 @@ image::images/StandardDoc_Sections.png[]
 === Terms
 
 image::images/StandardDoc_Terms.png[]
-image::images/StandardDoc_Terms_models.png[]
 
 === Blocks
 
@@ -51,5 +48,6 @@ image::images/StandardDoc_Blocks_New.png[]
 === Inline
 
 image::images/StandardDoc_Inline.png[]
+image::images/StandardDoc_InlineForm.png[]
 
 

@@ -3,7 +3,6 @@ diagram StandardDoc_Sections {
   caption 'Section elements of StandardDocument'
 
 
-  include ../models/basic_document/BasicDocument.lutaml
   include ../models/basic_document/sections/BasicSection.lutaml
   include ../models/basic_document/sections/HierarchicalSection.lutaml
   include ../models/standard_document/sections/StandardSection.lutaml
@@ -15,8 +14,6 @@ diagram StandardDoc_Sections {
   include ../models/standard_document/sections/StandardContentSection.lutaml
   include ../models/standard_document/sections/ClauseSection.lutaml
   include ../models/standard_document/sections/ClauseHierarchicalSection.lutaml
-  include ../models/standard_document/sections/TermsSection.lutaml
-  include ../models/standard_document/sections/DefinitionSection.lutaml
   include ../models/standard_document/sections/AnnexSection.lutaml
   include ../models/standard_document/sections/StandardReferencesSection.lutaml
   include ../models/standard_document/sections/NormativeType.lutaml
@@ -86,17 +83,6 @@ diagram StandardDoc_Sections {
   association {
     owner StandardContentSection
     member Acknowledgements
-    owner_type inheritance
-  }
-
-  association {
-    owner ClauseSection
-    member TermsSection
-    owner_type inheritance
-  }
-  association {
-    owner ClauseSection
-    member DefinitionSection
     owner_type inheritance
   }
   association {

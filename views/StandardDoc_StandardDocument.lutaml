@@ -30,9 +30,4 @@ diagram StandardDoc_StandardDocument {
     member MiscContainer
     owner_type direct
   }
-  association {
-    owner BasicDocument
-    member PageBreakElement
-    owner_type direct
-  }
 }

@@ -1,0 +1,49 @@
+diagram StandardDoc_Form {
+  title 'StandardDocument Inline'
+  caption 'Form elements of StandardDocument'
+
+  include ../models/standard_document/block/Form.lutaml
+  include ../models/standard_document/elements/FormInput.lutaml
+  include ../models/standard_document/elements/Input.lutaml
+  include ../models/standard_document/elements/InputType.lutaml
+  include ../models/standard_document/elements/Label.lutaml
+  include ../models/standard_document/elements/Select.lutaml
+  include ../models/standard_document/elements/Option.lutaml
+  include ../models/standard_document/elements/Textarea.lutaml
+
+  association {
+    owner Form
+    member FormInput
+    owner_type direct
+  }
+  association {
+    owner FormInput
+    member Input
+    owner_type inheritance
+  }
+  association {
+    owner FormInput
+    member Select
+    owner_type inheritance
+  }
+  association {
+    owner FormInput
+    member Textarea
+    owner_type inheritance
+  }
+  association {
+    owner Input
+    member InputType
+    owner_type direct
+  }
+  association {
+    owner ReferenceToIdElement
+    member Label
+    owner_type inheritance
+  }
+  association {
+    owner Select
+    member Option
+    owner_type direct
+  }
+}
