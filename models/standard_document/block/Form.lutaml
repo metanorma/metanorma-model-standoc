@@ -32,4 +32,9 @@ class Form {
       Form input elements
     }
   }
+  +label: Label[0..*] {
+    definition {
+      Form input labels
+    }
+  }
 }

@@ -1,5 +1,5 @@
 class Label {
   definition {
-    Label associated with input element
+    Label associated with form input element
   }
 }

@@ -17,6 +17,11 @@ diagram StandardDoc_Form {
     owner_type direct
   }
   association {
+    owner Form
+    member Label
+    owner_type direct
+  }
+  association {
     owner FormInput
     member Input
     owner_type inheritance
