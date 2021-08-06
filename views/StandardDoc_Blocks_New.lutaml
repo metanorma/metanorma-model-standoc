@@ -3,7 +3,6 @@ diagram StandardDoc_Blocks_New {
   title 'StandardDocument Blocks'
   caption 'Block elements of StandardDocument new to BasicDocument'
 
-  include ../models/basic_document/BasicDocument.lutaml
   include ../models/basic_document/refs/ReferenceElement.lutaml
   include ../models/basic_document/block/BasicBlockNoNotes.lutaml
   include ../models/standard_document/block/AmendBlock.lutaml
@@ -22,13 +21,13 @@ diagram StandardDoc_Blocks_New {
   include ../models/standard_document/block/ImageMapRadius.lutaml
 
   association {
-    owner BasicDocument
-    member BasicBlockNoNotes
-    owner_type direct
+    owner BasicBlockNoNotes
+    member ToC
+    owner_type inheritance
   }
   association {
     owner BasicBlockNoNotes
-    member ToC
+    member AmendBlock
     owner_type inheritance
   }
   association {
@@ -58,9 +57,24 @@ diagram StandardDoc_Blocks_New {
   }
 
   association {
+    owner BasicBlockNoNotes
+    member SvgMapBlock
+    owner_type inheritance
+  }
+  association {
     owner SvgMapBlock
     member SvgTargetType
     owner_type direct
+  }
+  association {
+    owner SvgTargetType
+    member ReferenceElement
+    owner_type direct
+  }
+  association {
+    owner BasicBlockNoNotes
+    member ImageMapBlock
+    owner_type inheritance
   }
   association {
     owner ImageMapBlock
@@ -80,6 +94,11 @@ diagram StandardDoc_Blocks_New {
   association {
     owner ImageMapAreaType
     member ImageMapRadius
+    owner_type direct
+  }
+  association {
+    owner ImageMapAreaType
+    member ReferenceElement
     owner_type direct
   }
 
