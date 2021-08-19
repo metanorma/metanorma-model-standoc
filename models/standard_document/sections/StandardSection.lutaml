@@ -2,6 +2,11 @@ class StandardSection {
   definition {
     Section of a _StandardDocument_.
   }
+  +variant-title: <<relaton>> TypedTitleString[0..*]  {
+    definition {
+      Alternate titles for section.
+    }
+  }
   +status: NormativeType {
     definition {
       Force of this clause in the standards document.
