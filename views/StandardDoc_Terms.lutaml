@@ -6,6 +6,7 @@ diagram StandardDoc_Terms {
   include ../models/standard_document/sections/ClauseSection.lutaml
   include ../models/standard_document/terms/TermCollection.lutaml
   include ../models/standard_document/terms/Term.lutaml
+  include ../models/standard_document/terms/TermDefinition.lutaml
   include ../models/standard_document/terms/RelatedTerm.lutaml
   include ../models/standard_document/terms/RelatedTermType.lutaml
   include ../models/standard_document/terms/TermSource.lutaml
@@ -26,6 +27,16 @@ diagram StandardDoc_Terms {
   association {
     owner TermCollection
     member Term
+    owner_type direct
+  }
+  association {
+    owner Term
+    member TermDefinition
+    owner_type direct
+  }
+  association {
+    owner TermDefinition
+    member Definition
     owner_type direct
   }
   association {

@@ -52,7 +52,7 @@ class Term <<Term>> {
       information about the term (e.g. part of speech, gender).
     }
   }
-  +definition: <<BasicDocument>> Definition[1..*] {
+  +definition: TermDefinition[1..*] {
     definition {
       The definition of the term applied in the current
       document.
