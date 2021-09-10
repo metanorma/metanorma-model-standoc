@@ -11,7 +11,17 @@ class Concept{
   }
   +ref: Boolean[0..1] {
     definition {
-      Render a reference and link to a definition for the concept.
+      Render a reference to a definition for the concept.
+    }
+  }
+  +linkmention: Boolean[0..1] {
+    definition {
+      Hyperlink the mention of the term to the definition for the concept.
+    }
+  }
+  +linkref: Boolean[0..1] {
+    definition {
+      Hyperlink the reference for the term to the definition for the concept.
     }
   }
   +refterm: PureTextElement[0..1] {
