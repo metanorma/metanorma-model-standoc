@@ -1,0 +1,16 @@
+class Passthrough {
+  definition {
+    Wrapper around raw markup to be transferred into one or more nominated output formats
+    during processing.
+  }
+  +formats: String {
+    definition {
+      Format of markup to be transferred.
+    }
+  }
+  +content: String {
+    definition {
+      Markup to be transferred.
+    }
+  }
+}

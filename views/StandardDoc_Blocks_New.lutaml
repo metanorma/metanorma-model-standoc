@@ -14,6 +14,7 @@ diagram StandardDoc_Blocks_New {
   include ../models/standard_document/block/ChangeType.lutaml
   include ../models/standard_document/block/ElementName.lutaml
   include ../models/standard_document/block/SvgMapBlock.lutaml
+  include ../models/standard_document/block/Passthrough.lutaml
   include ../models/standard_document/block/SvgTargetType.lutaml
   include ../models/standard_document/block/ImageMapAreaType.lutaml
   include ../models/standard_document/block/ImageMapAreaTypeType.lutaml
@@ -60,7 +61,11 @@ diagram StandardDoc_Blocks_New {
     member ElementName
     owner_type direct
   }
-
+  association {
+    owner BasicBlockNoNotes
+    member Passthrough
+    owner_type inheritance
+  }
   association {
     owner BasicBlockNoNotes
     member SvgMapBlock
