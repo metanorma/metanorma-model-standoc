@@ -4,6 +4,8 @@ diagram StandardDoc_Terms {
 
 
   include ../models/standard_document/sections/ClauseSection.lutaml
+  include ../models/standard_document/sections/DefinitionSection.lutaml
+  include ../models/standard_document/sections/TermsSection.lutaml
   include ../models/standard_document/terms/TermCollection.lutaml
   include ../models/standard_document/terms/Term.lutaml
   include ../models/standard_document/terms/TermDefinition.lutaml
@@ -16,13 +18,23 @@ diagram StandardDoc_Terms {
 
   association {
     owner ClauseSection
-    member TermCollection
+    member TermsSection
     owner_type inheritance
   }
   association {
     owner ClauseSection
-    member DefinitionCollection
+    member DefinitionSection
     owner_type inheritance
+  }
+  association {
+    owner TermsSection
+    member TermCollection
+    owner_type direct
+  }
+  association {
+    owner DefinitionSection
+    member DefinitionCollection
+    owner_type direct
   }
   association {
     owner TermCollection
