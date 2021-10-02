@@ -15,6 +15,9 @@ diagram StandardDoc_Blocks {
   include ../models/basic_document/block/AdmonitionBlock.lutaml
   include ../models/basic_document/block/TableBlock.lutaml
 
+  include ../models/standard_document/block/StandardBlock.lutaml
+  include ../models/standard_document/block/StandardBlockNoNotes.lutaml
+  include ../models/standard_document/block/MultilingualRenderingType.lutaml
   include ../models/standard_document/block/StandardNoteBlock.lutaml
   include ../models/standard_document/block/StandardTableBlock.lutaml
   include ../models/standard_document/block/TableCol.lutaml
@@ -33,8 +36,18 @@ diagram StandardDoc_Blocks {
   }
   association {
     owner BasicBlockNoNotes
-    member BasicBlock
+    member StandardBlockNoNotes
     owner_type inheritance
+  }
+  association {
+    owner StandardBlockNoNotes
+    member StandardBlock
+    owner_type inheritance
+  }
+  association {
+    owner StandardBlockNoNotes
+    member MultilingualRenderingType
+    owner_type direct
   }
   association {
     owner BasicBlockNoNotes
@@ -42,7 +55,7 @@ diagram StandardDoc_Blocks {
     owner_type inheritance
   }
   association {
-    owner BasicBlock
+    owner BasicBlockNoNotes
     member TableBlock
     owner_type inheritance
   }
@@ -62,7 +75,7 @@ diagram StandardDoc_Blocks {
     owner_type direct
   }
   association {
-    owner BasicBlock
+    owner BasicBlockNoNotes
     member FigureBlock
     owner_type inheritance
   }
@@ -72,7 +85,7 @@ diagram StandardDoc_Blocks {
     owner_type inheritance
   }
   association {
-    owner BasicBlock
+    owner BasicBlockNoNotes
     member SourcecodeBlock
     owner_type inheritance
   }
@@ -82,7 +95,7 @@ diagram StandardDoc_Blocks {
     owner_type inheritance
   }
   association {
-    owner BasicBlock
+    owner BasicBlockNoNotes
     member FormulaBlock
     owner_type inheritance
   }
@@ -92,7 +105,7 @@ diagram StandardDoc_Blocks {
     owner_type inheritance
   }
   association {
-    owner BasicBlock
+    owner BasicBlockNoNotes
     member ExampleBlock
     owner_type inheritance
   }
@@ -102,7 +115,7 @@ diagram StandardDoc_Blocks {
     owner_type inheritance
   }
   association {
-    owner BasicBlock
+    owner BasicBlockNoNotes
     member ParagraphBlock
     owner_type inheritance
   }
@@ -112,7 +125,7 @@ diagram StandardDoc_Blocks {
     owner_type inheritance
   }
   association {
-    owner BasicBlock
+    owner BasicBlockNoNotes
     member QuoteBlock
     owner_type inheritance
   }
@@ -122,7 +135,7 @@ diagram StandardDoc_Blocks {
     owner_type inheritance
   }
   association {
-    owner BasicBlock
+    owner BasicBlockNoNotes
     member AdmonitionBlock
     owner_type inheritance
   }
@@ -131,4 +144,50 @@ diagram StandardDoc_Blocks {
     member StandardAdmonitionBlock
     owner_type inheritance
   }
+  association {
+    owner StandardBlockNoNotes
+    member StandardNoteBlock
+    owner_type inheritance
+  }
+  association {   
+    owner StandardBlock
+    member StandardFigureBlock
+    owner_type inheritance
+  }
+  association {
+    owner StandardBlock
+    member StandardSourcecodeBlock
+    owner_type inheritance
+  }
+  association {
+    owner StandardBlock
+    member StandardFormulaBlock
+    owner_type inheritance
+  }
+  association {
+    owner StandardBlock
+    member StandardExampleBlock
+    owner_type inheritance
+  }
+  association {
+    owner StandardBlock
+    member StandardParagraphBlock
+    owner_type inheritance
+  }
+  association {
+    owner StandardBlock
+    member StandardQuoteBlock
+    owner_type inheritance
+  }
+  association {
+    owner StandardBlock
+    member StandardAdmonitionBlock
+    owner_type inheritance
+  }
+  association {
+    owner StandardBlock
+    member StandardTableBlock
+    owner_type inheritance
+  }
+
 }

@@ -3,14 +3,17 @@ diagram StandardDoc_List {
   caption 'List Block elements of StandardDocument adapted from BasicDocument'
 
   include ../models/basic_document/block/BasicBlockNoNotes.lutaml
+  include ../models/standard_document/block/StandardBlockNoNotes.lutaml
 
   include ../models/basic_document/list/List.lutaml
+  include ../models/basic_document/list/OrderedList.lutaml
   include ../models/basic_document/list/UnorderedList.lutaml
   include ../models/basic_document/list/DefinitionList.lutaml
   include ../models/basic_document/list/Definition.lutaml
   include ../models/basic_document/list/ListItem.lutaml
 
   include ../models/standard_document/list/StandardUnorderedList.lutaml
+  include ../models/standard_document/list/StandardOrderedList.lutaml
   include ../models/standard_document/list/UnorderedCheckableListItem.lutaml
   include ../models/standard_document/list/StandardDefinitionList.lutaml
   include ../models/standard_document/list/StandardDefinition.lutaml
@@ -28,12 +31,22 @@ diagram StandardDoc_List {
   }
   association {
     owner List
+    member OrderedList
+    owner_type inheritance
+  }
+  association {
+    owner List
     member ListItem
     owner_type direct
   }
   association {
     owner UnorderedList
     member StandardUnorderedList
+    owner_type inheritance
+  }
+  association {
+    owner OrderedList
+    member StandardOrderedList
     owner_type inheritance
   }
   association {
@@ -70,5 +83,20 @@ diagram StandardDoc_List {
     owner DefinitionList
     member Definition
     owner_type direct
+  }
+  association {
+    owner StandardBlockNoNotes
+    member StandardDefinitionList
+    owner_type inheritance
+  }
+  association {
+    owner StandardBlockNoNotes
+    member StandardUnorderedList
+    owner_type inheritance
+  }
+  association {
+    owner StandardBlockNoNotes
+    member StandardOrderedList
+    owner_type inheritance
   }
 }

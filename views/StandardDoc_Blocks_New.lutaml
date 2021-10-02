@@ -5,6 +5,7 @@ diagram StandardDoc_Blocks_New {
 
   include ../models/basic_document/refs/ReferenceElement.lutaml
   include ../models/basic_document/block/BasicBlockNoNotes.lutaml
+  include ../models/standard_document/block/StandardBlockNoNotes.lutaml
   include ../models/standard_document/block/AmendBlock.lutaml
   include ../models/standard_document/block/AutoNumber.lutaml
   include ../models/standard_document/block/ImageMapBlock.lutaml
@@ -23,16 +24,21 @@ diagram StandardDoc_Blocks_New {
 
   association {
     owner BasicBlockNoNotes
+    member StandardBlockNoNotes
+    owner_type inheritance
+  }
+  association {
+    owner StandardBlockNoNotes
     member ToC
     owner_type inheritance
   }
   association {
-    owner BasicBlockNoNotes
+    owner StandardBlockNoNotes
     member AmendBlock
     owner_type inheritance
   }
   association {
-    owner BasicBlockNoNotes
+    owner StandardBlockNoNotes
     member Form
     owner_type inheritance
   }
@@ -62,12 +68,12 @@ diagram StandardDoc_Blocks_New {
     owner_type direct
   }
   association {
-    owner BasicBlockNoNotes
+    owner StandardBlockNoNotes
     member Passthrough
     owner_type inheritance
   }
   association {
-    owner BasicBlockNoNotes
+    owner StandardBlockNoNotes
     member SvgMapBlock
     owner_type inheritance
   }
@@ -82,7 +88,7 @@ diagram StandardDoc_Blocks_New {
     owner_type direct
   }
   association {
-    owner BasicBlockNoNotes
+    owner StandardBlockNoNotes
     member ImageMapBlock
     owner_type inheritance
   }

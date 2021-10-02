@@ -1,0 +1,27 @@
+enum MultilingualRenderingType {
+
+  definition {
+    How a block element may be rendered in a multilingual document.
+  }
+
+  common {
+    definition {
+      Block is shared across all languages.
+    }
+  }
+  all-columns {
+    definition {
+      Block spans all columns of text, and versions in different languages are displayed consecutively.
+    }
+  }
+  parallel {
+    definition {
+      Block is to be aligned to the block occupying the same position in the document hierarchy.
+    }
+  }
+  tag {
+    definition {
+      Block is to be aligned to all blocks sharing the same `tag` attribute as this block.
+    }
+  }
+}

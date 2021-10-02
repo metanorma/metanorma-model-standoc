@@ -4,14 +4,4 @@ class StandardExampleBlock {
       Override the numbering of this block in numbering.
     }
   }
-  +keep-lines-together: Boolean[0..1] {
-    definition {
-      Do not permit a page break between the lines of the block in paged media.
-    }
-  }
-  +keep-with-next: Boolean[0..1] {
-    definition {
-      Keep this block on the same page as the following block in paged media.
-    }
-  }
 }
