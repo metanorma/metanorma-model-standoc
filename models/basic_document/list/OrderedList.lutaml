@@ -1,0 +1,5 @@
+class OrderedList <<BasicDocument>> {
+  definition {
+    Ordered list block.
+  }
+}
