@@ -8,6 +8,8 @@ diagram StandardDoc_Terms {
   include ../models/standard_document/sections/TermsSection.lutaml
   include ../models/standard_document/terms/TermCollection.lutaml
   include ../models/standard_document/terms/Term.lutaml
+  include ../models/standard_document/terms/Designation.lutaml
+  include ../models/standard_document/terms/ExpressionDesignation.lutaml
   include ../models/standard_document/terms/TermDefinition.lutaml
   include ../models/standard_document/terms/RelatedTerm.lutaml
   include ../models/standard_document/terms/RelatedTermType.lutaml
@@ -44,6 +46,16 @@ diagram StandardDoc_Terms {
   association {
     owner Term
     member TermDefinition
+    owner_type direct
+  }
+  association {
+    owner Term
+    member Designation
+    owner_type direct
+  }
+  association {
+    owner Designation
+    member ExpressionDesignation
     owner_type direct
   }
   association {

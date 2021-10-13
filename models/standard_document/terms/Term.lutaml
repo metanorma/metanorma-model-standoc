@@ -12,13 +12,13 @@ class Term <<Term>> {
       cross-references.
     }
   }
-  +preferred: <<BasicDocument>> LocalizedString[1..*] {
+  +preferred: Designation[1..*] {
     definition {
       One or more names under which the term being defined
       is canonically known.
     }
   }
-  +admitted: <<BasicDocument>> LocalizedString[0..*] {
+  +admitted: Designation[0..*] {
     definition {
       Zero or more names which are acceptable synonyms for
       the term being defined.
@@ -34,7 +34,7 @@ class Term <<Term>> {
       preferred term)
     }
   }
-  +deprecates: <<BasicDocument>> LocalizedString[0..*] {
+  +deprecates: Designation[0..*] {
     definition {
       Zero or more names which are deprecated synonyms for
       the term being defined.

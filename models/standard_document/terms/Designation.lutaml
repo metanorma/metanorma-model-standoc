@@ -1,0 +1,5 @@
+class Designation {
+  definition {
+    A name under which a managed term is known.
+  }
+}
