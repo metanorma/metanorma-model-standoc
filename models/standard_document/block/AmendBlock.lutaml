@@ -30,7 +30,7 @@ class AmendBlock {
       Optional caption of this block.
     }
   }
-  +description: BasicBlock[0..*] {
+  +description: <<BasicDocument>> BasicBlock[0..*] {
     definition {
       Description of the change described in this block.
     }
@@ -41,7 +41,7 @@ class AmendBlock {
       within an AmendBlock newContent element.
     }
   }
-  +newContent: BasicBlock[0..*] {
+  +newContent: <<BasicDocument>> BasicBlock[0..*] {
     definition {
       New content to be added to the document; applicable to add and modify.
     }

@@ -1,0 +1,5 @@
+class BasicBlock <<BasicDocument>> {
+  definition {
+    Base class of blocks for a BasicDocument.
+  }
+}

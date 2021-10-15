@@ -51,7 +51,7 @@ class Term <<Term>> {
       Subject of the term.
     }
   }
-  +usageInfo: <<BasicDocument>> LocalizedString[0..1] {
+  +usageInfo: <<BasicDocument>> BasicBlock[0..*] {
     definition {
       Information about how the term is to be used.
     }
