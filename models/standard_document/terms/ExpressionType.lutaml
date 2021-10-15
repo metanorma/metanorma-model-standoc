@@ -1,0 +1,26 @@
+enum ExpressionType {
+  definition {
+    Type of linguistic form used as designation.
+  }
+   prefix {
+     definition {
+       The form is a prefix.
+     }
+   }
+   suffix {
+     definition {
+       The form is a suffix.
+     }
+   }
+   abbreviation {
+     definition {
+       The form is an abbreviation.
+     }
+   }
+   full {
+     definition {
+       The form is a self-standing linguistic expression.
+     }
+   }
+}
+

@@ -1,0 +1,7 @@
+data_type Iso15924Code {
+  definition {
+    Script identifier, as defined in ISO 15924.
+  }
+}
+
+
