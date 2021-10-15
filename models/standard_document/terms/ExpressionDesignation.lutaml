@@ -2,9 +2,41 @@ class ExpressionDesignation {
   definition {
     A designation realised as a linguistic form.
   }
+  +language: <<BasicDocument>> Iso639Code[0..1] {
+    definition {
+      The language of the designation, as an ISO-639 3-letter code.
+    }
+  }
+  +script: <<BasicDocument>> Iso15924Code [0..1] {
+    definition {
+      The script of the designation, as an ISO-15924 code.
+    }
+  }
+  +type: ExpressionType [0..1] {
+    definition {
+      Type of linguistic form used as designation.
+    }
+  }
   +text: <<BasicDocument>> PureTextElement[0..*] {
     definition {
       The textual form of the designation.
     }
   }
+  +pronunciation: <<BasicDocument>> LocalizedString [0..*] {
+    definition {
+      A pronunciation guide to the designation.
+    }
+  }
+  +isInternational: Boolean[0..1] {
+    definition {
+      Whether the designation (typically an abbreviation) is the same across languages, or language-specific.
+    }
+  }
+  +abbreviationType: AbbreviationType [0..1] {
+    definition {
+      Type of abbreviation, according to how it is formed.
+    }
+  }
 }
+
+

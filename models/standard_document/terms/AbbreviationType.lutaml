@@ -1,0 +1,20 @@
+enum AbbreviationType {
+  definition {
+    Type of abbreviation, according to how it is formed.
+  }
+  truncation {
+    definition {
+      Abbrevation formed by truncating constituent words.
+    }
+  }
+  acronym  {
+    definition {
+      Abbrevation formed from the initials of its constituent words, and pronounced as a new word.
+    }
+  }
+  initialism {
+    definition {
+      Abbrevation formed from the initials of its constituent words, and pronounced as a sequence of letters.
+    }
+  }
+}
