@@ -46,10 +46,14 @@ class Term <<Term>> {
       in case the term is ambiguous between several semantic domains.
     }
   }
-  +grammar: <<BasicDocument>> LocalizedString[0..*] {
+  +subject: <<BasicDocument>> LocalizedString[0..1] {
     definition {
-      Zero or more abbreviations giving grammatical
-      information about the term (e.g. part of speech, gender).
+      Subject of the term.
+    }
+  }
+  +usageInfo: <<BasicDocument>> LocalizedString[0..1] {
+    definition {
+      Information about how the term is to be used.
     }
   }
   +definition: TermDefinition[1..*] {
