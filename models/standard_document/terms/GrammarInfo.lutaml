@@ -1,0 +1,41 @@
+class GrammarInfo {
+  definition {
+    Grammatical information about a designation.
+  }
+  +gender: GrammarGender [0..*] {
+    definition {
+      The grammatical gender of the designation.
+    }
+  }
+  +isPreposition: Boolean [0..1] {
+    definition {
+      The designation is a preposition.
+    }
+  }
+  +isParticiple: Boolean [0..1] {
+    definition {
+      The designation is a participle.
+    }
+  }
+  +isAdjective: Boolean [0..1] {
+    definition {
+      The designation is an adjective.
+    }
+  }
+  +isVerb: Boolean [0..1] {
+    definition {
+      The designation is a verb.
+    }
+  }
+  +isAdverb: Boolean [0..1] {
+    definition {
+      The designation is an adverb.
+    }
+  }
+  +isNoun: Boolean [0..1] {
+    definition {
+      The designation is a noun.
+    }
+  }
+}
+

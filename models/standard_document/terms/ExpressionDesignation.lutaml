@@ -37,6 +37,11 @@ class ExpressionDesignation {
       Type of abbreviation, according to how it is formed.
     }
   }
+  +grammarInfo: GrammarInfo [0..1] {
+    definition {
+      Grammatical information about the designation.
+    }
+  }
 }
 
 
