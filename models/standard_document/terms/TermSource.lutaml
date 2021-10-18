@@ -3,11 +3,15 @@ class TermSource <<Term>>{
     The bibliographic source where a term is defined in the
     sense applicable in this _StandardDocument_.
   }
-
   +status: TermSourceStatus {
     definition {
       The status of the term as it is used in this document,
       relative to its definition in the original document.
+    }
+  }
+  +status: TermSourceType {
+    definition {
+      The type of the managed term in the present context.
     }
   }
   +origin: <<Bibliography>> Citation {

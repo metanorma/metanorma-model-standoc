@@ -1,0 +1,15 @@
+enum TermSourceType {
+  definition {
+    The type of the managed term in the present context.
+  }
+  authoritative {
+    definition {
+      The managed term is authoritative in the present context.
+    }
+  }
+  lineage {
+    definition {
+      The managed term constitutes lineage in the present context.
+    }
+  }
+}

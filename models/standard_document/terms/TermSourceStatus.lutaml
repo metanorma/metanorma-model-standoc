@@ -1,17 +1,40 @@
 enum TermSourceStatus {
-
   definition {
     The status of a term as it is used in this document, relative to its definition in the original document.
   }
-
   identical {
     definition {
-      The term definition in this document is identical to that given in the original document.
+      The managed term in the present context is identical to the term as found in the bibliographic source.
     }
   }
   modified {
     definition {
-      The term definition in this document has been modified from that given in the original document.
+      The managed term in the present context has been modified from the term as found in the bibliographic source.
+    }
+  }
+  restyled {
+    definition {
+      The managed term in the present context has been restyled from the term as found in the bibliographic source.
+    }
+  }
+  context-added {
+    definition {
+      The managed term in the present context has had context added to it, relative to the term as found in the bibliographic source.
+    }
+  }
+  generalisation {
+    definition {
+      The managed term in the present context is a generalisation of the term as found in the bibliographic source.
+    }
+  }
+  specialisation {
+    definition {
+      The managed term in the present context is a specialisation of the term as found in the bibliographic source.
+    }
+  }
+  unspecified {
+    definition {
+      The managed term in the present context is in an unspecified relation to the term as found in the bibliographic source.
     }
   }
 }
