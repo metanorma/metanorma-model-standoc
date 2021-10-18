@@ -1,21 +1,45 @@
 enum RelatedTermType {
   definition {
-    Type of relation between terms.
+    The relation of a term to the current term.
   }
-
-   compare {
-     definition {
-       The related term is mentioned as something the current term is comparable to.
-     }
-   }
-   contrast {
-     definition {
-       The related term is mentioned as something the current term is to be contrasted with.
-     }
-   }
-   see {
-     definition {
-       The related term is mentioned as something to be consulted as providing further information on the current term.
-     }
-   }
+  deprecates {
+    definition {
+      The current term deprecates the related term.
+    }
+  }
+  supersedes {
+    definition {
+      The current term supersedes the related term.
+    }
+  }
+  narrower {
+    definition {
+      The current term is narrower in denotation than the related term.
+    }
+  }
+  broader {
+    definition {
+      The current term is broader in denotation than the related term.
+    }
+  }
+  equivalent {
+    definition {
+      The current term is equivalent in denotation than the related term.
+    }
+  }
+  compare {
+    definition {
+      The current term may be compared to the related term.
+    }
+  }
+  contrast {
+    definition {
+      The current term is understood in contrast to the related term.
+    }
+  }
+  see {
+    definition {
+      For a better understanding of the current term, one should also see the related term.
+    }
+  }
 }

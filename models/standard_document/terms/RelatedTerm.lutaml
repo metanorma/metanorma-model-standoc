@@ -7,9 +7,24 @@ class RelatedTerm {
       Type of relation of term applicable.
     }
   }
-  +content: <<BasicDocument>> LocalizedString {
+  +preferred: Designation {
     definition {
       Label of term related to the current term.
+    }
+  }
+  +xref: ReferenceToIdElement[0..1] {
+    definition {
+      Link to a definition of the term in an element of the current document.
+    }
+  }
+  +eref: ReferenceToCitationElement[0..1] {
+    definition {
+      Link to a definition of the term in a bibliographic entry.
+    }
+  }
+  +termref: ReferenceToTermbase[0..1] {
+    definition {
+      Link to a definition of the term in a termbase.
     }
   }
 }
