@@ -1,0 +1,17 @@
+class LetterSymbolDesignation {
+  definition {
+    A designation realised as a letter or symbol.
+  }
+  +text: <<BasicDocument>> PureTextElement[0..*] {
+    definition {
+      The textual form of the designation.
+    }
+  }
+  +isInternational: Boolean[0..1] {
+    definition {
+      Whether the designation (typically an abbreviation) is the same across languages, or language-specific.
+    }
+  }
+}
+
+
