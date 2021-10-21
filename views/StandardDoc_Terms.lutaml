@@ -25,6 +25,7 @@ diagram StandardDoc_Terms {
   include ../models/basic_document/list/Definition.lutaml
   include ../models/basic_document/datatypes/Iso15924Code.lutaml
   include ../models/basic_document/datatypes/Iso639Code.lutaml
+  include ../models/basic_document/datatypes/Iso3166Code.lutaml
 
   association {
     owner ClauseSection
@@ -64,6 +65,11 @@ diagram StandardDoc_Terms {
   association {
     owner Term
     member Designation
+    owner_type direct
+  }
+  association {
+    owner Designation
+    member Iso3166Code
     owner_type direct
   }
   association {

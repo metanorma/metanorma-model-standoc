@@ -1,0 +1,7 @@
+data_type Iso3166Code {
+  definition {
+    Country and country subdivisions identifier, as defined in ISO 3166.
+  }
+}
+
+

@@ -2,4 +2,19 @@ class Designation {
   definition {
     A name under which a managed term is known.
   }
+  +absent: Boolean [0..1] {
+    definition {
+      Indication that the term designation is missing.
+    }
+  }
+  +geographicArea: Iso3166Code [0..*] {
+    definition {
+      The geographic area in which the managed term is known under this designation.
+    }
+  }
+  +sources: ConceptSource [0..*] {
+    definition {
+      Bibliographic references for this designation of the managed term.
+    }
+  }
 }
