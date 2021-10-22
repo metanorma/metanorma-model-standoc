@@ -1,0 +1,5 @@
+class StemElement <<BasicDocument>>{
+  definition {
+    Inline element containing mathematical formatting.
+  }
+}

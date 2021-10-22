@@ -23,7 +23,9 @@ diagram StandardDoc_Terms {
   include ../models/standard_document/terms/GrammarInfo.lutaml
   include ../models/standard_document/terms/GrammarGender.lutaml
   include ../models/basic_document/block/BasicBlock.lutaml
+  include ../models/basic_document/block/FigureBlock.lutaml
   include ../models/basic_document/list/Definition.lutaml
+  include ../models/basic_document/elements/StemElement.lutaml
   include ../models/basic_document/datatypes/Iso15924Code.lutaml
   include ../models/basic_document/datatypes/Iso639Code.lutaml
   include ../models/basic_document/datatypes/Iso3166Code.lutaml
@@ -81,6 +83,16 @@ diagram StandardDoc_Terms {
   association {
     owner Designation
     member LetterSymbolDesignation
+    owner_type direct
+  }
+  association {
+    owner Designation
+    member GraphicalSymbolDesignation
+    owner_type direct
+  }
+  association {
+    owner LetterSymbolDesignation
+    member StemElement
     owner_type direct
   }
   association {
