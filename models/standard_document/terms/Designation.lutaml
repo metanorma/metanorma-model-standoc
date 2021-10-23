@@ -12,7 +12,7 @@ class Designation {
       The geographic area in which the managed term is known under this designation.
     }
   }
-  +sources: ConceptSource [0..*] {
+  +sources: TermSource [0..*] {
     definition {
       Bibliographic references for this designation of the managed term.
     }

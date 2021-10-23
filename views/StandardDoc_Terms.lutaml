@@ -9,6 +9,7 @@ diagram StandardDoc_Terms {
   include ../models/standard_document/terms/TermCollection.lutaml
   include ../models/standard_document/terms/Term.lutaml
   include ../models/standard_document/terms/Designation.lutaml
+  include ../models/standard_document/terms/NonVerbalRepresentation.lutaml
   include ../models/standard_document/terms/ExpressionDesignation.lutaml
   include ../models/standard_document/terms/ExpressionType.lutaml
   include ../models/standard_document/terms/LetterSymbolDesignation.lutaml
@@ -24,6 +25,8 @@ diagram StandardDoc_Terms {
   include ../models/standard_document/terms/GrammarGender.lutaml
   include ../models/basic_document/block/BasicBlock.lutaml
   include ../models/basic_document/block/FigureBlock.lutaml
+  include ../models/basic_document/block/FormulaBlock.lutaml
+  include ../models/basic_document/block/TableBlock.lutaml
   include ../models/basic_document/list/Definition.lutaml
   include ../models/basic_document/elements/StemElement.lutaml
   include ../models/basic_document/datatypes/Iso15924Code.lutaml
@@ -128,6 +131,26 @@ diagram StandardDoc_Terms {
   association {
     owner TermDefinition
     member Definition
+    owner_type direct
+  }
+  association {
+    owner TermDefinition
+    member NonVerbalRepresentation
+    owner_type direct
+  }
+  association {
+    owner NonVerbalRepresentation
+    member FigureBlock
+    owner_type direct
+  }
+  association {
+    owner NonVerbalRepresentation
+    member FormulaBlock
+    owner_type direct
+  }
+  association {
+    owner NonVerbalRepresentation
+    member TableBlock
     owner_type direct
   }
   association {

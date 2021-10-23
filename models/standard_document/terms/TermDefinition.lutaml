@@ -3,13 +3,19 @@ class TermDefinition <<Term>> {
     The definition of a term applied in the current
     document.
   }
-  +definition: <<BasicDocument>> Definition {
+  +definition: <<BasicDocument>> Definition [0..1] {
     definition {
       The content of the definition of the term applied in the current
       document.
     }
   }
-  +source: TermSource[0..*] {
+  +definition: NonVerbalRepresentation [0..1] {
+    definition {
+      Non-verbal representation of the term applied in the current
+      document.
+    }
+  }
+  source: TermSource[0..*] {
     definition {
       Zero or more bibliographical sources for this definition of the term. These
       include the `origin` of the term, which is its bibliographical

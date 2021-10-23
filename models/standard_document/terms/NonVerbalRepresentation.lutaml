@@ -1,0 +1,25 @@
+class NonVerbalRepresentation {
+  definition {
+    Non-verbal representation of the term.
+  }
+  +figure: <<BasicDocument>> FigureBlock [0..*] {
+    definition {
+      Figure representation of the term.
+    }
+  }
+  +formula: <<BasicDocument>> FormulaBlock [0..*] {
+    definition {
+      Figure representation of the term.
+    }
+  }
+  +table: <<BasicDocument>> TableBlock [0..*] {
+    definition {
+      Figure representation of the term.
+    }
+  }
+  +sources: TermSource [0..*] {
+    definition {
+      Bibliographic references for this designation of the managed term.
+    }
+  }
+}
