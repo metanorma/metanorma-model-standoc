@@ -10,6 +10,7 @@ diagram StandardDoc_Terms {
   include ../models/standard_document/terms/Term.lutaml
   include ../models/standard_document/terms/Designation.lutaml
   include ../models/standard_document/terms/NonVerbalRepresentation.lutaml
+  include ../models/standard_document/terms/VerbalExpression.lutaml
   include ../models/standard_document/terms/ExpressionDesignation.lutaml
   include ../models/standard_document/terms/ExpressionType.lutaml
   include ../models/standard_document/terms/LetterSymbolDesignation.lutaml
@@ -27,7 +28,11 @@ diagram StandardDoc_Terms {
   include ../models/basic_document/block/FigureBlock.lutaml
   include ../models/basic_document/block/FormulaBlock.lutaml
   include ../models/basic_document/block/TableBlock.lutaml
+  include ../models/basic_document/block/ParagraphBlock.lutaml
   include ../models/basic_document/list/Definition.lutaml
+  include ../models/basic_document/list/DefinitionList.lutaml
+  include ../models/basic_document/list/OrderedList.lutaml
+  include ../models/basic_document/list/UnorderedList.lutaml
   include ../models/basic_document/elements/StemElement.lutaml
   include ../models/basic_document/datatypes/Iso15924Code.lutaml
   include ../models/basic_document/datatypes/Iso639Code.lutaml
@@ -130,7 +135,27 @@ diagram StandardDoc_Terms {
   }
   association {
     owner TermDefinition
-    member Definition
+    member VerbalExpression
+    owner_type direct
+  }
+  association {
+    owner VerbalExpression
+    member ParagraphBlock
+    owner_type direct
+  }
+  association {
+    owner VerbalExpression
+    member UnorderedList
+    owner_type direct
+  }
+  association {
+    owner VerbalExpression
+    member OrderedList
+    owner_type direct
+  }
+  association {
+    owner VerbalExpression
+    member DefinitionList
     owner_type direct
   }
   association {

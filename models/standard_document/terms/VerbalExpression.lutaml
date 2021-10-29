@@ -1,0 +1,25 @@
+class VerbalExpression {
+  definition {
+    Verbal expression of the term.
+  }
+  +paragraph: <<BasicDocument>> ParagraphBlock [0..*] {
+    definition {
+      Paragraph in term definition.
+    }
+  }
+  +ol: <<BasicDocument>> OrderedList [0..*] {
+    definition {
+      Ordered list in term definition.
+    }
+  }
+  +ul: <<BasicDocument>> UnorderedList [0..*] {
+    definition {
+      Unordered list in term definition.
+    }
+  }
+  +dl: DefinitionList [0..*] {
+    definition {
+      Definition list in term definition.
+    }
+  }
+}
