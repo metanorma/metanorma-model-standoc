@@ -24,6 +24,7 @@ diagram StandardDoc_Terms {
   include ../models/standard_document/terms/AbbreviationType.lutaml
   include ../models/standard_document/terms/GrammarInfo.lutaml
   include ../models/standard_document/terms/GrammarGender.lutaml
+  include ../models/standard_document/block/MultilingualRenderingType.lutaml
   include ../models/basic_document/block/BasicBlock.lutaml
   include ../models/basic_document/block/FigureBlock.lutaml
   include ../models/basic_document/block/FormulaBlock.lutaml
@@ -66,6 +67,11 @@ diagram StandardDoc_Terms {
   association {
     owner Term
     member BasicBlock
+    owner_type direct
+  }
+  association {
+    owner Term
+    member MultilingualRenderingType
     owner_type direct
   }
   association {

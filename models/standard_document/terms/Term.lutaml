@@ -16,6 +16,16 @@ class Term <<Term>> {
       The script of the term entry, as an ISO-15924 code.
     }
   }
+  +tag: String[0..1] {
+    definition {
+      Non-unique identifier within document. Used to align two blocks in different languages in a multilingual document.
+    }
+  }
+  +multilingual-rendering: MultilingualRenderingType[0..1] {
+    definition {
+      Specification of how a block element may be rendered in a multilingual document.
+    }
+  }
   +id: String[0..1] {
     definition {
       An optional identifier for the term, to be used in
