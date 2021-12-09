@@ -6,6 +6,16 @@ class Term <<Term>> {
     NOTE: The `Term` definition fully aligns with the structure
     and requirements of terms in ISO/IEC DIR 2, 16.6.
   }
+  +language: <<BasicDocument>> Iso639Code[0..1] {
+    definition {
+      The language of the term entry, as an ISO-639 3-letter code.
+    }
+  }
+  +script: <<BasicDocument>> Iso15924Code [0..1] {
+    definition {
+      The script of the term entry, as an ISO-15924 code.
+    }
+  }
   +id: String[0..1] {
     definition {
       An optional identifier for the term, to be used in
