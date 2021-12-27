@@ -4,6 +4,7 @@ diagram StandardDoc_Sections {
 
 
   include ../models/basic_document/sections/BasicSection.lutaml
+  include ../models/standard_document/block/StandardBlockNoNotes.lutaml
   include ../models/basic_document/sections/HierarchicalSection.lutaml
   include ../models/standard_document/sections/StandardSection.lutaml
   include ../models/standard_document/sections/StandardHierarchicalSection.lutaml
@@ -17,6 +18,7 @@ diagram StandardDoc_Sections {
   include ../models/standard_document/sections/AnnexSection.lutaml
   include ../models/standard_document/sections/StandardReferencesSection.lutaml
   include ../models/standard_document/sections/NormativeType.lutaml
+  include ../models/standard_document/sections/FloatingTitle.lutaml
 
   association {
     owner BasicSection
@@ -90,5 +92,14 @@ diagram StandardDoc_Sections {
     member ClauseHierarchicalSection
     owner_type inheritance
   }
-
+  association {
+    owner StandardBlockNoNotes
+    member FloatingTitle
+    owner_type inheritance
+  }
+  association {
+    owner StandardSection
+    member FloatingTitle
+    owner_type inheritance
+  }
 }

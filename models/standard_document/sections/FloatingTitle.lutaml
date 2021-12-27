@@ -1,0 +1,10 @@
+class FloatingTitle {
+  definition {
+    A floating title, outside of the clause hierarchy
+  }
+  +depth: Integer {
+    definition {
+      The depth of the floating title in the clause hierarchy: which level heading it should be presented as
+    }
+  }
+}
