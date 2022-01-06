@@ -9,33 +9,5 @@ on:
   pull_request:
 
 jobs:
-  make:
-    name: Test on LutaML ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ ubuntu-latest, windows-latest, macos-latest ]
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - uses: metanorma/metanorma-build-scripts/plantuml-setup-action@master
-
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '2.7'
-          bundler-cache: true
-
-      - run: bundle exec make clean all
-
-  tests-passed:
-    needs: make
-    runs-on: ubuntu-latest
-    steps:
-      - uses: peter-evans/repository-dispatch@v1
-        with:
-          token: ${{ secrets.METANORMA_CI_PAT_TOKEN || secrets.GITHUB_TOKEN }}
-          repository: ${{ github.repository }}
-          event-type: tests-passed
-          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
+  rake:
+    uses: metanorma/metanorma-build-scripts/.github/workflows/model-make.yml@main
