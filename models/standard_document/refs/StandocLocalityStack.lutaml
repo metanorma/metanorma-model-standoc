@@ -1,0 +1,10 @@
+class StandocLocalityStack {
+   definition {
+     Description of location in a reference, which can be combined with other locations in a single citation.
+   }
+  +connective: XrefConnectiveType {
+    definition {
+      Connective linking this location to its predecessor. _from/to_ are presumed to nest more closely than _and_ or _or_.
+    }
+  }
+}

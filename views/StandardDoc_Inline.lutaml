@@ -8,6 +8,7 @@ diagram StandardDoc_Inline {
   include ../models/basic_document/refs/ReferenceToCitationElement.lutaml
   include ../models/basic_document/elements/PageBreakElement.lutaml
   include ../models/basic_document/elements/TextElement.lutaml
+  include ../models/relaton/LocalityStack.lutaml
   include ../models/standard_document/refs/ReferenceToTermbase.lutaml
   include ../models/standard_document/refs/ReferenceToTerm.lutaml
   include ../models/standard_document/refs/StandocReferenceToIdElement.lutaml
@@ -15,6 +16,7 @@ diagram StandardDoc_Inline {
   include ../models/standard_document/refs/XrefCaseType.lutaml
   include ../models/standard_document/refs/XrefConnectiveType.lutaml
   include ../models/standard_document/refs/XrefTargetType.lutaml
+  include ../models/standard_document/refs/StandocLocalityStack.lutaml
   include ../models/standard_document/elements/StandardPageBreakElement.lutaml
   include ../models/standard_document/elements/OrientationType.lutaml
   include ../models/standard_document/elements/Add.lutaml
@@ -23,6 +25,11 @@ diagram StandardDoc_Inline {
   association {
     owner ReferenceElement
     member ReferenceToIdElement
+    owner_type inheritance
+  }
+  association {
+    owner LocalityStack
+    member StandocLocalityStack
     owner_type inheritance
   }
   association {
@@ -68,6 +75,11 @@ diagram StandardDoc_Inline {
   association {
     owner StandocReferenceToCitationElement
     member Concept
+    owner_type direct
+  }
+  association {
+    owner StandocReferenceToCitationElement
+    member StandocLocalityStack
     owner_type direct
   }
   association {
