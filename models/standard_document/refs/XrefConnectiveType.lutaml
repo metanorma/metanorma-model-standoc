@@ -1,0 +1,25 @@
+enum XrefConnectiveType {
+  definition {
+     Connective linking the current cross-reference target to its predecessor.
+  }
+  and {
+    definition {
+      and
+    }
+  }
+  or {
+    definition {
+      or
+    }
+  }
+  from {
+    definition {
+      from, in from-to pair
+    }
+  }
+  to {
+    definition {
+      to, in from-to pair
+    }
+  }
+}

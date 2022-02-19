@@ -18,4 +18,9 @@ class StandocReferenceToIdElement {
       provide the identifier of the end element of the span.
     }
   }
+  +xref_target: XrefTargetType[0..*] {
+    definition {
+      Listing of multiple cross-reference targets to be combined under the one element.
+    }
+  }
 }
