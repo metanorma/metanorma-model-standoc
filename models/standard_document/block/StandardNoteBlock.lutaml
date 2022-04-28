@@ -27,6 +27,16 @@ class StandardNoteBlock {
       Do not number this block in rendering.
     }
   }
+  +cover-page: Boolean[0..1] {
+    definition {
+      Display the note on the document cover page.
+    }
+  }
+  +notag: Boolean[0..1] {
+    definition {
+      Do not insert text labelling the note as a note in rendering.
+    }
+  }
   +type: String[0..1] {
     definition {
       Semantic classification of note.
