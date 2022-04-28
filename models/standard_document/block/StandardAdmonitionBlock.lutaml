@@ -1,2 +1,13 @@
 class StandardAdmonitionBlock {
+  +cover-page: Boolean[0..1] {
+    definition {
+      Display the admonition on the document cover page.
+    }
+  }
+  +notag: Boolean[0..1] {
+    definition {
+      Do not insert text labelling the type of admonition in rendering.
+    }
+  }
+
 }
