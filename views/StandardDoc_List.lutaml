@@ -2,15 +2,15 @@ diagram StandardDoc_List {
   title 'StandardDocument List Blocks'
   caption 'List Block elements of StandardDocument adapted from BasicDocument'
 
-  include ../models/basic_document/block/BasicBlockNoNotes.lutaml
+  include ../models/basic_document/blocks/BasicBlockNoNotes.lutaml
   include ../models/standard_document/block/StandardBlockNoNotes.lutaml
 
-  include ../models/basic_document/list/List.lutaml
-  include ../models/basic_document/list/OrderedList.lutaml
-  include ../models/basic_document/list/UnorderedList.lutaml
-  include ../models/basic_document/list/DefinitionList.lutaml
-  include ../models/basic_document/list/Definition.lutaml
-  include ../models/basic_document/list/ListItem.lutaml
+  include ../models/basic_document/lists/List.lutaml
+  include ../models/basic_document/lists/OrderedList.lutaml
+  include ../models/basic_document/lists/UnorderedList.lutaml
+  include ../models/basic_document/lists/DefinitionList.lutaml
+  include ../models/basic_document/lists/Definition.lutaml
+  include ../models/basic_document/lists/ListItem.lutaml
 
   include ../models/standard_document/list/StandardUnorderedList.lutaml
   include ../models/standard_document/list/StandardOrderedList.lutaml

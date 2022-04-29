@@ -3,8 +3,8 @@ diagram StandardDoc_Blocks_New {
   title 'StandardDocument Blocks'
   caption 'Block elements of StandardDocument new to BasicDocument'
 
-  include ../models/basic_document/refs/ReferenceElement.lutaml
-  include ../models/basic_document/block/BasicBlockNoNotes.lutaml
+  include ../models/basic_document/referenceelements/ReferenceElement.lutaml
+  include ../models/basic_document/blocks/BasicBlockNoNotes.lutaml
   include ../models/standard_document/block/StandardBlockNoNotes.lutaml
   include ../models/standard_document/block/AmendBlock.lutaml
   include ../models/standard_document/block/AutoNumber.lutaml

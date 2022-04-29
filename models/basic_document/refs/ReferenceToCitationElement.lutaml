@@ -1,5 +1,0 @@
-class ReferenceToCitationElement <<BasicDocument>> {
-  definition {
-    An external reference to a bibliographic entity.
-  }
-}

@@ -4,14 +4,14 @@ diagram StandardDoc_StandardDocument {
 
   include ../models/basic_document/BasicDocument.lutaml
 
-  include ../models/basic_document/refs/ReferenceElement.lutaml
-  include ../models/basic_document/refs/ReferenceToCitationElement.lutaml
-  include ../models/basic_document/refs/ReferenceToIdElement.lutaml
+  include ../models/basic_document/referenceelements/ReferenceElement.lutaml
+  include ../models/basic_document/referenceelements/ReferenceToCitationElement.lutaml
+  include ../models/basic_document/referenceelements/ReferenceToIdElement.lutaml
 
   include ../models/standard_document/refs/ReferenceToTermbase.lutaml
   include ../models/standard_document/refs/ReferenceToTerm.lutaml
 
-  include ../models/basic_document/elements/PageBreakElement.lutaml
+  include ../models/basic_document/emptyelements/PageBreakElement.lutaml
   include ../models/standard_document/elements/StandardPageBreakElement.lutaml
   include ../models/standard_document/elements/OrientationType.lutaml
 

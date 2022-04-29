@@ -2,8 +2,8 @@ diagram StandardDoc_Metadata {
   title 'StandardDocument Metadata'
   caption 'Metadata elements of StandardDocument'
 
-  include ../models/basic_document/metadata/BibDataExtensionType.lutaml
-  include ../models/basic_document/metadata/BibData.lutaml
+  include ../models/basic_document/bibdata/BibDataExtensionType.lutaml
+  include ../models/basic_document/bibdata/BibData.lutaml
   include ../models/standard_document/metadata/StandardBibData.lutaml
   include ../models/standard_document/metadata/StandardBibDataExtensionType.lutaml
   include ../models/standard_document/metadata/EditorialGroupType.lutaml
