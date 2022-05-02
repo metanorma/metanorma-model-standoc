@@ -1,0 +1,10 @@
+class Span {
+  definition {
+    Semantic markup for inline elements.
+  }
+  class: String {
+    definition {
+      Class of the inline span as semantic markup.
+    }
+  }
+}
