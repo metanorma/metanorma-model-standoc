@@ -9,6 +9,7 @@ diagram StandardDoc_Terms {
   include ../models/standard_document/terms/TermCollection.lutaml
   include ../models/standard_document/terms/Term.lutaml
   include ../models/standard_document/terms/Designation.lutaml
+  include ../models/standard_document/terms/GraphicalSymbolDesignation.lutaml
   include ../models/standard_document/terms/NonVerbalRepresentation.lutaml
   include ../models/standard_document/terms/VerbalExpression.lutaml
   include ../models/standard_document/terms/ExpressionDesignation.lutaml
@@ -25,16 +26,16 @@ diagram StandardDoc_Terms {
   include ../models/standard_document/terms/GrammarInfo.lutaml
   include ../models/standard_document/terms/GrammarGender.lutaml
   include ../models/standard_document/block/MultilingualRenderingType.lutaml
-  include ../models/basic_document/block/BasicBlock.lutaml
-  include ../models/basic_document/block/FigureBlock.lutaml
-  include ../models/basic_document/block/FormulaBlock.lutaml
-  include ../models/basic_document/block/TableBlock.lutaml
-  include ../models/basic_document/block/ParagraphBlock.lutaml
-  include ../models/basic_document/list/Definition.lutaml
-  include ../models/basic_document/list/DefinitionList.lutaml
-  include ../models/basic_document/list/OrderedList.lutaml
-  include ../models/basic_document/list/UnorderedList.lutaml
-  include ../models/basic_document/elements/StemElement.lutaml
+  include ../models/basic_document/blocks/BasicBlock.lutaml
+  include ../models/basic_document/ancillaryblocks/FigureBlock.lutaml
+  include ../models/basic_document/ancillaryblocks/FormulaBlock.lutaml
+  include ../models/basic_document/tables/TableBlock.lutaml
+  include ../models/basic_document/paragraphs/ParagraphBlock.lutaml
+  include ../models/basic_document/lists/Definition.lutaml
+  include ../models/basic_document/lists/DefinitionList.lutaml
+  include ../models/basic_document/lists/OrderedList.lutaml
+  include ../models/basic_document/lists/UnorderedList.lutaml
+  include ../models/basic_document/textelements/StemElement.lutaml
   include ../models/basic_document/datatypes/Iso15924Code.lutaml
   include ../models/basic_document/datatypes/Iso639Code.lutaml
   include ../models/basic_document/datatypes/Iso3166Code.lutaml

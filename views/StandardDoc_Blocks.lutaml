@@ -3,17 +3,17 @@ diagram StandardDoc_Blocks {
   caption 'Block elements of StandardDocument adapted from BasicDocument'
 
   include ../models/basic_document/BasicDocument.lutaml
-  include ../models/basic_document/block/BasicBlockNoNotes.lutaml
+  include ../models/basic_document/blocks/BasicBlockNoNotes.lutaml
 
-  include ../models/basic_document/block/NoteBlock.lutaml
-  include ../models/basic_document/block/FigureBlock.lutaml
-  include ../models/basic_document/block/SourcecodeBlock.lutaml
-  include ../models/basic_document/block/FormulaBlock.lutaml
-  include ../models/basic_document/block/ExampleBlock.lutaml
-  include ../models/basic_document/block/ParagraphBlock.lutaml
-  include ../models/basic_document/block/QuoteBlock.lutaml
-  include ../models/basic_document/block/AdmonitionBlock.lutaml
-  include ../models/basic_document/block/TableBlock.lutaml
+  include ../models/basic_document/blocks/NoteBlock.lutaml
+  include ../models/basic_document/ancillaryblocks/FigureBlock.lutaml
+  include ../models/basic_document/ancillaryblocks/SourcecodeBlock.lutaml
+  include ../models/basic_document/ancillaryblocks/FormulaBlock.lutaml
+  include ../models/basic_document/ancillaryblocks/ExampleBlock.lutaml
+  include ../models/basic_document/paragraphs/ParagraphBlock.lutaml
+  include ../models/basic_document/multiparagraphs/QuoteBlock.lutaml
+  include ../models/basic_document/multiparagraphs/AdmonitionBlock.lutaml
+  include ../models/basic_document/tables/TableBlock.lutaml
 
   include ../models/standard_document/block/StandardBlock.lutaml
   include ../models/standard_document/block/StandardBlockNoNotes.lutaml
