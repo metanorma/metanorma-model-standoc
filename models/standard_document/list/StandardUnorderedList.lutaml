@@ -7,4 +7,9 @@ class StandardUnorderedList {
       List item for standards documents.
     }
   }
+  +name: String[0..1] {
+    definition {
+      Caption of the list.
+    }
+  }
 }

@@ -21,6 +21,7 @@ diagram StandardDoc_Inline {
   include ../models/standard_document/elements/OrientationType.lutaml
   include ../models/standard_document/elements/Add.lutaml
   include ../models/standard_document/elements/Del.lutaml
+  include ../models/standard_document/elements/Span.lutaml
 
   association {
     owner ReferenceElement
@@ -121,6 +122,11 @@ diagram StandardDoc_Inline {
     owner StandardPageBreakElement
     member OrientationType
     owner_type direct
+  }
+  association {
+    owner TextElement
+    member Span
+    owner_type inheritance
   }
   association {
     owner TextElement

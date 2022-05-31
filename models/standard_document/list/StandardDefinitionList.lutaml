@@ -14,4 +14,9 @@ class StandardDefinitionList {
       This definition list is the key of a figure or formula.
     }
   }
+  +name: String[0..1] {
+    definition {
+      Caption of the list.
+    }
+  }
 }
