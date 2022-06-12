@@ -39,6 +39,11 @@ enum RelatedTermType {
   }
   see {
     definition {
+      For a better understanding of the current term, one should see the related term.
+    }
+  }
+  seealso {
+    definition {
       For a better understanding of the current term, one should also see the related term.
     }
   }
