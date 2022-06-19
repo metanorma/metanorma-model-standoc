@@ -1,2 +1,7 @@
 class StandardParagraphBlock {
+  +type: String[0..1] {
+    definition {
+      Allow semantic classification of paragraphs.
+    }
+  }
 }
