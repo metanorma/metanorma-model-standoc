@@ -1,0 +1,7 @@
+class StandardBibliographicItem {
+  +suppress_identifier: Boolean[0..1] {
+    definition {
+      Suppress identifier from item rendering.
+    }
+  }
+}

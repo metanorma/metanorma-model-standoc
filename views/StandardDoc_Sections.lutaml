@@ -19,6 +19,8 @@ diagram StandardDoc_Sections {
   include ../models/standard_document/sections/StandardReferencesSection.lutaml
   include ../models/standard_document/sections/NormativeType.lutaml
   include ../models/standard_document/sections/FloatingTitle.lutaml
+  include ../models/standard_document/block/StandardBibliographicItem.lutaml
+  include ../models/relaton/BibliographicItem.lutaml
 
   association {
     owner BasicSection
@@ -28,6 +30,11 @@ diagram StandardDoc_Sections {
   association {
     owner BasicSection
     member HierarchicalSection
+    owner_type inheritance
+  }
+  association {
+    owner BibliographicItem
+    member StandardBibliographicItem
     owner_type inheritance
   }
   association {
@@ -59,6 +66,11 @@ diagram StandardDoc_Sections {
     owner StandardSection
     member StandardReferencesSection
     owner_type inheritance
+  }
+  association {
+    owner StandardReferencesSection
+    member StandardBibliographicItem
+    owner_type direct
   }
 
   association {

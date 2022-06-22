@@ -19,7 +19,7 @@ class StandardReferencesSection{
       Whether the references in the current section are normative or informative for the document.
     }
   }
-  references: <<Bibliography>> BibliographicItem[0..*] {
+  references: StandardBibliographicItem[0..*] {
     definition {
       Bibliographic items cited in the document.
     }
