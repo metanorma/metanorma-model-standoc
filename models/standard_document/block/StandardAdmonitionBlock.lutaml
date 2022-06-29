@@ -9,5 +9,9 @@ class StandardAdmonitionBlock {
       Do not insert text labelling the type of admonition in rendering.
     }
   }
-
+ +type: StandardAdmonitionType {
+    definition {
+      Display the admonition on the document cover page.
+    }
+  }
 }

@@ -1,0 +1,5 @@
+class AdmonitionType <<BasicDocument>> {
+  definition {
+    Subclass of admonition determining how it is to be rendered.
+  }
+}

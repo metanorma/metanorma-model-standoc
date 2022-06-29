@@ -1,0 +1,7 @@
+class StandardAdmonitionType {
+  editorial {
+    definition {
+      Annotation by document editors, intended for all readers of the document and not just its authors.
+    }
+  }
+}

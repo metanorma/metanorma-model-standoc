@@ -14,6 +14,7 @@ diagram StandardDoc_Blocks {
   include ../models/basic_document/block/QuoteBlock.lutaml
   include ../models/basic_document/block/AdmonitionBlock.lutaml
   include ../models/basic_document/block/TableBlock.lutaml
+  include ../models/basic_document/block/AdmonitionType.lutaml
 
   include ../models/standard_document/block/StandardBlock.lutaml
   include ../models/standard_document/block/StandardBlockNoNotes.lutaml
@@ -28,6 +29,7 @@ diagram StandardDoc_Blocks {
   include ../models/standard_document/block/StandardParagraphBlock.lutaml
   include ../models/standard_document/block/StandardQuoteBlock.lutaml
   include ../models/standard_document/block/StandardAdmonitionBlock.lutaml
+  include ../models/standard_document/block/StandardAdmonitionType.lutaml
 
   association {
     owner BasicDocument
@@ -142,6 +144,11 @@ diagram StandardDoc_Blocks {
   association {
     owner AdmonitionBlock
     member StandardAdmonitionBlock
+    owner_type inheritance
+  }
+  association {
+    owner AdmonitionType
+    member StandardAdmonitionType
     owner_type inheritance
   }
   association {
