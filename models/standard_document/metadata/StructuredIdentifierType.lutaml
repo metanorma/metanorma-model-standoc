@@ -49,6 +49,16 @@ class StructuredIdentifierType {
       Representation in the identifier of the document supplement, if this is a document supplement.
     }
   }
+  +amendment: String[0..1] {
+    definition {
+      Representation in the identifier of the document amendment, if this is a document amendment.
+    }
+  }
+  +corrigendum: String[0..1] {
+    definition {
+      Representation in the identifier of the document corrigendum, if this is a document corrigendum.
+    }
+  }
   +year: String[0..1] {
     definition {
       Representation in the identifier of the year of publication or issuance of the document.
