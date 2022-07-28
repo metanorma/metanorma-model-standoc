@@ -1,10 +1,15 @@
 class Span {
   definition {
-    Semantic markup for inline elements.
+    Semantic or formatting markup for inline elements.
   }
-  class: String {
+  class: String[0..1] {
     definition {
       Class of the inline span as semantic markup.
+    }
+  }
+  style: String[0..1] {
+    definition {
+      CSS style directive for the inline span. Is intended to be the same as HTML style attribute.
     }
   }
 }
