@@ -1,0 +1,20 @@
+enum XrefStyleType {
+  definition {
+     Style of how a cross-reference is to be rendered.
+  }
+  short {
+    definition {
+      Default style: render cross-reference only through the numbering and type of the element (e.g. Chapter 3)
+    }
+  }
+  basic {
+    definition {
+      Render cross-reference only through the title of the element (e.g. "The hunting of the snark")
+    }
+  }
+  full {
+    definition {
+      Render cross-reference as a combination of title and the numbering and type of the element (e.g. Chapter 3, "The hunting of the snark")
+    }
+  }
+}

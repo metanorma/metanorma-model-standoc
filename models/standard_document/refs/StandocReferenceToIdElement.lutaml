@@ -23,4 +23,9 @@ class StandocReferenceToIdElement {
       Listing of multiple cross-reference targets to be combined under the one element.
     }
   }
+  +style: XrefStyleType[0..1] {
+    definition {
+      Style of cross-reference rendering (title vs numbering).
+    }
+  }
 }

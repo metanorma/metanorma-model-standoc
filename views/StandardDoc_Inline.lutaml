@@ -14,6 +14,7 @@ diagram StandardDoc_Inline {
   include ../models/standard_document/refs/StandocReferenceToIdElement.lutaml
   include ../models/standard_document/refs/StandocReferenceToCitationElement.lutaml
   include ../models/standard_document/refs/XrefCaseType.lutaml
+  include ../models/standard_document/refs/XrefStyleType.lutaml
   include ../models/standard_document/refs/XrefConnectiveType.lutaml
   include ../models/standard_document/refs/XrefTargetType.lutaml
   include ../models/standard_document/refs/StandocLocalityStack.lutaml
@@ -111,6 +112,11 @@ diagram StandardDoc_Inline {
   association {
     owner StandocReferenceToIdElement
     member XrefCaseType
+    owner_type direct
+  }
+  association {
+    owner StandocReferenceToIdElement
+    member XrefStyleType
     owner_type direct
   }
   association {
