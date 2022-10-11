@@ -2,6 +2,11 @@ class StandardBibDataExtensionType {
   definition {
     The extension point of the bibliographic description of a _StandardDocument_.
   }
+  +schema-version: String[0..1] {
+    definition {
+      The version of the flavour-specific schema that this extension point conforms to.
+    }
+  }
   +doctype: String {
     definition {
       Classification of the _StandardDocument_ that is treated as a distinct series by the
