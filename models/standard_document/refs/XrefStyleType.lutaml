@@ -17,4 +17,9 @@ enum XrefStyleType {
       Render cross-reference as a combination of title and the numbering and type of the element (e.g. Chapter 3, "The hunting of the snark")
     }
   }
+  id {
+    definition {
+      Render cross-reference as the anchor or identifier used to identify the target
+    }
+  }
 }
