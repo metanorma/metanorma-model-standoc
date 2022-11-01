@@ -1,0 +1,10 @@
+class StandocReferenceToCitationElementWithConnective {
+  definition {
+    Cross-reference to an bibliographic reference within a _StandardDocument_, with a connective.
+  }
+  +connective: XrefConnectiveType[0..1] {
+    definition {
+      Connective linking this location to its predecessor. _from/to_ are presumed to nest more closely than _and_ or _or_.
+    }
+  }
+}

@@ -1,0 +1,10 @@
+class StandocReferenceToCitationElementStack {
+  definition {
+    Set of cross-references to bibliographic references within a _StandardDocument_, joined with connectives.
+  }
+  +eref: StandocReferenceToCitationElement[1..*] {
+    definition {
+      Cross-reference to a bibliographic reference.
+    }
+  }
+}
