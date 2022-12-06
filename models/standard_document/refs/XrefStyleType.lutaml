@@ -22,4 +22,9 @@ enum XrefStyleType {
       Render cross-reference as the anchor or identifier used to identify the target
     }
   }
+  text {
+    definition {
+      Extension point: User-defined rendering style (e.g. "modspec" for cross-references compliant to the OGC Modspec model of cross-referencing requirements from other requirements, independent of how those requirements are cross-referenced within a standards document.)
+    }
+  }
 }

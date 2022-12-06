@@ -9,6 +9,11 @@ class Concept{
       Render the term in the concept in italics.
     }
   }
+  +bold: Boolean[0..1] {
+    definition {
+      Render the term in the concept in boldface.
+    }
+  }
   +ref: Boolean[0..1] {
     definition {
       Render a reference to a definition for the concept.
