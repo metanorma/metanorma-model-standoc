@@ -4,4 +4,9 @@ class StandardSourcecodeBlock {
       Override the numbering of this block in numbering.
     }
   }
+  +linenums: Boolean[0..1] {
+    definition {
+      Render the sourcecode block with line numbering. Default value is false.
+    }
+  }
 }
