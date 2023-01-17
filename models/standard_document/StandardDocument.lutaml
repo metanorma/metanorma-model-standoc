@@ -26,7 +26,7 @@ class StandardDocument {
       model.
     }
   }
-  +misc: MiscContainer[0..1] {
+  +extension: MiscContainer[0..1] {
     definition {
       Extension point for extraneous elements that need to be added to standards document
       from other schemas, e.g. UnitsML.
