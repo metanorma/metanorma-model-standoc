@@ -1,4 +1,9 @@
 class StandardAdmonitionType {
+  statement {
+    definition {
+      Intended for typographically separate statements in mathematics, such as propositions, proofs, or theorems. Statement conflates all of these for rendering, while Proposition, Proof, Theorem etc. can be treated as distinct classes.
+    }
+  }
   editorial {
     definition {
       Annotation by document editors, intended for all readers of the document and not just its authors.
