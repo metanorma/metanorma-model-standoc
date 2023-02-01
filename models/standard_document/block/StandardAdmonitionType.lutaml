@@ -4,4 +4,9 @@ class StandardAdmonitionType {
       Annotation by document editors, intended for all readers of the document and not just its authors.
     }
   }
+  box {
+    definition {
+      Box annotation, intended as standalone sidebar element which can be referenced from within the document.
+    }
+  }
 }
