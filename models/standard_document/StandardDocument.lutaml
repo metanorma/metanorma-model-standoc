@@ -64,6 +64,11 @@ class StandardDocument {
       Index of a standards document.
     }
   }
+  +colophon: StandardHierarchicalSection[0..*] {
+    definition {
+      Zero or more optional sections that appear as a colophon or postface.
+    }
+  }
   +type: StandardDocumentType {
     definition {
       Type of standards document representation given in this class instance.
