@@ -2,9 +2,14 @@ class TermCollection <<Term>> {
   definition {
     A collection of terms, constituting the main body of a Terms Section.
   }
-  +terms: Term[0..*] {
+  +term: Term[0..*] {
     definition {
       Individual terms.
+    }
+  }
+  +terms: TermCollection[0..*] {
+    definition {
+      Nested collections of terms.
     }
   }
 }
