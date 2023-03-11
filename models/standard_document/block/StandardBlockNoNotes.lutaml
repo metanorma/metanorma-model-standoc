@@ -9,4 +9,11 @@ class StandardBlockNoNotes {
       Specification of how a block element may be rendered in a multilingual document.
     }
   }
+  +columns: String {
+    definition {
+      Set the columns display of the current block, overriding the display inherited from the document.
+      For example, if the document is set to two-column, this attribute would be used to set the block
+      to span across both columns.
+    }
+  }
 }
