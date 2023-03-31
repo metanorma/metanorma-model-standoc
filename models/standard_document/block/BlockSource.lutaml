@@ -1,0 +1,23 @@
+class BlockSource {
+  definition {
+    The bibliographic source where a block (figure or term) appearing in this _StandardDocument_
+    is taken from.
+  }
+  +status: <<Term>> TermSourceStatus {
+    definition {
+      The status of the term as it is used in this document,
+      relative to its definition in the original document.
+    }
+  }
+  +origin: <<Bibliography>> Citation {
+    definition {
+      The original document and location where the block has been obtained from.
+    }
+  }
+  +modification: <<BasicDocument>> ParagraphBlock[0..1] {
+    definition {
+      Any changes that the block has undergone relative to the original document,
+      in order to be included in this _StandardDocument_.
+    }
+  }
+}

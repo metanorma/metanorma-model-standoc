@@ -16,6 +16,8 @@ diagram StandardDoc_Blocks {
   include ../models/basic_document/block/TableBlock.lutaml
   include ../models/basic_document/block/AdmonitionType.lutaml
 
+  include ../models/standard_document/term/TermSourceStatus.lutaml
+
   include ../models/standard_document/block/StandardBlock.lutaml
   include ../models/standard_document/block/StandardBlockNoNotes.lutaml
   include ../models/standard_document/block/MultilingualRenderingType.lutaml
@@ -30,6 +32,7 @@ diagram StandardDoc_Blocks {
   include ../models/standard_document/block/StandardQuoteBlock.lutaml
   include ../models/standard_document/block/StandardAdmonitionBlock.lutaml
   include ../models/standard_document/block/StandardAdmonitionType.lutaml
+  include ../models/standard_document/block/BlockSource.lutaml
 
   association {
     owner BasicDocument
@@ -73,7 +76,27 @@ diagram StandardDoc_Blocks {
   }
   association {
     owner StandardTableBlock
+    member BlockSource
+    owner_type direct
+  }
+  association {
+    owner StandardFigureBlock
+    member BlockSource
+    owner_type direct
+  }
+  association {
+    owner StandardTableBlock
     member TableCol
+    owner_type direct
+  }
+  association {
+    owner BlockSource
+    member TermSourceStatus
+    owner_type direct
+  }
+  association {
+    owner BlockSource
+    member ParagraphBlock
     owner_type direct
   }
   association {
