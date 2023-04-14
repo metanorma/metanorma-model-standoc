@@ -77,6 +77,11 @@ class StandardDocument {
   }
   +version: String {
     definition {
+      Version number of the gem used to generate this standards document.
+    }
+  }
+  +schema-version: String {
+    definition {
       Version number of the schema used for this standards document.
     }
   }
