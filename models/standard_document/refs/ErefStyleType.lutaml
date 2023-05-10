@@ -1,0 +1,10 @@
+enum ErefStyleType {
+  definition {
+     Style of how a citation is to be rendered.
+  }
+  text {
+    definition {
+      Extension point: Name of identifier type to be used to form citation in this iteration of the standard.
+    }
+  }
+}

@@ -12,6 +12,12 @@ enum TermSourceStatus {
       The managed term in the present context has been modified from the term as found in the bibliographic source.
     }
   }
+  adapted {
+    definition {
+      The managed term in the present context has been modified from the term as found in the bibliographic source, in order
+      to better fit some local requirement, though still with the intent of retaining the original meaning as much as possible.
+    }
+  }
   restyled {
     definition {
       The managed term in the present context has been restyled from the term as found in the bibliographic source.
