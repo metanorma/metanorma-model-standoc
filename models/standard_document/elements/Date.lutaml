@@ -1,0 +1,30 @@
+class Date {
+  definition {
+    Localisable rendering of a date
+  }
+  value: String {
+    definition {
+      Date to be rendered in ISO 8601 format.
+    }
+  } 
+  format: String[0..1] {
+    definition {
+      Format to be used to render date, as a strftime formatting string.
+    }
+  } 
+  language: Iso639Code[0..1] {
+    definition {
+      Format to be used to render date, as a as an ISO-639 3-letter code.
+    }
+  } 
+  script: Iso15924Code[0..1] {
+    definition {
+      Script to be used to render date, as an ISO-15924 code.
+    }
+  } 
+  locale: String[0..1] {
+    definition {
+      Locale to be used to render date.
+    }
+  } 
+}

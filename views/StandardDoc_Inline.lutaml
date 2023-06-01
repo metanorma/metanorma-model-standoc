@@ -24,6 +24,7 @@ diagram StandardDoc_Inline {
   include ../models/standard_document/elements/StandardPageBreakElement.lutaml
   include ../models/standard_document/elements/OrientationType.lutaml
   include ../models/standard_document/elements/Add.lutaml
+  include ../models/standard_document/elements/Date.lutaml
   include ../models/standard_document/elements/Del.lutaml
   include ../models/standard_document/elements/Span.lutaml
 
@@ -155,6 +156,11 @@ diagram StandardDoc_Inline {
   association {
     owner TextElement
     member Add
+    owner_type inheritance
+  }
+  association {
+    owner TextElement
+    member Date
     owner_type inheritance
   }
   association {
