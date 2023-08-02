@@ -8,6 +8,7 @@ diagram StandardDoc_Inline {
   include ../models/basic_document/refs/ReferenceToCitationElement.lutaml
   include ../models/basic_document/elements/PageBreakElement.lutaml
   include ../models/basic_document/elements/TextElement.lutaml
+  include ../models/basic_document/elements/StemElement.lutaml
   include ../models/relaton/LocalityStack.lutaml
   include ../models/standard_document/refs/ReferenceToTermbase.lutaml
   include ../models/standard_document/refs/ReferenceToTerm.lutaml
@@ -27,6 +28,7 @@ diagram StandardDoc_Inline {
   include ../models/standard_document/elements/Date.lutaml
   include ../models/standard_document/elements/Del.lutaml
   include ../models/standard_document/elements/Span.lutaml
+  include ../models/standard_document/elements/StandardStemElement.lutaml
 
   association {
     owner ReferenceElement
@@ -166,6 +168,16 @@ diagram StandardDoc_Inline {
   association {
     owner TextElement
     member Del
+    owner_type inheritance
+  }
+  association {
+    owner TextElement
+    member StemElement
+    owner_type inheritance
+  }
+  association {
+    owner StemElement
+    member StandardStemElement
     owner_type inheritance
   }
 }

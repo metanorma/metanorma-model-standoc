@@ -25,6 +25,7 @@ diagram StandardDoc_Terms {
   include ../models/standard_document/terms/GrammarInfo.lutaml
   include ../models/standard_document/terms/GrammarGender.lutaml
   include ../models/standard_document/block/MultilingualRenderingType.lutaml
+  include ../models/standard_document/elements/StandardStemElement.lutaml
   include ../models/basic_document/block/BasicBlock.lutaml
   include ../models/basic_document/block/FigureBlock.lutaml
   include ../models/basic_document/block/FormulaBlock.lutaml
@@ -34,7 +35,6 @@ diagram StandardDoc_Terms {
   include ../models/basic_document/list/DefinitionList.lutaml
   include ../models/basic_document/list/OrderedList.lutaml
   include ../models/basic_document/list/UnorderedList.lutaml
-  include ../models/basic_document/elements/StemElement.lutaml
   include ../models/basic_document/datatypes/Iso15924Code.lutaml
   include ../models/basic_document/datatypes/Iso639Code.lutaml
   include ../models/basic_document/datatypes/Iso3166Code.lutaml
@@ -106,7 +106,7 @@ diagram StandardDoc_Terms {
   }
   association {
     owner LetterSymbolDesignation
-    member StemElement
+    member StandardStemElement
     owner_type direct
   }
   association {

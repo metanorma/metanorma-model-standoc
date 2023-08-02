@@ -1,0 +1,10 @@
+class StandardStemElement {
+  definition {
+    Mathematically formatted text.
+  }
+  +block: Boolean {
+    definition {
+      Whether to treat the expression as a block or as an inline element, for display purposes.
+    }
+  }
+}
