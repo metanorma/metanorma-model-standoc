@@ -3,6 +3,12 @@ class TermDefinition <<Term>> {
     The definition of a term applied in the current
     document.
   }
+  +type: String [0..1] {
+    definition {
+      Type of definition, used to differentiate it from other definitions of the
+      same term if present.
+    }
+  }
   +verbalexpression: VerbalExpression [0..1] {
     definition {
       The content of the definition of the term applied in the current
