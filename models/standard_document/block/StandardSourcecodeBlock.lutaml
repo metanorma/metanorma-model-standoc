@@ -9,4 +9,15 @@ class StandardSourcecodeBlock {
       Render the sourcecode block with line numbering. Default value is false.
     }
   }
+  +eref: StandocReferenceToCitationElement[0..1] {
+    definition {
+      Hyperlink of code segment to external bibliographic resource.
+    }
+  }
+  +xref: StandocReferenceToIdElement[0..1] {
+    definition {
+      Hyperlink of code segment to another part of the document.
+    }
+  }
 }
+

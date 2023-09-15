@@ -17,6 +17,8 @@ diagram StandardDoc_Blocks {
   include ../models/basic_document/block/AdmonitionType.lutaml
 
   include ../models/standard_document/terms/TermSourceStatus.lutaml
+  include ../models/standard_document/refs/StandocReferenceToCitationElement.lutaml
+  include ../models/standard_document/refs/StandocReferenceToIdElement.lutaml
 
   include ../models/standard_document/block/StandardBlock.lutaml
   include ../models/standard_document/block/StandardBlockNoNotes.lutaml
@@ -118,6 +120,16 @@ diagram StandardDoc_Blocks {
     owner SourcecodeBlock
     member StandardSourcecodeBlock
     owner_type inheritance
+  }
+  association {
+    owner SourcecodeBlock
+    member StandocReferenceToCitationElement
+    owner_type direct
+  }
+  association {
+    owner SourcecodeBlock
+    member StandocReferenceToIdElement
+    owner_type direct
   }
   association {
     owner BasicBlockNoNotes
