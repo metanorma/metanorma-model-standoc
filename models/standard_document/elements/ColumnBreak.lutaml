@@ -1,0 +1,5 @@
+class ColumnBreak {
+  definition {
+    Indication of a break in text rendered as columns.
+  }
+}

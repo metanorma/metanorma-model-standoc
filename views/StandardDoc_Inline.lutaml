@@ -9,6 +9,7 @@ diagram StandardDoc_Inline {
   include ../models/basic_document/elements/PageBreakElement.lutaml
   include ../models/basic_document/elements/TextElement.lutaml
   include ../models/basic_document/elements/StemElement.lutaml
+  include ../models/basic_document/elements/BasicElement.lutaml
   include ../models/relaton/LocalityStack.lutaml
   include ../models/standard_document/refs/ReferenceToTermbase.lutaml
   include ../models/standard_document/refs/ReferenceToTerm.lutaml
@@ -29,6 +30,7 @@ diagram StandardDoc_Inline {
   include ../models/standard_document/elements/Del.lutaml
   include ../models/standard_document/elements/Span.lutaml
   include ../models/standard_document/elements/StandardStemElement.lutaml
+  include ../models/standard_document/elements/ColumnBreak.lutaml
 
   association {
     owner ReferenceElement
@@ -140,6 +142,16 @@ diagram StandardDoc_Inline {
     member ErefStyleType
     owner_type direct
   }
+  association {
+    owner BasicElement
+    member PageBreakElement
+    owner_type inheritance
+  } 
+  association {
+    owner BasicElement
+    member ColumnBreak
+    owner_type inheritance
+  } 
   association {
     owner PageBreakElement
     member StandardPageBreakElement
