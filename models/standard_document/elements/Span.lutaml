@@ -12,4 +12,9 @@ class Span {
       CSS style directive for the inline span. Is intended to be the same as HTML style attribute.
     }
   }
+  custom-charset: String[0..1] {
+    definition {
+      Character set that the contained text belongs to; is used in particular to capture mutually agreed definitions of codepoints in Unicode Private Use Area.
+    }
+  }
 }
