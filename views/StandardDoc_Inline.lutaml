@@ -31,6 +31,7 @@ diagram StandardDoc_Inline {
   include ../models/standard_document/elements/Span.lutaml
   include ../models/standard_document/elements/StandardStemElement.lutaml
   include ../models/standard_document/elements/ColumnBreak.lutaml
+  include ../models/standard_document/elements/Passthrough.lutaml
 
   association {
     owner ReferenceElement
@@ -175,6 +176,11 @@ diagram StandardDoc_Inline {
   association {
     owner TextElement
     member Date
+    owner_type inheritance
+  }
+  association {
+    owner TextElement
+    member Passthrough
     owner_type inheritance
   }
   association {

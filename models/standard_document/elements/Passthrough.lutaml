@@ -1,0 +1,15 @@
+class Passthrough {
+  definition {
+    Inline text not to be processed semantically, and left in the markup of a target rendering language (e.g. raw HTML)
+  }
+  value: String {
+    definition {
+      Markup specific to a target rendering language
+    }
+  } 
+  formats: String[0..1] {
+    definition {
+      List of the target formats for which the markup is intended
+    }
+  } 
+}
