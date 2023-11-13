@@ -21,6 +21,17 @@ class StandardSection {
   +number: String[0..1] {
     definition {
       Value of number to be used for numbering of section, overriding any autonumbering in rendering.
+      The section number is still formed by appending this number to the hierarchical set of parent section numbers,
+      e.g. a number "3a" under Clause 1 subclause 2 will be numbered as 1.2.3a.
+    }
+  }
+  +branch-number: String[0..1] {
+    definition {
+      Value of number to be used for numbering of section, overriding any autonumbering in rendering,
+      and the hierarchy of parent section numbers. This attribute is mutually exclusive with `number`.
+      So under Clause 1 subclause 2, sub-subclause 3 is numbered as 1.2.3. If the following sub-subclause
+      is given a branch-number "7.2.1.5", that will be the overall section number given, ignoring the parent section
+      numbers.
     }
   }
 }
