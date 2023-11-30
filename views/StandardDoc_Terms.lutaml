@@ -14,6 +14,7 @@ diagram StandardDoc_Terms {
   include ../models/standard_document/terms/ExpressionDesignation.lutaml
   include ../models/standard_document/terms/ExpressionType.lutaml
   include ../models/standard_document/terms/LetterSymbolDesignation.lutaml
+  include ../models/standard_document/terms/LetterSymbolType.lutaml
   include ../models/standard_document/terms/TermDefinition.lutaml
   include ../models/standard_document/terms/RelatedTerm.lutaml
   include ../models/standard_document/terms/RelatedTermType.lutaml
@@ -97,6 +98,11 @@ diagram StandardDoc_Terms {
   association {
     owner Designation
     member LetterSymbolDesignation
+    owner_type direct
+  }
+  association {
+    owner LetterSymbolDesignation
+    member LetterSymbolType
     owner_type direct
   }
   association {

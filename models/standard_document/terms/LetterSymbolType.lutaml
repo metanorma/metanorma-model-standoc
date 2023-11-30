@@ -1,0 +1,26 @@
+enum LetterSymbolType {
+  definition {
+    The type of a symbol-like designation.
+  }
+  letter {
+    definition {
+      A letter, possibly subscripted or superscripted, intended to denote
+      some property that it abbreviates.
+    }
+  }
+  symbol {
+    definition {
+      A non-letter, intended to represent some property.
+    }
+  }
+  formula {
+    definition {
+      A mathematical formula.
+    }
+  }
+  equation {
+    definition {
+      A mathematical equation (or inequation).
+    }
+  }
+}
