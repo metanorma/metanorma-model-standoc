@@ -10,6 +10,7 @@ diagram StandardDoc_Blocks_New {
   include ../models/standard_document/block/AutoNumber.lutaml
   include ../models/standard_document/block/ImageMapBlock.lutaml
   include ../models/relaton/BibItemLocality.lutaml
+  include ../models/relaton/Contributor.lutaml
   include ../models/standard_document/block/ToC.lutaml
   include ../models/standard_document/block/Form.lutaml
   include ../models/standard_document/block/ChangeType.lutaml
@@ -50,6 +51,11 @@ diagram StandardDoc_Blocks_New {
   association {
     owner AmendBlock
     member ChangeType
+    owner_type direct
+  }
+  association {
+    owner AmendBlock
+    member Contributor
     owner_type direct
   }
   association {

@@ -2,9 +2,14 @@ diagram StandardDoc_Metadata {
   title 'StandardDocument Metadata'
   caption 'Metadata elements of StandardDocument'
 
+  include ../models/standard_document/block/AmendBlock.lutaml
   include ../models/basic_document/metadata/BibDataExtensionType.lutaml
   include ../models/basic_document/metadata/BibData.lutaml
+  include ../models/relaton/DocumentRelation.lutaml
+  include ../models/relaton/ReducedBibliographicItem.lutaml
+  include ../models/standard_document/metadata/StandardReducedBibliographicItem.lutaml
   include ../models/standard_document/metadata/StandardBibData.lutaml
+  include ../models/standard_document/metadata/StandardDocumentRelation.lutaml
   include ../models/standard_document/metadata/StandardBibDataExtensionType.lutaml
   include ../models/standard_document/metadata/EditorialGroupType.lutaml
   include ../models/standard_document/metadata/TechnicalCommitteeType.lutaml
@@ -15,6 +20,36 @@ diagram StandardDoc_Metadata {
     owner BibData
     member StandardBibData
     owner_type inheritance
+  }
+  association {
+    owner DocumentRelation
+    member StandardDocumentRelation
+    owner_type inheritance
+  }
+  association {
+    owner ReducedBibliographicItem
+    member StandardReducedBibliographicItem
+    owner_type inheritance
+  }
+  association {
+    owner StandardBibData
+    member AmendBlock
+    owner_type direct
+  }
+  association {
+    owner StandardReducedBibliographicItem
+    member AmendBlock
+    owner_type direct
+  }
+  association {
+    owner StandardBibData
+    member StandardDocumentRelation
+    owner_type direct
+  }
+  association {
+    owner StandardDocumentRelation
+    member StandardReducedBibliographicItem
+    owner_type direct
   }
   association {
     owner BibDataExtensionType

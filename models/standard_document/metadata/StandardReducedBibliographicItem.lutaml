@@ -1,0 +1,10 @@
+class StandardReducedBibliographicItem {
+  definition {
+    Reduced description of a bibliographic resource, without mandatory title and docidentifier, used for document relations.
+  }
+  +amend: AmendBlock[0..*] {
+    definition {
+      Machine-readable description of changes specific to this document.
+    }
+  }
+}

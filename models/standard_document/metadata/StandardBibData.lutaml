@@ -2,6 +2,16 @@ class StandardBibData {
   definition {
     The bibliographic description of a _StandardDocument_.
   }
+  +relation: StandardDocumentRelation[0..*] {
+    definition {
+      The relation(s) of the bibliographic item to other bibliographic items.
+    }
+  }   
+  +amend: AmendBlock[0..*] {
+    definition {
+      Machine-readable description of changes specific to this document.
+    }
+  }
   +ext: StandardBibDataExtensionType {
     definition {
       The extension point of the bibliographic description of a _StandardDocument_.

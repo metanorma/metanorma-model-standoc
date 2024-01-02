@@ -1,0 +1,10 @@
+class StandardDocumentRelation {
+  definition {
+    Relation between a bibliographic item and another bibliographic item.
+  }
+  +bibitem: StandardReducedBibliographicItem {
+    definition {
+      The target bibliographic item to which this bibliographic item is described as related to.
+    }
+  }
+}

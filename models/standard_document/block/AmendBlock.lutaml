@@ -46,4 +46,14 @@ class AmendBlock {
       New content to be added to the document; applicable to add and modify.
     }
   }
+  +keyword: String[0..*] {
+    definition {
+      Keyword for classifying the machine-readable change.
+    }
+  }
+  +contributor: Contributor[0..*] {
+    definition {
+      Contributor responsible for the machine-readable change.
+    }
+  }
 }
