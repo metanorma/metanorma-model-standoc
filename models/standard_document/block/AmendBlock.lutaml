@@ -13,6 +13,12 @@ class AmendBlock {
       Typically this is given as a clause.
     }
   }
+  +localityStack: LocalityStack[0..*] {
+    definition {
+      The location in the original document which has undergone the change described in this block,
+      expressed as multiple levels of citation..
+    }
+  }
   +path: String[0..1] {
     definition {
       The location within the bibLocality where the change applies to,
