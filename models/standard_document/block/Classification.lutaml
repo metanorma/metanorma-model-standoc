@@ -1,0 +1,15 @@
+class Classification {
+  definition {
+    Key-value classification of an entity.
+  }
+  +key: String {
+    definition {
+      Key for the classification.
+    }
+  }
+  +value: String {
+    definition {
+      Value for the classification.
+    }
+  }
+}

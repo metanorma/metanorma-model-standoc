@@ -7,6 +7,7 @@ diagram StandardDoc_Blocks_New {
   include ../models/basic_document/block/BasicBlockNoNotes.lutaml
   include ../models/standard_document/block/StandardBlockNoNotes.lutaml
   include ../models/standard_document/block/AmendBlock.lutaml
+  include ../models/standard_document/block/Classification.lutaml
   include ../models/standard_document/block/AutoNumber.lutaml
   include ../models/standard_document/block/ImageMapBlock.lutaml
   include ../models/relaton/BibItemLocality.lutaml
@@ -52,6 +53,11 @@ diagram StandardDoc_Blocks_New {
   association {
     owner AmendBlock
     member ChangeType
+    owner_type direct
+  }
+  association {
+    owner AmendBlock
+    member Classification
     owner_type direct
   }
   association {
