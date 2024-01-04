@@ -1,0 +1,11 @@
+class StandardAmendBlock {
+  definition {
+    Block expressing a machine-readable change in a document.
+  }
+  +autoNumber: AutoNumber[0..*] {
+    definition {
+      Specification of how blocks of a given class should be autonumbered
+      within an AmendBlock newContent element.
+    }
+  }
+}

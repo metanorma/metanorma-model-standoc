@@ -6,16 +6,9 @@ diagram StandardDoc_Blocks_New {
   include ../models/basic_document/refs/ReferenceElement.lutaml
   include ../models/basic_document/block/BasicBlockNoNotes.lutaml
   include ../models/standard_document/block/StandardBlockNoNotes.lutaml
-  include ../models/standard_document/block/AmendBlock.lutaml
-  include ../models/standard_document/block/Classification.lutaml
-  include ../models/standard_document/block/AutoNumber.lutaml
   include ../models/standard_document/block/ImageMapBlock.lutaml
-  include ../models/relaton/BibItemLocality.lutaml
-  include ../models/relaton/LocalityStack.lutaml
-  include ../models/relaton/Contributor.lutaml
   include ../models/standard_document/block/ToC.lutaml
   include ../models/standard_document/block/Form.lutaml
-  include ../models/standard_document/block/ChangeType.lutaml
   include ../models/standard_document/block/ElementName.lutaml
   include ../models/standard_document/block/SvgMapBlock.lutaml
   include ../models/standard_document/block/Passthrough.lutaml
@@ -37,37 +30,12 @@ diagram StandardDoc_Blocks_New {
   }
   association {
     owner StandardBlockNoNotes
-    member AmendBlock
-    owner_type inheritance
-  }
-  association {
-    owner StandardBlockNoNotes
     member Form
     owner_type inheritance
   }
   association {
     owner ToC
     member StandardUnorderedList
-    owner_type direct
-  }
-  association {
-    owner AmendBlock
-    member ChangeType
-    owner_type direct
-  }
-  association {
-    owner AmendBlock
-    member Classification
-    owner_type direct
-  }
-  association {
-    owner AmendBlock
-    member Contributor
-    owner_type direct
-  }
-  association {
-    owner AmendBlock
-    member AutoNumber
     owner_type direct
   }
   association {
