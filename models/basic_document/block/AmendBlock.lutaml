@@ -1,0 +1,5 @@
+class AmendBlock <<BasicDocument>> {
+  definition {
+    Block describing a change in a document.
+  }
+}
