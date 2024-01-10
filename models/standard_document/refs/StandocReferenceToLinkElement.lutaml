@@ -1,0 +1,10 @@
+class StandocReferenceToLinkElement {
+  definition {
+    A reference to an external document or resource.
+  }
+  +style: String[0..1] {
+    definition {
+      Style of link rendering.
+    }
+  }
+}

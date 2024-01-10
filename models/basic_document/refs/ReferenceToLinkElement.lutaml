@@ -1,0 +1,5 @@
+class ReferenceToLinkElement <<BasicDocument>> {
+  definition {
+    A reference to an external document or resource.
+  }
+}
