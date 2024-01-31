@@ -5,6 +5,7 @@ diagram StandardDoc_Blocks_New {
 
   include ../models/basic_document/refs/ReferenceElement.lutaml
   include ../models/basic_document/block/BasicBlockNoNotes.lutaml
+  include ../models/metanorma_requirements/block/Provision.lutaml
   include ../models/standard_document/block/StandardBlockNoNotes.lutaml
   include ../models/standard_document/block/ImageMapBlock.lutaml
   include ../models/standard_document/block/ToC.lutaml
@@ -26,6 +27,11 @@ diagram StandardDoc_Blocks_New {
   association {
     owner StandardBlockNoNotes
     member ToC
+    owner_type inheritance
+  }
+  association {
+    owner StandardBlockNoNotes
+    member Provision
     owner_type inheritance
   }
   association {
