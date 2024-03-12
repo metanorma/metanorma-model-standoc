@@ -1,4 +1,9 @@
 class StandardFigureBlock {
+  +width: String[0..1] {
+    definition {
+      Width of the figure block in rendering.
+    }
+  }
   +number: String[0..1] {
     definition {
       Override the numbering of this block in numbering.
