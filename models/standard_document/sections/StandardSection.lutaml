@@ -34,4 +34,9 @@ class StandardSection {
       numbers.
     }
   }
+  +unnumbered: Boolean[0..1] {
+    definition {
+      Do not apply numbering to this clause.
+    }
+  }
 }
