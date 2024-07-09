@@ -14,4 +14,9 @@ class StandardTableBlock {
       The widths of the columns in the table.
     }
   }
+  +source: String[0..*] {
+    definition {
+      A URI or other reference intended to link to an externally hosted data source (or equivalent).
+    }
+  }
 }

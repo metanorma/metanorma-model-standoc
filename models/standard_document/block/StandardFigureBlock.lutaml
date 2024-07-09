@@ -9,4 +9,9 @@ class StandardFigureBlock {
       Override the numbering of this block in numbering.
     }
   }
+  +source: String[0..*] {
+    definition {
+      A URI or other reference intended to link to an externally hosted image (or equivalent).
+    }
+  }
 }
