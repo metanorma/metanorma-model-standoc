@@ -4,7 +4,7 @@ class Date {
   }
   value: String {
     definition {
-      Date to be rendered in ISO 8601 format.
+      Date to be rendered, in ISO 8601 format.
     }
   } 
   format: String[0..1] {

@@ -4,7 +4,7 @@ class StandardUnorderedList {
   }
   +listitem: UnorderedCheckableListItem[0..*] {
     definition {
-      List item for standards documents.
+      Unordered list item for standards documents.
     }
   }
   +name: String[0..1] {

@@ -2,14 +2,9 @@ class ImageMapBlock {
   definition {
     Wrapper around an image file, to specify an image map, with areas of an image being hyperlinked.
   }
-  +source: String {
+  +source: StandardFigureBlock {
     definition {
-      The location of the image file to be updated.
-    }
-  }
-  +alt: String[0..1] {
-    definition {
-      Alternate text to be provided for the image file.
+      The image to be hyperlinked.
     }
   }
   +area: ImageMapAreaType[0..*] {

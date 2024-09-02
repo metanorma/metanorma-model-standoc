@@ -8,6 +8,7 @@ diagram StandardDoc_Blocks_New {
   include ../models/metanorma_requirements/block/Provision.lutaml
   include ../models/standard_document/block/StandardBlockNoNotes.lutaml
   include ../models/standard_document/block/ImageMapBlock.lutaml
+  include ../models/standard_document/block/StandardFigureBlock.lutaml
   include ../models/standard_document/block/ToC.lutaml
   include ../models/standard_document/block/Form.lutaml
   include ../models/standard_document/block/ElementName.lutaml
@@ -71,6 +72,11 @@ diagram StandardDoc_Blocks_New {
   }
   association {
     owner SvgMapBlock
+    member StandardFigureBlock
+    owner_type direct
+  }
+  association {
+    owner SvgMapBlock
     member SvgTargetType
     owner_type direct
   }
@@ -83,6 +89,11 @@ diagram StandardDoc_Blocks_New {
     owner StandardBlockNoNotes
     member ImageMapBlock
     owner_type inheritance
+  }
+  association {
+    owner ImageMapBlock
+    member StandardFigureBlock
+    owner_type direct
   }
   association {
     owner ImageMapBlock

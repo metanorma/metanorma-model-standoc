@@ -1,6 +1,6 @@
 class StandardUnorderedList {
   definition {
-    Ordered list for standards documents.
+    Unordered list for standards documents.
   }
   +name: String[0..1] {
     definition {

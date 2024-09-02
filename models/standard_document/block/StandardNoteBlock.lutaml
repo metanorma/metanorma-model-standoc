@@ -67,7 +67,7 @@ class StandardNoteBlock {
       Sourcecode included within note.
     }
   }
-  +quotes: QuoteBlock[0..*] {
+  +quote: QuoteBlock[0..*] {
     definition {
       Blockquote included within note.
     }

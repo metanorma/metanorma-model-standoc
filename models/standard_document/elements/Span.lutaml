@@ -4,7 +4,7 @@ class Span {
   }
   class: String[0..1] {
     definition {
-      Class of the inline span as semantic markup.
+      Class of the inline span, as semantic markup.
     }
   }
   style: String[0..1] {

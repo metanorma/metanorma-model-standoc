@@ -11,7 +11,7 @@ class StandardAdmonitionBlock {
   }
  +type: StandardAdmonitionType {
     definition {
-      Display the admonition on the document cover page.
+      Category of admonition.
     }
   }
 }

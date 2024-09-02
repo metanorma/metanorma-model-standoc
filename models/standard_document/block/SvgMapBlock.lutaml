@@ -3,14 +3,9 @@ class SvgMapBlock {
     Wrapper around an SVG file, to update its hyperlinks with potentially document-specific
     links, so that the SVG file can hyperlink to anchors within the document.
   }
-  +source: String {
+  +figure: StandardfigureBlock {
     definition {
-      The location of the SVG file to be updated.
-    }
-  }
-  +alt: String[0..1] {
-    definition {
-      Alternate text to be provided for the SVG file.
+      The SVG file to be updated.
     }
   }
   +target: SvgTargetType[0..*] {

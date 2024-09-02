@@ -5,7 +5,7 @@ class AutoNumber {
   }
   +type: ElementName {
     definition {
-      The class of block to apply autonumbering to within an AmendBlock newContent element.
+      The class of block to apply autonumbering to, within an AmendBlock newContent element.
     }
   }
   +value: String {

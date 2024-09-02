@@ -1,20 +1,20 @@
 class Option {
   definition {
-    Option of a Select input
+    Option of a Select input.
   }
   disabled: Boolean[0..1] {
     definition {
-      Option is disabled
+      Option is disabled.
     }
   }
   value: String[0..1] {
     definition {
-      Value associated with this option
+      Value associated with this option.
     }
   }
   content: PureTextElement[0..1] {
     definition {
-      Display text associated with this option
+      Display text associated with this option.
     }
   }
 }
