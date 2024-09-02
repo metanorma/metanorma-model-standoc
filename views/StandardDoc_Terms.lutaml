@@ -25,6 +25,7 @@ diagram StandardDoc_Terms {
   include ../models/standard_document/terms/AbbreviationType.lutaml
   include ../models/standard_document/terms/GrammarInfo.lutaml
   include ../models/standard_document/terms/GrammarGender.lutaml
+  include ../models/standard_document/terms/GrammarNumber.lutaml
   include ../models/standard_document/block/MultilingualRenderingType.lutaml
   include ../models/standard_document/elements/StandardStemElement.lutaml
   include ../models/basic_document/block/BasicBlock.lutaml
@@ -143,6 +144,11 @@ diagram StandardDoc_Terms {
   association {
     owner GrammarInfo
     member GrammarGender
+    owner_type direct
+  }
+  association {
+    owner GrammarInfo
+    member GrammarNumber
     owner_type direct
   }
   association {

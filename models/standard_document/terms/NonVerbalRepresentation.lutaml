@@ -9,7 +9,7 @@ class NonVerbalRepresentation {
   }
   +formula: <<BasicDocument>> FormulaBlock [0..*] {
     definition {
-      Figure representation of the term.
+      Formula representation of the term.
     }
   }
   +table: <<BasicDocument>> TableBlock [0..*] {
@@ -17,7 +17,7 @@ class NonVerbalRepresentation {
       Figure representation of the term.
     }
   }
-  +sources: TermSource [0..*] {
+  +source: TermSource [0..*] {
     definition {
       Bibliographic references for this designation of the managed term.
     }

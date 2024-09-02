@@ -12,6 +12,16 @@ class Designation {
       The geographic area in which the managed term is known under this designation.
     }
   }
+  +fieldofapplication: <<BasicDocument>> BasicBlock[0..*] {
+    definition {
+      Information about what field/domain the designation is specifically applied to.
+    }
+  }
+  +usageInfo: <<BasicDocument>> BasicBlock[0..*] {
+    definition {
+      Information about how the designation is to be used.
+    }
+  }
   +sources: TermSource [0..*] {
     definition {
       Bibliographic references for this designation of the managed term.

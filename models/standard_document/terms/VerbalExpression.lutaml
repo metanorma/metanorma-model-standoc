@@ -22,4 +22,9 @@ class VerbalExpression {
       Definition list in term definition.
     }
   }
+  +source: TermSource[0..*] {
+    definition {
+      Zero or more bibliographical sources for this definition of the term. 
+    }
+  }
 }

@@ -4,7 +4,7 @@ class FloatingTitle {
   }
   +depth: Integer {
     definition {
-      The depth of the floating title in the clause hierarchy: which level heading it should be presented as
+      The ostensive depth of the floating title in the clause hierarchy: which level heading it should be presented as
     }
   }
 }

@@ -24,7 +24,7 @@ enum RelatedTermType {
   }
   equivalent {
     definition {
-      The current term is equivalent in denotation than the related term.
+      The current term is equivalent in denotation to the related term.
     }
   }
   compare {

@@ -14,7 +14,7 @@ class LetterSymbolDesignation {
   }
   +isInternational: Boolean[0..1] {
     definition {
-      Whether the designation (typically an abbreviation) is the same across languages, or language-specific.
+      Whether the designation is the same across languages, or language-specific.
     }
   }
   +type: LetterSymbolType[0..1] {

@@ -1,0 +1,20 @@
+enum GrammarNumber {
+  definition {
+    The grammatical number of the designation.
+  }
+  singular {
+    definition {
+      Singular number.
+    }
+  }
+  plural {
+    definition {
+      Plural number.
+    }
+  }
+  dual {
+    definition {
+      Dual number.
+    }
+  }
+}

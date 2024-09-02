@@ -4,12 +4,23 @@ class TechnicalCommitteeType {
   }
   +number: Integer[0..1] {
     definition {
-      Identifier of the technical committee (typically numeric).
+      Numeric identifier of the technical committee.
+    }
+  }
+  +identifier: String[0..1] {
+    definition {
+      Non-numeric, complete identifier of the technical committee.
     }
   }
   +type: String[0..1] {
     definition {
       Type of the technical committee, used in identifying the technical committee.
+    }
+  }
+  +prefix: String[0..1] {
+    definition {
+      Disambiguating prefix added to number to form the identifier of the technical committee,
+      typically indicating its type.
     }
   }
   +text: String {

@@ -46,12 +46,7 @@ class Term <<Term>> {
   }
   +related: RelatedTerm[0..*] {
     definition {
-      Zero or more names which are related to the term being
-      defined. Each has a type, indicating how the term is related;
-      permitted values are compare (for "see also" references to terms),
-      contrast (for terms that illuminate the term definition as what it
-      is not), see (if this is a deprecated term, to reference the
-      preferred term)
+      Zero or more names which are related to the term being defined. 
     }
   }
   +deprecates: Designation[0..*] {
@@ -69,11 +64,6 @@ class Term <<Term>> {
   +subject: <<BasicDocument>> LocalizedString[0..1] {
     definition {
       Subject of the term.
-    }
-  }
-  +usageInfo: <<BasicDocument>> BasicBlock[0..*] {
-    definition {
-      Information about how the term is to be used.
     }
   }
   +definition: TermDefinition[1..*] {
@@ -94,13 +84,7 @@ class Term <<Term>> {
   }
   +source: TermSource[0..*] {
     definition {
-      Zero or more bibliographical sources for the term. These
-      include the `origin` of the term, which is its bibliographical
-      citation (as defined in Relaton); the `status` of the
-      definition (whether `identical` to the definition given in the
-      origin cited, or `modified`); and, if the definition is modified, a
-      description of the `modification` to the definition applied for
-      this document.
+      Zero or more bibliographical sources for the term.
     }
   }
 }

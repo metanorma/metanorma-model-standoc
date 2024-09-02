@@ -21,15 +21,4 @@ class TermDefinition <<Term>> {
       document.
     }
   }
-  source: TermSource[0..*] {
-    definition {
-      Zero or more bibliographical sources for this definition of the term. These
-      include the `origin` of the term, which is its bibliographical
-      citation (as defined in Relaton); the `status` of the
-      definition (whether `identical` to the definition given in the
-      origin cited, or `modified`); and, if the definition is modified, a
-      description of the `modification` to the definition applied for
-      this document.
-    }
-  }
 }

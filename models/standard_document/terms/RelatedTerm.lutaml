@@ -9,7 +9,7 @@ class RelatedTerm {
   }
   +preferred: Designation {
     definition {
-      Label of term related to the current term.
+      Preferred designation of the term related to the current term.
     }
   }
   +xref: ReferenceToIdElement[0..1] {

@@ -35,7 +35,7 @@ class StandardDocument {
   +boilerplate: BoilerplateType[0..1] {
     definition {
       An optional _boilerplate_ section, intended to appear at the
-      front of the document. It consists of content addressing
+      front of the document, with content not specific to the document. It consists of content addressing
       _copyright_, _license_, _legal_, and _feedback_ concerns.
     }
   }
@@ -72,7 +72,6 @@ class StandardDocument {
   +type: StandardDocumentType {
     definition {
       Type of standards document representation given in this class instance.
-      Set to "standard" for all standards documents.
     }
   }
   +version: String {
