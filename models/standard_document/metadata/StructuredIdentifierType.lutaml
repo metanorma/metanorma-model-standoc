@@ -4,7 +4,7 @@ class StructuredIdentifierType {
   }
   +type: String[0..1] {
     definition {
-      Representation in the identifier of the type of standard document.
+      Representation in the identifier of the type of standard document, corresponds to bibitem/ext/doctype.
     }
   }
   +agency: String[1..*] {
@@ -14,7 +14,8 @@ class StructuredIdentifierType {
   }
   +class: String[0..1] {
     definition {
-      Representation in the identifier of the class of standard document (as a subclass of the document type).
+      Representation in the identifier of the class of standard document (as a subclass of the document type),
+      corresponds to bibitem/item/docsubtype.
     }
   }
   +docnumber: String {
@@ -26,7 +27,7 @@ class StructuredIdentifierType {
   }
   +partnumber: String[0..1] {
     definition {
-      Representation in the identifier of the document part, if this is a document part.
+      Representation in the identifier of the document part, if this is a document part. May be compound
     }
   }
   +edition: String[0..1] {

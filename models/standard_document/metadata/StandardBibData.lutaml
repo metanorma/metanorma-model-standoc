@@ -9,7 +9,7 @@ class StandardBibData {
   }   
   +amend: AmendBlock[0..*] {
     definition {
-      Machine-readable description of changes specific to this document.
+      Description of changes specific to this document.
     }
   }
   +ext: StandardBibDataExtensionType {
