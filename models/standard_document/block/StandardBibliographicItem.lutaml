@@ -4,4 +4,9 @@ class StandardBibliographicItem {
       Suppress identifier from item rendering.
     }
   }
+  +hidden: Boolean[0..1] {
+    definition {
+      Suppress from display in rendered document.
+    }
+  }
 }

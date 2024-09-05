@@ -6,6 +6,7 @@ diagram StandardDoc_Sections {
   include ../models/basic_document/sections/BasicSection.lutaml
   include ../models/standard_document/block/StandardBlockNoNotes.lutaml
   include ../models/basic_document/sections/HierarchicalSection.lutaml
+  include ../models/relaton/ReducedBibliographicItem.lutaml
   include ../models/standard_document/sections/StandardSection.lutaml
   include ../models/standard_document/sections/StandardHierarchicalSection.lutaml
   include ../models/standard_document/sections/Abstract.lutaml
@@ -20,7 +21,6 @@ diagram StandardDoc_Sections {
   include ../models/standard_document/sections/NormativeType.lutaml
   include ../models/standard_document/sections/FloatingTitle.lutaml
   include ../models/standard_document/block/StandardBibliographicItem.lutaml
-  include ../models/relaton/BibliographicItem.lutaml
 
   association {
     owner BasicSection
@@ -33,7 +33,7 @@ diagram StandardDoc_Sections {
     owner_type inheritance
   }
   association {
-    owner BibliographicItem
+    owner ReducedBibliographicItem
     member StandardBibliographicItem
     owner_type inheritance
   }

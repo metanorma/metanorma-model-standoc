@@ -7,4 +7,9 @@ class StandocReferenceToLinkElement {
       Style of link rendering.
     }
   }
+  +update-type: Boolean[0..1] {
+    definition {
+      Update link file suffix to match rendered file output (HTML > HTML, PDF > PDF).
+    }
+  }
 }
