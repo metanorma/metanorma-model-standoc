@@ -39,4 +39,9 @@ class StandardSection {
       Do not apply numbering to this clause.
     }
   }
+  +inline-header: Boolean[0..1] {
+    definition {
+      Render the section number and title (if present) inline with the first paragraph of the section.
+    }
+  }
 }
