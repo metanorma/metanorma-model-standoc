@@ -11,6 +11,7 @@ diagram StandardDoc_Inline {
   include ../models/basic_document/elements/TextElement.lutaml
   include ../models/basic_document/elements/StemElement.lutaml
   include ../models/basic_document/elements/BasicElement.lutaml
+  include ../models/basic_document/refs/Footnote.lutaml
   include ../models/relaton/LocalityStack.lutaml
   include ../models/standard_document/refs/ReferenceToTermbase.lutaml
   include ../models/standard_document/refs/ReferenceToTerm.lutaml
@@ -19,6 +20,7 @@ diagram StandardDoc_Inline {
   include ../models/standard_document/refs/StandocReferenceToCitationElement.lutaml
   include ../models/standard_document/refs/StandocReferenceToCitationElementWithConnective.lutaml
   include ../models/standard_document/refs/StandocReferenceToCitationElementStack.lutaml
+  include ../models/standard_document/refs/StandocFootnote.lutaml
   include ../models/standard_document/refs/XrefCaseType.lutaml
   include ../models/standard_document/refs/XrefStyleType.lutaml
   include ../models/standard_document/refs/ErefStyleType.lutaml
@@ -41,6 +43,11 @@ diagram StandardDoc_Inline {
     owner_type inheritance
   }
   association {
+    owner ReferenceToIdElement
+    member Footnote
+    owner_type inheritance
+  }
+  association {
     owner ReferenceElement
     member ReferenceToLinkElement
     owner_type inheritance
@@ -56,8 +63,8 @@ diagram StandardDoc_Inline {
     owner_type inheritance
   }
   association {
-    owner ReferenceToTermSource
-    member ReferenceToIdElement
+    owner ReferenceToIdElement
+    member ReferenceToTermSource
     owner_type inheritance
   }
   association {
@@ -94,6 +101,11 @@ diagram StandardDoc_Inline {
     owner StandocReferenceToCitationElement
     member Concept
     owner_type direct
+  }
+  association {
+    owner Footnote
+    member StandocFootnote
+    owner_type inheritance
   }
   association {
     owner StandocReferenceToCitationElement

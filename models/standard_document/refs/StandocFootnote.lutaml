@@ -1,0 +1,11 @@
+class StandocFootnote {
+  definition {
+    Inline reference to a paragraph or paragraphs, appearing as a footnote within a _StandardDocument_.
+  }
+  +hiddenref: Boolean[0..1] {
+    definition {
+      Number the footnote as normal, but suppress display of the footnote reference in the document body.
+      This is done if the footnote reference is already presented in some other form, e.g. within a figure image.
+    }
+  }
+}

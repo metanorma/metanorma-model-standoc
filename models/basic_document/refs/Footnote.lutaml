@@ -1,0 +1,5 @@
+class Footnote <<BasicDocument>> {
+  definition {
+    Inline reference to a paragraph or paragraphs, appearing as a footnote.
+  }
+}
