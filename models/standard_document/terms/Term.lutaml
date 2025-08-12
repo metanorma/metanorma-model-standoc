@@ -72,12 +72,12 @@ class Term <<Term>> {
       document.
     }
   }
-  +note: <<BasicDocument>> ParagraphBlock[0..*] {
+  +note: StandardNoteBlock[0..*] {
     definition {
       Zero or more notes about the term.
     }
   }
-  +example: <<BasicDocument>> ParagraphBlock[0..*] {
+  +example: StandardExampleBlock[0..*] {
     definition {
       Zero or more examples of how the term is to be used.
     }
