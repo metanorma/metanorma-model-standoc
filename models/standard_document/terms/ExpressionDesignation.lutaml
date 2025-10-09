@@ -12,6 +12,11 @@ class ExpressionDesignation {
       The script of the designation, as an ISO-15924 code.
     }
   }
+  +locale: String[0..1] {
+    definition {
+      The locale of the designation
+    }
+  }
   +type: ExpressionType [0..1] {
     definition {
       Type of linguistic form used as designation.

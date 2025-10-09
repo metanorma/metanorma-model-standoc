@@ -9,4 +9,19 @@ class StandardBibliographicItem {
       Suppress from display in rendered document.
     }
   }
+  language: Iso639Code[0..1] {
+    definition {
+      Format to be used to render item, as a as an ISO-639 3-letter code.
+    }
+  }
+  script: Iso15924Code[0..1] {
+    definition {
+      Script to be used to render item, as an ISO-15924 code.
+    }
+  }
+  locale: String[0..1] {
+    definition {
+      Locale to be used to render item.
+    }
+  }
 }
