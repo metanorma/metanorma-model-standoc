@@ -4,4 +4,9 @@ class StandardFormulaBlock {
       Override the numbering of this block in numbering.
     }
   }
+  +key: Key[0..1] {
+    definition {
+      Overrides definition list, definition of symbols used
+    }
+  }
 }

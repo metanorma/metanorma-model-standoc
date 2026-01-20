@@ -1,0 +1,20 @@
+class Key {
+  definition {
+    Key defining symbols used in a block.
+  }
+  +name: String[0..1] {
+    definition {
+      Name of the key.
+    }
+  }
+  +para: StandardParagraphBlock[0..*] {
+    definition {
+      Paragraphs included in Key.
+    }
+  }
+  +dl: StandardDefinitionList[0..*] {
+    definition {
+      Definition lists included in Key.
+    }
+  }
+}

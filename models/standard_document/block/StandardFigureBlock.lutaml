@@ -14,4 +14,9 @@ class StandardFigureBlock {
       A URI or other reference intended to link to an externally hosted image (or equivalent).
     }
   }
+  +key: Key[0..1] {
+    definition {
+      Overrides definition list, definition of symbols used
+    }
+  }
 }
