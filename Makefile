@@ -17,7 +17,7 @@ endif
 
 PNG := $(patsubst views/%.lutaml,images/%.png,$(SRC))
 
-all: $(PNG)
+all: $(PNG) verify-images
 
 images/%.png: views/%.lutaml
 	lutaml lml generate $< -o $@ -t png
@@ -28,7 +28,35 @@ views/%.lutaml: models/%.wsd | views
 views:
 	mkdir views
 
+# Defensive content-type check. The lutaml CLI happily writes Graphviz dot
+# source into a .png output path when the wrong flag is passed (the bug
+# fixed by metanorma/ci#303 — text content in files named *.png, with
+# `make all` still exiting 0). This target asserts each generated PNG
+# actually starts with the PNG magic bytes, so the same class of bug fails
+# CI loudly instead of passing silently. See metanorma/ci#302 for the
+# broader "make-exits-0-but-output-malformed" pattern.
+ifeq ($(OS),Windows_NT)
+verify-images:
+	@echo "verify-images: skipped on Windows (file(1) not standard)"
+else
+verify-images: $(PNG)
+	@count=0; bad=0; \
+	for f in $(PNG); do \
+	  if [ -z "$$f" ]; then continue; fi; \
+	  count=$$((count+1)); \
+	  if ! file -b "$$f" | grep -q "^PNG image data"; then \
+	    echo "ERROR: $$f is not a valid PNG (file -b reports: $$(file -b "$$f"))" >&2; \
+	    bad=$$((bad+1)); \
+	  fi; \
+	done; \
+	if [ $$bad -gt 0 ]; then \
+	  echo "verify-images: $$bad of $$count file(s) failed PNG content check" >&2; \
+	  exit 1; \
+	fi; \
+	echo "verify-images: $$count PNG file(s) verified"
+endif
+
 clean:
 	$(RM) images/*.png
 
-.PHONY: clean
+.PHONY: clean verify-images all
